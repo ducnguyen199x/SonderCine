@@ -73,6 +73,10 @@
 		4EC5293426D62C32003515B3 /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293026D62C32003515B3 /* NowPlayingCoordinator.swift */; };
 		4EC5293526D62C32003515B3 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293126D62C32003515B3 /* NowPlayingViewController.swift */; };
 		4EC5293626D62C32003515B3 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293226D62C32003515B3 /* NowPlayingViewModel.swift */; };
+		4EC5293C26D62CF6003515B3 /* TopRated.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC5293826D62CF6003515B3 /* TopRated.storyboard */; };
+		4EC5293D26D62CF6003515B3 /* TopRatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293926D62CF6003515B3 /* TopRatedCoordinator.swift */; };
+		4EC5293E26D62CF6003515B3 /* TopRatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293A26D62CF6003515B3 /* TopRatedViewController.swift */; };
+		4EC5293F26D62CF6003515B3 /* TopRatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293B26D62CF6003515B3 /* TopRatedViewModel.swift */; };
 		CFE045DD96DCE4483DF11EDD /* Pods_SonderCine_SonderCineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A645F06546B8FE0FAEC3028 /* Pods_SonderCine_SonderCineUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +172,10 @@
 		4EC5293026D62C32003515B3 /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
 		4EC5293126D62C32003515B3 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		4EC5293226D62C32003515B3 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
+		4EC5293826D62CF6003515B3 /* TopRated.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopRated.storyboard; sourceTree = "<group>"; };
+		4EC5293926D62CF6003515B3 /* TopRatedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCoordinator.swift; sourceTree = "<group>"; };
+		4EC5293A26D62CF6003515B3 /* TopRatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedViewController.swift; sourceTree = "<group>"; };
+		4EC5293B26D62CF6003515B3 /* TopRatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedViewModel.swift; sourceTree = "<group>"; };
 		522C3414505165662EBD3C79 /* Pods-SonderCine-SonderCineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine-SonderCineUITests.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DEB1283D9F9EFDA9D3C550E /* Pods-SonderCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.release.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.release.xcconfig"; sourceTree = "<group>"; };
 		A2DB93354E3922171D2A722E /* Pods-SonderCine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -380,6 +388,7 @@
 		4EC528E926D60B68003515B3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4EC5293726D62CE3003515B3 /* TopRated */,
 				4EC5292E26D62C16003515B3 /* NowPlaying */,
 				4EC5292526D6102C003515B3 /* MainTabbar */,
 				4EC528EA26D60B68003515B3 /* SplashScreen */,
@@ -436,6 +445,17 @@
 				4EC5293226D62C32003515B3 /* NowPlayingViewModel.swift */,
 			);
 			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		4EC5293726D62CE3003515B3 /* TopRated */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5293826D62CF6003515B3 /* TopRated.storyboard */,
+				4EC5293926D62CF6003515B3 /* TopRatedCoordinator.swift */,
+				4EC5293A26D62CF6003515B3 /* TopRatedViewController.swift */,
+				4EC5293B26D62CF6003515B3 /* TopRatedViewModel.swift */,
+			);
+			path = TopRated;
 			sourceTree = "<group>";
 		};
 		63056D3068780E574794F27B /* Frameworks */ = {
@@ -563,6 +583,7 @@
 				4EC5290226D60B6B003515B3 /* LaunchScreen.storyboard in Resources */,
 				4EC528FF26D60B6B003515B3 /* Assets.xcassets in Resources */,
 				4EC5293326D62C32003515B3 /* NowPlaying.storyboard in Resources */,
+				4EC5293C26D62CF6003515B3 /* TopRated.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +764,7 @@
 				4EC5288926D60B68003515B3 /* Coordinator.swift in Sources */,
 				4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */,
 				4EC528D426D60B68003515B3 /* Sequence+Extensions.swift in Sources */,
+				4EC5293D26D62CF6003515B3 /* TopRatedCoordinator.swift in Sources */,
 				4EC528D226D60B68003515B3 /* ReusableView+Extensions.swift in Sources */,
 				4EC528C026D60B68003515B3 /* Date+Extensions.swift in Sources */,
 				4EC5292C26D61048003515B3 /* MainTabbarViewController.swift in Sources */,
@@ -761,6 +783,7 @@
 				4EC528F226D60B68003515B3 /* SplashScreenViewModel.swift in Sources */,
 				4EC528C226D60B68003515B3 /* DateFormatter+Extensions.swift in Sources */,
 				4EC5288B26D60B68003515B3 /* AppCoordinator.swift in Sources */,
+				4EC5293E26D62CF6003515B3 /* TopRatedViewController.swift in Sources */,
 				4EC528F026D60B68003515B3 /* SplashScreenViewController.swift in Sources */,
 				4EC528BA26D60B68003515B3 /* Codable+Extensions.swift in Sources */,
 				4EC528C426D60B68003515B3 /* Dictionary+Extensions.swift in Sources */,
@@ -775,6 +798,7 @@
 				4EC528FD26D60B68003515B3 /* SceneDelegate.swift in Sources */,
 				4EC528E426D60B68003515B3 /* UIView+Extensions.swift in Sources */,
 				4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */,
+				4EC5293F26D62CF6003515B3 /* TopRatedViewModel.swift in Sources */,
 				4EC528C626D60B68003515B3 /* Error+Extensions.swift in Sources */,
 				4EC528D826D60B68003515B3 /* UIActivityIndicator+Extensions.swift in Sources */,
 				4EC528DE26D60B68003515B3 /* UINavigationController+Extensions.swift in Sources */,

@@ -12,16 +12,19 @@ protocol TabContentCoordinatorDelegate: CoordinatorDelegate { }
 class TabContentCoordinator: Coordinator {
     enum TapType {
         case nowPlaying
+        case topRated
         
         var title: String {
             switch self {
             case .nowPlaying: return "Now Playing"
+            case .topRated: return "Top Rated"
             }
         }
         
         var icon: UIImage {
             switch self {
             case .nowPlaying: return UIImage()
+            case .topRated: return UIImage()
             }
         }
     }
