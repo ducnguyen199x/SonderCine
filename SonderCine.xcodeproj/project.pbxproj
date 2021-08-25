@@ -77,6 +77,8 @@
 		4EC5293D26D62CF6003515B3 /* TopRatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293926D62CF6003515B3 /* TopRatedCoordinator.swift */; };
 		4EC5293E26D62CF6003515B3 /* TopRatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293A26D62CF6003515B3 /* TopRatedViewController.swift */; };
 		4EC5293F26D62CF6003515B3 /* TopRatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293B26D62CF6003515B3 /* TopRatedViewModel.swift */; };
+		4EC5294526D67A67003515B3 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5294426D67A67003515B3 /* AppConfiguration.swift */; };
+		4EC5294826D68092003515B3 /* MovieImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5294726D68092003515B3 /* MovieImage.swift */; };
 		CFE045DD96DCE4483DF11EDD /* Pods_SonderCine_SonderCineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A645F06546B8FE0FAEC3028 /* Pods_SonderCine_SonderCineUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +178,9 @@
 		4EC5293926D62CF6003515B3 /* TopRatedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCoordinator.swift; sourceTree = "<group>"; };
 		4EC5293A26D62CF6003515B3 /* TopRatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedViewController.swift; sourceTree = "<group>"; };
 		4EC5293B26D62CF6003515B3 /* TopRatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedViewModel.swift; sourceTree = "<group>"; };
+		4EC5294126D677EB003515B3 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
+		4EC5294426D67A67003515B3 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		4EC5294726D68092003515B3 /* MovieImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImage.swift; sourceTree = "<group>"; };
 		522C3414505165662EBD3C79 /* Pods-SonderCine-SonderCineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine-SonderCineUITests.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DEB1283D9F9EFDA9D3C550E /* Pods-SonderCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.release.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.release.xcconfig"; sourceTree = "<group>"; };
 		A2DB93354E3922171D2A722E /* Pods-SonderCine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +259,8 @@
 				4EC528FE26D60B6B003515B3 /* Assets.xcassets */,
 				4EC5290026D60B6B003515B3 /* LaunchScreen.storyboard */,
 				4EC5290326D60B6B003515B3 /* Info.plist */,
+				4EC5294226D67A49003515B3 /* Shared */,
+				4EC5294026D677CF003515B3 /* Configuration */,
 				4EC5287D26D60B68003515B3 /* CommonShare */,
 				4EC528E926D60B68003515B3 /* Modules */,
 			);
@@ -456,6 +463,39 @@
 				4EC5293B26D62CF6003515B3 /* TopRatedViewModel.swift */,
 			);
 			path = TopRated;
+			sourceTree = "<group>";
+		};
+		4EC5294026D677CF003515B3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5294126D677EB003515B3 /* Dev.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4EC5294226D67A49003515B3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5294626D6806D003515B3 /* Models */,
+				4EC5294326D67A5C003515B3 /* Utils */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4EC5294326D67A5C003515B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5294426D67A67003515B3 /* AppConfiguration.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4EC5294626D6806D003515B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5294726D68092003515B3 /* MovieImage.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		63056D3068780E574794F27B /* Frameworks */ = {
@@ -756,6 +796,7 @@
 				4EC5289226D60B68003515B3 /* BaseNavigationController.swift in Sources */,
 				4EC5289626D60B68003515B3 /* BaseViewModel.swift in Sources */,
 				4EC5288D26D60B68003515B3 /* CoordinatorRelatedExtensions.swift in Sources */,
+				4EC5294826D68092003515B3 /* MovieImage.swift in Sources */,
 				4EC528BC26D60B68003515B3 /* Comparable+Extensions.swift in Sources */,
 				4EC528E026D60B68003515B3 /* UITableView+Extensions.swift in Sources */,
 				4EC528CA26D60B68003515B3 /* NSMutableAttributedString+Extensions.swift in Sources */,
@@ -796,6 +837,7 @@
 				4EC528AA26D60B68003515B3 /* NetworkProvider.swift in Sources */,
 				4EC5288F26D60B68003515B3 /* ViewControllerDelegate.swift in Sources */,
 				4EC528FD26D60B68003515B3 /* SceneDelegate.swift in Sources */,
+				4EC5294526D67A67003515B3 /* AppConfiguration.swift in Sources */,
 				4EC528E426D60B68003515B3 /* UIView+Extensions.swift in Sources */,
 				4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */,
 				4EC5293F26D62CF6003515B3 /* TopRatedViewModel.swift in Sources */,
@@ -857,6 +899,7 @@
 /* Begin XCBuildConfiguration section */
 		4EC5291A26D60B6B003515B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC5294126D677EB003515B3 /* Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -918,6 +961,7 @@
 		};
 		4EC5291B26D60B6B003515B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC5294126D677EB003515B3 /* Dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

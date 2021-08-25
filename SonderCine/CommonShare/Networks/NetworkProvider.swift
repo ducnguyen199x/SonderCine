@@ -97,7 +97,11 @@ class NetworkClient: NetworkProvider {
         guard let url = URL(string: encodedUrlString) else { return .error(NetworkError.invalidUrl) }
         
         let single = Single<T>.create { single -> Disposable in
-            let request = NetworkClient.alamofireRequest(url, method: method, parameters: params, payloadBody: api.httpBody, headers: api.headers)
+            var mergeParams = api.defaultParams
+            if let params = params {
+                mergeParams.merge(params) { _, second in second }
+            }
+            let request = NetworkClient.alamofireRequest(url, method: method, parameters: mergeParams, payloadBody: api.httpBody, headers: api.headers)
                 .validate()
                 .responseData { response in
                     switch response.result {
@@ -132,8 +136,11 @@ class NetworkClient: NetworkProvider {
         guard let url = URL(string: encodedUrlString) else { return .error(NetworkError.invalidUrl) }
         
         let single = Completable.create { single -> Disposable in
-            debugPrint(method.rawValue + " : " + url.absoluteString)
-            let request = NetworkClient.alamofireRequest(url, method: method, parameters: params, payloadBody: api.httpBody, headers: api.headers)
+            var mergeParams = api.defaultParams
+            if let params = params {
+                mergeParams.merge(params) { _, second in second }
+            }
+            let request = NetworkClient.alamofireRequest(url, method: method, parameters: mergeParams, payloadBody: api.httpBody, headers: api.headers)
                 .validate()
                 .responseData { response in
                     switch response.result {

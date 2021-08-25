@@ -1,0 +1,13 @@
+//
+//  Dev.xcconfig
+//  SonderCine
+//
+//  Created by Nguyen Thanh Duc on 25/8/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_ENDPOINT = https:/$()/api.themoviedb.org/3
+THE_MOVIE_DB_API_KEY = 1d96053c639e1496db422824bf3103a8
+IMAGE_ENDPOINT = https:/$()/image.tmdb.org/t/p

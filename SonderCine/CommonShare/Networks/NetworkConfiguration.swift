@@ -8,9 +8,15 @@
 import Foundation
 
 struct NetworkConfiguration {
-    static let baseURL = Bundle.userDefine(key: "API_ENDPOINT") ?? ""
-
+    static let baseURL = AppConfiguration.apiEndpoint.value ?? ""
+    static let baseImageURL = AppConfiguration.imageEndpoint.value ?? ""
+    
     static func apiUrlString(_ apiType: API) -> String {
-        return self.baseURL + apiType.apiVersionPath + apiType.apiPath
+        switch apiType {
+        case .image:
+            return self.baseImageURL + apiType.apiVersionPath + apiType.apiPath
+        default:
+            return self.baseURL + apiType.apiVersionPath + apiType.apiPath
+        }
     }
 }

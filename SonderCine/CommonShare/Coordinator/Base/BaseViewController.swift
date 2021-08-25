@@ -89,7 +89,7 @@ class BaseViewController: UIViewController {
     func observerOrientation() {
         NotificationCenter.default.rx
             .notification(UIDevice.orientationDidChangeNotification)
-            .observeOn(MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
                 self?.didChangeOrientation()
             }).disposed(by: rx.disposeBag)

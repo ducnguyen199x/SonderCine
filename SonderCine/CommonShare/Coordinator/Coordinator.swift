@@ -21,7 +21,7 @@ extension Int: CoordinatorPayload {}
 extension Array: CoordinatorPayload {}
 extension URL: CoordinatorPayload {}
 
-protocol CoordinatorDelegate: class {}
+protocol CoordinatorDelegate: AnyObject {}
 
 class Coordinator {
     deinit {

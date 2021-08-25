@@ -11,21 +11,23 @@ import Alamofire
 typealias CacheLocation = (filename: String, subDirectory: String)
 
 enum API {
-    case firstAPI
+    case nowPlaying
+    case topRated
+    case movieDetail(id: String)
+    case credits(id: String)
+    case image(type: ImageType, path: String)
     
     var urlString: String {
-        switch self {
-        case .firstAPI:
-            return NetworkConfiguration.apiUrlString(self)
-        default:
-            return NetworkConfiguration.apiUrlString(self)
-        }
+        return NetworkConfiguration.apiUrlString(self)
     }
     
     var apiPath: String {
         switch self {
-        case .firstAPI: return "firstAPI"
-        default: return ""
+        case .topRated: return "movie/top_rated"
+        case .nowPlaying: return "movie/now_playing"
+        case .movieDetail(let id): return "movie/\(id)"
+        case .credits(let id): return "movie/\(id)/credits"
+        case let .image(type, path): return "t/p/\(type.size)\(path)"
         }
     }
     
@@ -33,14 +35,19 @@ enum API {
         return "/"
     }
     
-    var apiAuthPath: String {
-        return "/"
-    }
-    
     var shouldHandleExpiredToken: Bool {
+        return true
+    }
+}
+
+// MARK: Default params
+extension API {
+    var defaultParams: JSON {
         switch self {
+        case .topRated, .nowPlaying, .movieDetail, .credits:
+            return ["api_key": AppConfiguration.theMovieDBAPIKey.value ?? ""]
         default:
-            return true
+            return [:]
         }
     }
 }
@@ -48,24 +55,14 @@ enum API {
 // MARK: Headers
 extension API {
     var headers: HTTPHeaders {
-        var defaultHeaders: HTTPHeaders = ["Content-Type": "application/json"]
-        switch self {
-        default:
-            break
-        }
-        return defaultHeaders
+        return ["Content-Type": "application/json"]
     }
 }
 
 // MARK: HTTP Body
 extension API {
     var httpBody: Data? {
-        var httpBody: [String: Any] = [:]
-        switch self {
-        default:
-            break
-        }
-        return httpBody.isEmpty ? nil : httpBody.data()
+        return nil
     }
 }
 
@@ -100,12 +97,7 @@ typealias FormData = (data: Data, name: String, fileName: String?, mimeType: Str
 
 extension API {
     var formDataArray: [FormData] {
-        var array: [FormData] = []
-            switch self {
-            default:
-                break
-            }
-        return array
+        return []
     }
 }
 
