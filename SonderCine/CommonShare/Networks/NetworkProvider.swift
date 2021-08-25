@@ -110,7 +110,7 @@ class NetworkClient: NetworkProvider {
                         } catch let error {
                             debugPrint(method.rawValue + " : " + url.absoluteString)
                             debugPrint(error)
-                            single(.error(error))
+                            single(.failure(error))
                         }
                     case .failure(let error):
                         debugPrint(method.rawValue + " : " + url.absoluteString)
@@ -221,7 +221,7 @@ class NetworkClient: NetworkProvider {
                             single(.success(decodedObject))
                         } catch let error {
                             debugPrint(error)
-                            single(.error(error))
+                            single(.failure(error))
                         }
                     case .failure(let error):
                         self.processError(error, for: single, responseData: response.data)
@@ -257,7 +257,7 @@ class NetworkClient: NetworkProvider {
                                      cancelButtonTitle: "OK",
                                      in: nil)
         }
-        sequence(.error(error))
+        sequence(.failure(error))
     }
     
     private func processError(_ error: AFError, for sequence: (CompletableEvent) -> Void, responseData: Data?) {

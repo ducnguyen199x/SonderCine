@@ -6,7 +6,6 @@
 
 import RxSwift
 import RxCocoa
-import RxDataSources
 
 public enum ViewModelState: Equatable {
     case idle

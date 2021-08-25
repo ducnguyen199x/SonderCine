@@ -23,3 +23,4 @@ custom_rules:
     name: "Vertical Whitespace before Closing Braces"
     message: "Don't include vertical whitespace (empty line) before closing braces."
     severity: warning
+
