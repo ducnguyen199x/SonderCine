@@ -28,9 +28,9 @@ extension AppCoordinator {
         invoke(coordinator, sceneType: .root(window))
     }
     
-    func openMainScreen() {
+    func openMainTabbarScreen() {
         guard let window = window else { return }
-        let coordinator = MainCoordinator()
+        let coordinator = MainTabbarCoordinator()
         coordinator.delegate = self
         removeAllCoordinators()
         invoke(coordinator, sceneType: .root(window))
@@ -39,9 +39,9 @@ extension AppCoordinator {
 
 extension AppCoordinator: SplashScreenCoordinatorDelegate {
     func splashScreenCoordinatorCompleted() {
-        openMainScreen()
+        openMainTabbarScreen()
     }
 }
 
-extension AppCoordinator: MainCoordinatorDelegate {
+extension AppCoordinator: MainTabbarCoordinatorDelegate {
 }
