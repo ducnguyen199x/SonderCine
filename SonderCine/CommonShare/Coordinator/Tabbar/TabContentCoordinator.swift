@@ -11,22 +11,22 @@ protocol TabContentCoordinatorDelegate: CoordinatorDelegate { }
 
 class TabContentCoordinator: Coordinator {
     enum TapType {
-        case item1
+        case nowPlaying
         
         var title: String {
             switch self {
-            case .item1: return "Item 1"
+            case .nowPlaying: return "Now Playing"
             }
         }
         
         var icon: UIImage {
             switch self {
-            case .item1: return UIImage()
+            case .nowPlaying: return UIImage()
             }
         }
     }
     
-    var tabType: TapType = .item1
+    var tabType: TapType = .nowPlaying
     weak var delegate: TabContentCoordinatorDelegate?
 }
 

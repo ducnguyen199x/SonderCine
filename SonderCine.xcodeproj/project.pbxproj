@@ -69,6 +69,10 @@
 		4EC5292B26D61048003515B3 /* MainTabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5292726D61048003515B3 /* MainTabbarCoordinator.swift */; };
 		4EC5292C26D61048003515B3 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5292826D61048003515B3 /* MainTabbarViewController.swift */; };
 		4EC5292D26D61048003515B3 /* MainTabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5292926D61048003515B3 /* MainTabbarViewModel.swift */; };
+		4EC5293326D62C32003515B3 /* NowPlaying.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC5292F26D62C32003515B3 /* NowPlaying.storyboard */; };
+		4EC5293426D62C32003515B3 /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293026D62C32003515B3 /* NowPlayingCoordinator.swift */; };
+		4EC5293526D62C32003515B3 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293126D62C32003515B3 /* NowPlayingViewController.swift */; };
+		4EC5293626D62C32003515B3 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5293226D62C32003515B3 /* NowPlayingViewModel.swift */; };
 		CFE045DD96DCE4483DF11EDD /* Pods_SonderCine_SonderCineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A645F06546B8FE0FAEC3028 /* Pods_SonderCine_SonderCineUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +164,10 @@
 		4EC5292726D61048003515B3 /* MainTabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarCoordinator.swift; sourceTree = "<group>"; };
 		4EC5292826D61048003515B3 /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
 		4EC5292926D61048003515B3 /* MainTabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewModel.swift; sourceTree = "<group>"; };
+		4EC5292F26D62C32003515B3 /* NowPlaying.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NowPlaying.storyboard; sourceTree = "<group>"; };
+		4EC5293026D62C32003515B3 /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
+		4EC5293126D62C32003515B3 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		4EC5293226D62C32003515B3 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
 		522C3414505165662EBD3C79 /* Pods-SonderCine-SonderCineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine-SonderCineUITests.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DEB1283D9F9EFDA9D3C550E /* Pods-SonderCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.release.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.release.xcconfig"; sourceTree = "<group>"; };
 		A2DB93354E3922171D2A722E /* Pods-SonderCine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -372,6 +380,7 @@
 		4EC528E926D60B68003515B3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4EC5292E26D62C16003515B3 /* NowPlaying */,
 				4EC5292526D6102C003515B3 /* MainTabbar */,
 				4EC528EA26D60B68003515B3 /* SplashScreen */,
 			);
@@ -416,6 +425,17 @@
 				4EC5292926D61048003515B3 /* MainTabbarViewModel.swift */,
 			);
 			path = MainTabbar;
+			sourceTree = "<group>";
+		};
+		4EC5292E26D62C16003515B3 /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5292F26D62C32003515B3 /* NowPlaying.storyboard */,
+				4EC5293026D62C32003515B3 /* NowPlayingCoordinator.swift */,
+				4EC5293126D62C32003515B3 /* NowPlayingViewController.swift */,
+				4EC5293226D62C32003515B3 /* NowPlayingViewModel.swift */,
+			);
+			path = NowPlaying;
 			sourceTree = "<group>";
 		};
 		63056D3068780E574794F27B /* Frameworks */ = {
@@ -542,6 +562,7 @@
 				4EC528EC26D60B68003515B3 /* SplashScreen.storyboard in Resources */,
 				4EC5290226D60B6B003515B3 /* LaunchScreen.storyboard in Resources */,
 				4EC528FF26D60B6B003515B3 /* Assets.xcassets in Resources */,
+				4EC5293326D62C32003515B3 /* NowPlaying.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,8 +749,10 @@
 				4EC528DC26D60B68003515B3 /* UICollectionView+Extensions.swift in Sources */,
 				4EC528B326D60B68003515B3 /* Alert.swift in Sources */,
 				4EC528A826D60B68003515B3 /* NetworkConfiguration.swift in Sources */,
+				4EC5293426D62C32003515B3 /* NowPlayingCoordinator.swift in Sources */,
 				4EC528CC26D60B68003515B3 /* NSObject+Extensions.swift in Sources */,
 				4EC5292B26D61048003515B3 /* MainTabbarCoordinator.swift in Sources */,
+				4EC5293526D62C32003515B3 /* NowPlayingViewController.swift in Sources */,
 				4EC528DA26D60B68003515B3 /* UIApplication+Extensions.swift in Sources */,
 				4EC528D026D60B68003515B3 /* Reactive+Extensions.swift in Sources */,
 				4EC5289E26D60B68003515B3 /* LocalizedError.swift in Sources */,
@@ -761,6 +784,7 @@
 				4EC528E626D60B68003515B3 /* UIViewController+Extensions.swift in Sources */,
 				4EC5289826D60B68003515B3 /* BaseTabbarController.swift in Sources */,
 				4EC528AE26D60B68003515B3 /* Relay.swift in Sources */,
+				4EC5293626D62C32003515B3 /* NowPlayingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

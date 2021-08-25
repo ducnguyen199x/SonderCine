@@ -14,7 +14,7 @@ final class MainTabbarCoordinator: Coordinator {
     
     override init() {
         super.init()
-        coordinators = []
+        coordinators = [NowPlayingCoordinator()]
     }
     
     override func makeNavigationController(payload: CoordinatorPayload? = nil) -> UINavigationController {
