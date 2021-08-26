@@ -7,18 +7,25 @@
 
 import Foundation
 
-struct MovieListWrapper: Codable {
-    var page: Int
-    var totalPages: Int
+struct MovieListWrapper: Decodable {
+    var paging: Paging
     var results: [Movie]
     
     enum CodingKeys: String, CodingKey {
         case page, results
         case totalPages = "total_pages"
     }
+    
+    init(from decoder: Decoder) throws {
+        let container = try? decoder.container(keyedBy: CodingKeys.self)
+        results = (try? container?.decodeIfPresent([Movie].self, forKey: .results)) ?? []
+        let page = (try? container?.decodeIfPresent(Int.self, forKey: .page)) ?? 0
+        let totalPages = (try? container?.decodeIfPresent(Int.self, forKey: .totalPages)) ?? 0
+        paging = Paging(current: page, total: totalPages)
+    }
 }
 
-struct Movie: Codable {
+struct Movie: Decodable {
     var id: Int
     var backdropPath: String?
     var posterPath: String?
@@ -40,7 +47,7 @@ struct Movie: Codable {
 }
 
 extension Movie {
-    struct Genre: Codable {
+    struct Genre: Decodable {
         var id: Int
         var name: String
     }

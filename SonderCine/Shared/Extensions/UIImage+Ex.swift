@@ -24,4 +24,16 @@ extension UIImage {
     static var vote: UIImage? {
         return UIImage(systemName: "star.fill")
     }
+    
+    static var backward: UIImage? {
+        return UIImage(systemName: "chevron.backward")
+    }
+    
+    static var forward: UIImage? {
+        return UIImage(systemName: "chevron.forward")
+    }
+    
+    static var ellipsis: UIImage? {
+        return UIImage(systemName: "ellipsis")
+    }
 }

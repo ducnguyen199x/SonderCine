@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let window = window {
             appCoordinator.start(sceneType: .root(window))
         }
+        
+        setupUI()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -46,5 +48,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+    
+    private func setupUI() {
+        window?.tintColor = .systemOrange
     }
 }

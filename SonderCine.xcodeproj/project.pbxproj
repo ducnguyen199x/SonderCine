@@ -12,6 +12,9 @@
 		4E8BF87E26D7BC9A0038EEBB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF87D26D7BC9A0038EEBB /* R.generated.swift */; };
 		4E8BF88026D7CA700038EEBB /* AdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF87F26D7CA700038EEBB /* AdsCell.xib */; };
 		4E8BF88226D7CA7B0038EEBB /* AdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88126D7CA7B0038EEBB /* AdsCell.swift */; };
+		4E8BF88526D7D7580038EEBB /* PaginationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88426D7D7580038EEBB /* PaginationControl.swift */; };
+		4E8BF88726D7E4E70038EEBB /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88626D7E4E70038EEBB /* Paging.swift */; };
+		4E8BF88926D7E6BD0038EEBB /* PaginationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88826D7E6BD0038EEBB /* PaginationCell.swift */; };
 		4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5287B26D60B68003515B3 /* AppDelegate.swift */; };
 		4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */; };
 		4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288526D60B68003515B3 /* BaseTableViewHeaderFooterView.swift */; };
@@ -118,6 +121,9 @@
 		4E8BF87D26D7BC9A0038EEBB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = R/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		4E8BF87F26D7CA700038EEBB /* AdsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsCell.xib; sourceTree = "<group>"; };
 		4E8BF88126D7CA7B0038EEBB /* AdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCell.swift; sourceTree = "<group>"; };
+		4E8BF88426D7D7580038EEBB /* PaginationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationControl.swift; sourceTree = "<group>"; };
+		4E8BF88626D7E4E70038EEBB /* Paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
+		4E8BF88826D7E6BD0038EEBB /* PaginationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationCell.swift; sourceTree = "<group>"; };
 		4EC5287826D60B68003515B3 /* SonderCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonderCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5287B26D60B68003515B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -249,6 +255,15 @@
 				48EC006FD627B153857471D5 /* Pods-SonderCineTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E8BF88326D7D7360038EEBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF88426D7D7580038EEBB /* PaginationControl.swift */,
+				4E8BF88826D7E6BD0038EEBB /* PaginationCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4EC5286D26D60B68003515B3 = {
@@ -476,6 +491,7 @@
 		4EC5294226D67A49003515B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF88326D7D7360038EEBB /* Views */,
 				4EC5295926D753E0003515B3 /* Networks */,
 				4EC5295426D74CB4003515B3 /* Extensions */,
 				4EC5294626D6806D003515B3 /* Models */,
@@ -498,6 +514,7 @@
 				4EC5295F26D76031003515B3 /* DynamicTypes */,
 				4EC5294726D68092003515B3 /* MovieImage.swift */,
 				4EC5295D26D75813003515B3 /* Movie.swift */,
+				4E8BF88626D7E4E70038EEBB /* Paging.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -871,6 +888,7 @@
 				4EC5289626D60B68003515B3 /* BaseViewModel.swift in Sources */,
 				4EC5288D26D60B68003515B3 /* CoordinatorRelatedExtensions.swift in Sources */,
 				4EC5294826D68092003515B3 /* MovieImage.swift in Sources */,
+				4E8BF88526D7D7580038EEBB /* PaginationControl.swift in Sources */,
 				4EC528BC26D60B68003515B3 /* Comparable+Extensions.swift in Sources */,
 				4EC528E026D60B68003515B3 /* UITableView+Extensions.swift in Sources */,
 				4EC528CA26D60B68003515B3 /* NSMutableAttributedString+Extensions.swift in Sources */,
@@ -917,6 +935,7 @@
 				4EC528C826D60B68003515B3 /* IndexPath+Extensions.swift in Sources */,
 				4EC528B826D60B68003515B3 /* Bundle+Extensions.swift in Sources */,
 				4EC528AA26D60B68003515B3 /* NetworkProvider.swift in Sources */,
+				4E8BF88926D7E6BD0038EEBB /* PaginationCell.swift in Sources */,
 				4EC5288F26D60B68003515B3 /* ViewControllerDelegate.swift in Sources */,
 				4EC5297226D7A722003515B3 /* ScrollView+PullToRefresh.swift in Sources */,
 				4EC528FD26D60B68003515B3 /* SceneDelegate.swift in Sources */,
@@ -929,6 +948,7 @@
 				4EC528D826D60B68003515B3 /* UIActivityIndicator+Extensions.swift in Sources */,
 				4EC528DE26D60B68003515B3 /* UINavigationController+Extensions.swift in Sources */,
 				4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */,
+				4E8BF88726D7E4E70038EEBB /* Paging.swift in Sources */,
 				4EC5295126D74199003515B3 /* MovieListingViewModel.swift in Sources */,
 				4EC528A626D60B68003515B3 /* API.swift in Sources */,
 				4EC528EE26D60B68003515B3 /* SplashScreenCoordinator.swift in Sources */,

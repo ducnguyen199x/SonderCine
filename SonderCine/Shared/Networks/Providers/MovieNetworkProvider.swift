@@ -10,8 +10,8 @@ import RxCocoa
 import Alamofire
 
 protocol MovieNetworkProvider {
-    func fetchNowPlaying() -> Single<[Movie]>
-    func fetchTopRated() -> Single<[Movie]>
+    func fetchNowPlaying(page: Int) -> Single<MovieListWrapper>
+    func fetchTopRated(page: Int) -> Single<MovieListWrapper>
 }
 
 struct MovieNetworkClient: MovieNetworkProvider {
@@ -21,13 +21,11 @@ struct MovieNetworkClient: MovieNetworkProvider {
         self.networkProvider = networkProvider
     }
     
-    func fetchNowPlaying() -> Single<[Movie]> {
-        let request: Single<MovieListWrapper> = networkProvider.get(api: .nowPlaying)
-        return request.map { $0.results }
+    func fetchNowPlaying(page: Int) -> Single<MovieListWrapper> {
+        networkProvider.get(api: .nowPlaying, params: ["page": page])
     }
 
-    func fetchTopRated() -> Single<[Movie]> {
-        let request: Single<MovieListWrapper> = networkProvider.get(api: .topRated)
-        return request.map { $0.results }
+    func fetchTopRated(page: Int) -> Single<MovieListWrapper> {
+        networkProvider.get(api: .topRated, params: ["page": page])
     }
 }

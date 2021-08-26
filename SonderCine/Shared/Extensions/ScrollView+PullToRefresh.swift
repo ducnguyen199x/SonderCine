@@ -32,5 +32,6 @@ final class RefreshControl: UIRefreshControl {
     
     @objc private func refresh() {
         action()
+        endRefreshing()
     }
 }

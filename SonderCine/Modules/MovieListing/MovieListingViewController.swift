@@ -15,7 +15,7 @@ final class MovieListingViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-
+    
     override func setupNavigation() {
         navigationItem.title = "WizeMovie"
         
@@ -39,10 +39,12 @@ final class MovieListingViewController: BaseViewController {
     override func bindViewModel() {
         super.bindViewModel()
         rx.disposeBag.insert([
+            viewModel.$state.bind(to: loadingIndicator.rx.viewModelAnimating),
+            viewModel.$items.subscribe(onNext: { [weak self] _ in
+                self?.reloadData()
+            }),
             viewModel.$state.subscribe(onNext: { [weak self] state in
                 switch state {
-                case .completed:
-                    self?.reloadData()
                 case .error(_):
                     self?.showDefaultAlert()
                 default:
@@ -55,11 +57,13 @@ final class MovieListingViewController: BaseViewController {
     
     private func setupTableView() {
         tableView.setRefresh { [weak self] in
-            self?.viewModel.fetchMovieList()
+            guard let self = self else { return }
+            self.viewModel.fetchMovieList(page: self.viewModel.currentPage)
         }
         tableView.registerNib(MovieCell.self)
         tableView.registerNib(AdsCell.self)
-        tableView.contentInset = .bottom(100)
+        tableView.registerClass(PaginationCell.self)
+        tableView.contentInset = .bottom(50)
     }
     
     private func reloadData() {
@@ -91,6 +95,14 @@ extension MovieListingViewController: UITableViewDelegate, UITableViewDataSource
             return cell
         case .ads:
             let cell: AdsCell = tableView.dequeueReusableCell(for: indexPath)
+            return cell
+        case let .pagination(paging):
+            let cell: PaginationCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.setPaging(paging) { [weak self] page in
+                guard let self = self else { return }
+                self.tableView.scrollToRow(at: .init(row: 0, section: 0), at: .top, animated: true)
+                self.viewModel.fetchMovieList(page: page)
+            }
             return cell
         }
     }

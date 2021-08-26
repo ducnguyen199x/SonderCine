@@ -17,52 +17,53 @@ extension MovieListingViewModel {
 
     /// Ads
     case ads
+    
+    /// Pagination
+    case pagination(Paging)
   }
 }
 
 final class MovieListingViewModel: BaseViewModel {
     let networkProvider: MovieNetworkProvider
     let category: Category
-    var movies = [Movie]() {
-        didSet {
-            makeItems()
-        }
-    }
     
     /// The view controller's datasource
-    var items = [Item]()
+    @Relay var items = [Item]()
+    var currentPage: Int = 1
 
     init(networkProvider: MovieNetworkProvider = MovieNetworkClient(), category: Category) {
         self.networkProvider = networkProvider
         self.category = category
     }
     
-    func fetchMovieList() {
-        let request: Single<[Movie]> = {
+    func fetchMovieList(page: Int = 1) {
+        currentPage = page
+        items = []
+        let request: Single<MovieListWrapper> = {
             switch category {
             case .nowPlaying:
-                return networkProvider.fetchNowPlaying()
+                return networkProvider.fetchNowPlaying(page: page)
             case .topRated:
-                return networkProvider.fetchTopRated()
+                return networkProvider.fetchTopRated(page: page)
             }
         }()
         
         state = .loading(nil)
-        request.subscribe(onSuccess: { [weak self] movies in
-            self?.movies = movies
+        request.subscribe(onSuccess: { [weak self] wrapper in
+            self?.makeItems(wrapper)
             self?.state = .completed
         }, onFailure: { [weak self] error in
-            self?.movies = []
             self?.state = .error(error)
         }).disposed(by: rx.disposeBag)
     }
     
-    private func makeItems() {
-        var items: [Item] = movies.map { .movie($0) }
+    private func makeItems(_ wrapper: MovieListWrapper) {
+        var items: [Item] = wrapper.results.map { .movie($0) }
         let adsNumber = items.count / 3
         for i in 1...adsNumber {
             items.insert(.ads, at: i * 3 + i - 1)
         }
+        items.append(.pagination(wrapper.paging))
         self.items = items
     }
     
