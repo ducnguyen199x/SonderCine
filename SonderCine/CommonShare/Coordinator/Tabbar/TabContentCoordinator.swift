@@ -10,7 +10,7 @@ import UIKit
 protocol TabContentCoordinatorDelegate: CoordinatorDelegate { }
 
 class TabContentCoordinator: Coordinator {
-    enum TapType {
+    enum TabType {
         case nowPlaying
         case topRated
         
@@ -29,7 +29,7 @@ class TabContentCoordinator: Coordinator {
         }
     }
     
-    var tabType: TapType = .nowPlaying
+    var tabType: TabType = .nowPlaying
     weak var delegate: TabContentCoordinatorDelegate?
 }
 

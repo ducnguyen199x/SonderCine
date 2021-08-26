@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="gch-sP-JiX">
             <objects>
-                <viewController storyboardIdentifier="TopRatedViewController" id="rrn-Ba-fsN" customClass="TopRatedViewController" customModule="SonderCine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieListingViewController" id="rrn-Ba-fsN" customClass="MovieListingViewController" customModule="SonderCine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BLm-vL-dlY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
