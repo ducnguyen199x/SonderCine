@@ -21,10 +21,10 @@ class TabContentCoordinator: Coordinator {
             }
         }
         
-        var icon: UIImage {
+        var icon: UIImage? {
             switch self {
-            case .nowPlaying: return UIImage()
-            case .topRated: return UIImage()
+            case .nowPlaying: return .nowPlaying
+            case .topRated: return .topRated
             }
         }
     }

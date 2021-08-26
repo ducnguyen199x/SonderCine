@@ -21,11 +21,6 @@ protocol BaseProtocol {
 }
 
 class BaseViewController: UIViewController {
-    #if DEBUG
-    private weak var observer: NSKeyValueObservation?
-    private var hitCount: Int = 0
-    private var audioSession: AVAudioSession?
-    #endif
     var controllerTitle: String?
   
     private weak var previousParent: UIViewController?
@@ -58,9 +53,6 @@ class BaseViewController: UIViewController {
         setupColor()
         localizedText()
         observerOrientation()
-        #if DEBUG
-        observeVolumeChanged()
-        #endif
         bindViewModel()
     }
     
@@ -70,9 +62,7 @@ class BaseViewController: UIViewController {
     
     func setupColor() {}
     
-    func bindViewModel() {
-        
-    }
+    func bindViewModel() {}
     
     func setupNavigation() {
         navigationController?.makeTranslucentNavigationBar()
@@ -104,22 +94,6 @@ class BaseViewController: UIViewController {
     func willDeinit() {
         preconditionFailure("You should implement this function in your class to detach coordinator.")
     }
-    
-    #if DEBUG
-    final func observeVolumeChanged() {
-        audioSession = AVAudioSession.sharedInstance()
-        observer = audioSession?.observe( \.outputVolume ) {[weak self] (_, _) in
-            guard FLEXManager.shared.isHidden else {
-                self?.hitCount = 0
-                return
-            }
-            self?.hitCount += 1
-            guard self?.hitCount == 3 else { return }
-            self?.hitCount = 0
-            FLEXManager.shared.showExplorer()
-        }
-    }
-    #endif
 }
 
 extension BaseViewController {
