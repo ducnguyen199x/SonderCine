@@ -9,10 +9,28 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension MovieListingViewModel {
+  /// Datasource item type
+  enum Item {
+    /// Movie
+    case movie(Movie)
+
+    /// Ads
+    case ads
+  }
+}
+
 final class MovieListingViewModel: BaseViewModel {
     let networkProvider: MovieNetworkProvider
     let category: Category
-    @Relay var movies: [Movie] = []
+    var movies = [Movie]() {
+        didSet {
+            makeItems()
+        }
+    }
+    
+    /// The view controller's datasource
+    var items = [Item]()
 
     init(networkProvider: MovieNetworkProvider = MovieNetworkClient(), category: Category) {
         self.networkProvider = networkProvider
@@ -39,12 +57,21 @@ final class MovieListingViewModel: BaseViewModel {
         }).disposed(by: rx.disposeBag)
     }
     
-    func numberOfRows() -> Int {
-        movies.count
+    private func makeItems() {
+        var items: [Item] = movies.map { .movie($0) }
+        let adsNumber = items.count / 3
+        for i in 1...adsNumber {
+            items.insert(.ads, at: i * 3 + i - 1)
+        }
+        self.items = items
     }
     
-    func movie(at indexPath: IndexPath) -> Movie? {
-        movies[safe: indexPath.row]
+    func numberOfRows() -> Int {
+        items.count
+    }
+    
+    func item(at indexPath: IndexPath) -> Item? {
+        items[safe: indexPath.row]
     }
 }
 

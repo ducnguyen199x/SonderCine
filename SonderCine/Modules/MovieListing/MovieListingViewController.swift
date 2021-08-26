@@ -58,6 +58,7 @@ final class MovieListingViewController: BaseViewController {
             self?.viewModel.fetchMovieList()
         }
         tableView.registerNib(MovieCell.self)
+        tableView.registerNib(AdsCell.self)
         tableView.contentInset = .bottom(100)
     }
     
@@ -81,12 +82,17 @@ extension MovieListingViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MovieCell = tableView.dequeueReusableCell(for: indexPath)
-        if let movie = viewModel.movie(at: indexPath) {
-            cell.configure(movie)
+        guard let item = viewModel.item(at: indexPath) else { return .init() }
+        
+        switch item {
+        case let .movie(movie):
+            let cell: MovieCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configure(movie, position: tableView.position(of: indexPath))
+            return cell
+        case .ads:
+            let cell: AdsCell = tableView.dequeueReusableCell(for: indexPath)
+            return cell
         }
-        cell.hideSeparator(indexPath.row == viewModel.numberOfRows() - 1)
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

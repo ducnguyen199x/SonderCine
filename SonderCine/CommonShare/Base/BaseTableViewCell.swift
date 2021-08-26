@@ -37,10 +37,10 @@ class BaseTableViewCell: UITableViewCell {
         didSetupView = true
     }
     
-    func addSeparator(height: CGFloat = 0.5,
+    func addSeparator(height: CGFloat = 1,
                       color: UIColor? = UITableView().separatorColor,
-                      leftInset: CGFloat = 20,
-                      rightInset: CGFloat = 0) {
+                      leftInset: CGFloat = 10,
+                      rightInset: CGFloat = 10) {
         separator.removeFromSuperview()
         addSubview(separator)
         separator.backgroundColor = color
@@ -50,5 +50,20 @@ class BaseTableViewCell: UITableViewCell {
         separator.bottomToSuperview()
     }
     
-    func refreshUI() {}
+    func refreshUI() {
+        switch position {
+        case .firstInSection, .middle:
+            hideSeparator(false)
+        default:
+            hideSeparator(true)
+        }
+    }
+    
+    /**
+     Hide bottom separator
+     - Parameter hide: hide or not hide
+     */
+    func hideSeparator(_ hide: Bool = true) {
+        separator.isHidden = hide
+    }
 }

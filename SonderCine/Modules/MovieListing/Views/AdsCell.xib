@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="123" id="0qG-74-h4c" customClass="AdsCell" customModule="SonderCine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0qG-74-h4c" id="j8h-qn-3vp">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAMPLE ADVERTISEMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67N-Zu-Ccs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="AlN-3O-GVc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="67N-Zu-Ccs" secondAttribute="trailing" id="T5V-nk-RBw"/>
+                    <constraint firstItem="67N-Zu-Ccs" firstAttribute="top" secondItem="j8h-qn-3vp" secondAttribute="top" id="cB9-vz-6W4"/>
+                    <constraint firstAttribute="bottom" secondItem="67N-Zu-Ccs" secondAttribute="bottom" id="odX-0B-e2J"/>
+                    <constraint firstItem="67N-Zu-Ccs" firstAttribute="leading" secondItem="j8h-qn-3vp" secondAttribute="leading" id="pRb-As-1rK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="adsBackgroundColor"/>
+            <connections>
+                <outlet property="adsTitle" destination="67N-Zu-Ccs" id="dZ8-sG-ro3"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="157.70089285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="adsBackgroundColor">
+            <color red="0.90517480594595678" green="0.90517480594595678" blue="0.90517480594595678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

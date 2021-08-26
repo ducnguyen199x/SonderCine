@@ -8,28 +8,40 @@
 import UIKit
 import Kingfisher
 
-class MovieCell: UITableViewCell {
+/// `MovieCell` display movie poster.
+class MovieCell: BaseTableViewCell {
+    /// the movie's thumbnail image
     @IBOutlet weak var thumbnail: UIImageView!
+
+    /// the movie's title
     @IBOutlet weak var titleLabel: UILabel!
+    
+    /// the movie's release date
     @IBOutlet weak var releaseDateLabel: UILabel!
+    
+    /// the movie's overview
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    /// the movie's vote
     @IBOutlet weak var voteLabel: UILabel!
-    @IBOutlet weak var separator: UIView!
     
     override func prepareForReuse() {
         super.prepareForReuse()
         thumbnail.image = nil
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    override func setupView() {
+        super.setupView()
+        addSeparator()
     }
     
     /**
      Update the cell displays with the movie
      - Parameter movie: movie
+     - Parameter position: position of the cell
      */
-    func configure(_ movie: Movie) {
+    func configure(_ movie: Movie, position: UITableView.IndexPathPosition = .invalid) {
+        self.position = position
         loadImage(movie.posterPath)
         titleLabel.text = movie.title
         releaseDateLabel.text = movie.releaseDate?.year()
@@ -64,14 +76,6 @@ class MovieCell: UITableViewCell {
         let voteAttributedString = NSAttributedString(string: " \(vote)", attributes: [.font: UIFont.systemFont(ofSize: 13)])
         mutableAttributed.append(voteAttributedString)
         self.voteLabel.attributedText = mutableAttributed
-    }
-    
-    /**
-     Hide bottom separator
-     - Parameter hide: hide or not hide
-     */
-    func hideSeparator(_ hide: Bool = true) {
-        separator.isHidden = hide
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {}
