@@ -86,6 +86,8 @@ extension API {
 extension API {
     var targetDecodeKey: String? {
         switch self {
+        case .nowPlaying, .topRated:
+            return "results"
         default:
             return nil
         }

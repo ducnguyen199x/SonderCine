@@ -31,6 +31,11 @@ final class MovieListingViewController: BaseViewController {
     override func willDeinit() {
         delegate?.viewControllerWillDeinit()
     }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        viewModel.fetchMovieList()
+    }
 }
 
 // MARK: Actions
