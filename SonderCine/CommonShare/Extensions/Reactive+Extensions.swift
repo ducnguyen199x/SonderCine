@@ -6,6 +6,20 @@
 
 import RxSwift
 import RxCocoa
+import UIKit
+
+extension Reactive where Base: UIActivityIndicatorView {
+    public var viewModelAnimating: Binder<ViewModelState> {
+        return Binder(self.base) { _, state in
+            switch state {
+            case .loading, .progress:
+                self.base.startAnimating()
+            case .completed, .error, .idle:
+                self.base.stopAnimating()
+            }
+        }
+    }
+}
 
 extension Reactive where Base: UICollectionView {
     func items<Sequence: Swift.Sequence, Cell: UICollectionViewCell, Source: ObservableType>

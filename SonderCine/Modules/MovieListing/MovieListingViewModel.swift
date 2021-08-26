@@ -29,11 +29,22 @@ final class MovieListingViewModel: BaseViewModel {
             }
         }()
         
+        state = .loading(nil)
         request.subscribe(onSuccess: { [weak self] movies in
             self?.movies = movies
-        }, onFailure: { [weak self] _ in
+            self?.state = .completed
+        }, onFailure: { [weak self] error in
             self?.movies = []
+            self?.state = .error(error)
         }).disposed(by: rx.disposeBag)
+    }
+    
+    func numberOfRows() -> Int {
+        movies.count
+    }
+    
+    func movie(at indexPath: IndexPath) -> Movie? {
+        movies[safe: indexPath.row]
     }
 }
 

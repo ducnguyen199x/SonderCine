@@ -107,9 +107,7 @@ class NetworkClient: NetworkProvider {
                     switch response.result {
                     case .success(let responseData):
                         do {
-                            let decoder = JSONDecoder()
-                            decoder.dateDecodingStrategy = .formatted(.serverFormat)
-                            let decodedObject = try decoder.decode(T.self, from: responseData)
+                            let decodedObject = try JSONDecoder().decode(T.self, from: responseData)
                             single(.success(decodedObject))
                         } catch let error {
                             debugPrint(method.rawValue + " : " + url.absoluteString)
@@ -222,9 +220,7 @@ class NetworkClient: NetworkProvider {
                     switch response.result {
                     case .success(let responseData):
                         do {
-                            let decoder = JSONDecoder()
-                            decoder.dateDecodingStrategy = .formatted(.serverFormat)
-                            let decodedObject = try decoder.decode(T.self, from: responseData)
+                            let decodedObject = try JSONDecoder().decode(T.self, from: responseData)
                             single(.success(decodedObject))
                         } catch let error {
                             debugPrint(error)

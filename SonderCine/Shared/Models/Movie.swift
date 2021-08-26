@@ -27,6 +27,7 @@ struct Movie: Codable {
     @StringValue var overview: String
     @DoubleValue var voteAverage: Double
     @IntValue var duration: Int
+    @DateValue<DateFormatterGeneral> var releaseDate: Date?
     
     enum CodingKeys: String, CodingKey {
         case id, genres, title, overview
@@ -34,6 +35,7 @@ struct Movie: Codable {
         case posterPath = "poster_path"
         case voteAverage = "vote_average"
         case duration = "runtime"
+        case releaseDate = "release_date"
     }
 }
 

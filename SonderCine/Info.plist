@@ -62,6 +62,8 @@
 	</array>
 	<key>UserDefined</key>
 	<dict>
+		<key>IMAGE_ENDPOINT</key>
+		<string>$(IMAGE_ENDPOINT)</string>
 		<key>API_ENDPOINT</key>
 		<string>$(API_ENDPOINT)</string>
 		<key>THE_MOVIE_DB_API_KEY</key>

@@ -39,6 +39,11 @@ extension Date {
         return "\(day) days ago"
     }
     
+    func year() -> String? {
+        guard let year = components([.year]).year else { return nil }
+        return "\(year)"
+    }
+    
     func daysDiffer(to date: Date) -> Int {
         return components(units: [.day], to: date).day ?? 0
     }

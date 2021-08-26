@@ -68,6 +68,16 @@ extension DateFormatter {
     }
     
     /**
+     format: yyyy-MM-dd
+     e.g: 2021-03-08
+     */
+    static var general: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter
+    }
+    
+    /**
      format: yyyy-MM-dd'T'HH:mm:ss.SSSSSS
      e.g: 2020-12-21T14:12:14.6205427
      */

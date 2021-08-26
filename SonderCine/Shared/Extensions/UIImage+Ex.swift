@@ -20,4 +20,8 @@ extension UIImage {
     static var topRated: UIImage? {
         return UIImage(systemName: "star.circle")
     }
+    
+    static var vote: UIImage? {
+        return UIImage(systemName: "star.fill")
+    }
 }
