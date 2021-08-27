@@ -25,6 +25,13 @@
 		4E8BF89C26D8D6CC0038EEBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89826D8D6CC0038EEBB /* SettingsViewController.swift */; };
 		4E8BF89D26D8D6CC0038EEBB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89926D8D6CC0038EEBB /* SettingsViewModel.swift */; };
 		4E8BF8A026D8DBBA0038EEBB /* SettingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89F26D8DBBA0038EEBB /* SettingPresentable.swift */; };
+		4E8BF8A726D8F06C0038EEBB /* DisplaySettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8A326D8F06C0038EEBB /* DisplaySettings.storyboard */; };
+		4E8BF8A826D8F06C0038EEBB /* DisplaySettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8A426D8F06C0038EEBB /* DisplaySettingsCoordinator.swift */; };
+		4E8BF8A926D8F06C0038EEBB /* DisplaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8A526D8F06C0038EEBB /* DisplaySettingsViewController.swift */; };
+		4E8BF8AA26D8F06C0038EEBB /* DisplaySettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8A626D8F06C0038EEBB /* DisplaySettingsViewModel.swift */; };
+		4E8BF8AD26D8F14D0038EEBB /* DisplaySettingsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8AC26D8F14D0038EEBB /* DisplaySettingsOptionView.swift */; };
+		4E8BF8AF26D8F47A0038EEBB /* UserDefaults+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8AE26D8F47A0038EEBB /* UserDefaults+Ex.swift */; };
+		4E8BF8B126D8F4AD0038EEBB /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8B026D8F4AD0038EEBB /* AppSettings.swift */; };
 		4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5287B26D60B68003515B3 /* AppDelegate.swift */; };
 		4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */; };
 		4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288526D60B68003515B3 /* BaseTableViewHeaderFooterView.swift */; };
@@ -144,6 +151,13 @@
 		4E8BF89826D8D6CC0038EEBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4E8BF89926D8D6CC0038EEBB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		4E8BF89F26D8DBBA0038EEBB /* SettingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresentable.swift; sourceTree = "<group>"; };
+		4E8BF8A326D8F06C0038EEBB /* DisplaySettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DisplaySettings.storyboard; sourceTree = "<group>"; };
+		4E8BF8A426D8F06C0038EEBB /* DisplaySettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsCoordinator.swift; sourceTree = "<group>"; };
+		4E8BF8A526D8F06C0038EEBB /* DisplaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsViewController.swift; sourceTree = "<group>"; };
+		4E8BF8A626D8F06C0038EEBB /* DisplaySettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsViewModel.swift; sourceTree = "<group>"; };
+		4E8BF8AC26D8F14D0038EEBB /* DisplaySettingsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsOptionView.swift; sourceTree = "<group>"; };
+		4E8BF8AE26D8F47A0038EEBB /* UserDefaults+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ex.swift"; sourceTree = "<group>"; };
+		4E8BF8B026D8F4AD0038EEBB /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		4EC5287826D60B68003515B3 /* SonderCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonderCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5287B26D60B68003515B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -290,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8BF88D26D89B630038EEBB /* CacheManager.swift */,
+				4E8BF8B026D8F4AD0038EEBB /* AppSettings.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -297,6 +312,7 @@
 		4E8BF89126D8D4030038EEBB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF8A126D8F04B0038EEBB /* Submodules */,
 				4E8BF89226D8D4110038EEBB /* SettingsSectionView.swift */,
 				4E8BF89626D8D6CC0038EEBB /* Settings.storyboard */,
 				4E8BF89726D8D6CC0038EEBB /* SettingsCoordinator.swift */,
@@ -312,6 +328,34 @@
 				4E8BF89F26D8DBBA0038EEBB /* SettingPresentable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4E8BF8A126D8F04B0038EEBB /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF8A226D8F0580038EEBB /* Display */,
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+		4E8BF8A226D8F0580038EEBB /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF8AB26D8F13B0038EEBB /* Views */,
+				4E8BF8A326D8F06C0038EEBB /* DisplaySettings.storyboard */,
+				4E8BF8A426D8F06C0038EEBB /* DisplaySettingsCoordinator.swift */,
+				4E8BF8A526D8F06C0038EEBB /* DisplaySettingsViewController.swift */,
+				4E8BF8A626D8F06C0038EEBB /* DisplaySettingsViewModel.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		4E8BF8AB26D8F13B0038EEBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF8AC26D8F14D0038EEBB /* DisplaySettingsOptionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4EC5286D26D60B68003515B3 = {
@@ -591,6 +635,7 @@
 				4EC5297126D7A721003515B3 /* ScrollView+PullToRefresh.swift */,
 				4EC5297326D7A7C8003515B3 /* Int+Ex.swift */,
 				4E8BF89426D8D4690038EEBB /* UIView+Ex.swift */,
+				4E8BF8AE26D8F47A0038EEBB /* UserDefaults+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -767,6 +812,7 @@
 				4EC528EC26D60B68003515B3 /* SplashScreen.storyboard in Resources */,
 				4E8BF89A26D8D6CC0038EEBB /* Settings.storyboard in Resources */,
 				4EC5290226D60B6B003515B3 /* LaunchScreen.storyboard in Resources */,
+				4E8BF8A726D8F06C0038EEBB /* DisplaySettings.storyboard in Resources */,
 				4EC528FF26D60B6B003515B3 /* Assets.xcassets in Resources */,
 				4E8BF88026D7CA700038EEBB /* AdsCell.xib in Resources */,
 				4EC5294E26D74199003515B3 /* MovieListing.storyboard in Resources */,
@@ -949,6 +995,7 @@
 				4E8BF88526D7D7580038EEBB /* PaginationControl.swift in Sources */,
 				4EC528BC26D60B68003515B3 /* Comparable+Extensions.swift in Sources */,
 				4EC528E026D60B68003515B3 /* UITableView+Extensions.swift in Sources */,
+				4E8BF8AF26D8F47A0038EEBB /* UserDefaults+Ex.swift in Sources */,
 				4EC528CA26D60B68003515B3 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				4EC5296126D76040003515B3 /* DoubleValue.swift in Sources */,
 				4EC528E826D60B68003515B3 /* UserDefaults+Extensions.swift in Sources */,
@@ -969,6 +1016,7 @@
 				4EC528A826D60B68003515B3 /* NetworkConfiguration.swift in Sources */,
 				4EC528CC26D60B68003515B3 /* NSObject+Extensions.swift in Sources */,
 				4EC5297026D7952E003515B3 /* Sequence+Ex.swift in Sources */,
+				4E8BF8A926D8F06C0038EEBB /* DisplaySettingsViewController.swift in Sources */,
 				4EC5292B26D61048003515B3 /* MainTabbarCoordinator.swift in Sources */,
 				4EC5297426D7A7C8003515B3 /* Int+Ex.swift in Sources */,
 				4EC528DA26D60B68003515B3 /* UIApplication+Extensions.swift in Sources */,
@@ -978,6 +1026,7 @@
 				4E8BF89D26D8D6CC0038EEBB /* SettingsViewModel.swift in Sources */,
 				4EC528B126D60B68003515B3 /* ActionSheet.swift in Sources */,
 				4E8BF87E26D7BC9A0038EEBB /* R.generated.swift in Sources */,
+				4E8BF8A826D8F06C0038EEBB /* DisplaySettingsCoordinator.swift in Sources */,
 				4EC528CE26D60B68003515B3 /* Optional+Extensions.swift in Sources */,
 				4E8BF88B26D898120038EEBB /* Constants.swift in Sources */,
 				4EC5296526D761B3003515B3 /* StringValue.swift in Sources */,
@@ -986,6 +1035,7 @@
 				4EC528C226D60B68003515B3 /* DateFormatter+Extensions.swift in Sources */,
 				4EC5288B26D60B68003515B3 /* AppCoordinator.swift in Sources */,
 				4E8BF89326D8D4110038EEBB /* SettingsSectionView.swift in Sources */,
+				4E8BF8AD26D8F14D0038EEBB /* DisplaySettingsOptionView.swift in Sources */,
 				4EC528F026D60B68003515B3 /* SplashScreenViewController.swift in Sources */,
 				4E8BF89B26D8D6CC0038EEBB /* SettingsCoordinator.swift in Sources */,
 				4EC528BA26D60B68003515B3 /* Codable+Extensions.swift in Sources */,
@@ -994,10 +1044,12 @@
 				4EC528B526D60B68003515B3 /* ImagePicker.swift in Sources */,
 				4EC5292D26D61048003515B3 /* MainTabbarViewModel.swift in Sources */,
 				4EC5289426D60B68003515B3 /* BaseViewController.swift in Sources */,
+				4E8BF8AA26D8F06C0038EEBB /* DisplaySettingsViewModel.swift in Sources */,
 				4EC528BE26D60B68003515B3 /* CoreAnimation+Extensions.swift in Sources */,
 				4EC528C826D60B68003515B3 /* IndexPath+Extensions.swift in Sources */,
 				4EC528B826D60B68003515B3 /* Bundle+Extensions.swift in Sources */,
 				4EC528AA26D60B68003515B3 /* NetworkProvider.swift in Sources */,
+				4E8BF8B126D8F4AD0038EEBB /* AppSettings.swift in Sources */,
 				4E8BF89526D8D4690038EEBB /* UIView+Ex.swift in Sources */,
 				4E8BF88926D7E6BD0038EEBB /* PaginationCell.swift in Sources */,
 				4EC5288F26D60B68003515B3 /* ViewControllerDelegate.swift in Sources */,

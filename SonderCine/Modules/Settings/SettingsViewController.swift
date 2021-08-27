@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol SettingsViewControllerDelegate: ViewControllerDelegate {}
+protocol SettingsViewControllerDelegate: ViewControllerDelegate {
+    func displaySettingsTapped()
+}
 
 final class SettingsViewController: BaseViewController {
     var viewModel: SettingsViewModel!
@@ -23,7 +25,7 @@ final class SettingsViewController: BaseViewController {
         // General section
         contentView.addArrangedSubview(SettingsSectionView(title: "General", items: [
             .link(label: "Language") { },
-            .link(label: "Display") { }
+            .link(label: "Display") { [weak self] in self?.delegate?.displaySettingsTapped() }
         ]))
         
         // About section

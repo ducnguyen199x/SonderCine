@@ -20,5 +20,18 @@ final class SettingsCoordinator: Coordinator {
     }
 }
 
+extension SettingsCoordinator {
+    func pushDisplaySettings() {
+        guard let navigation = rootViewController.navigationController else { return }
+        let coordinator = DisplaySettingsCoordinator()
+        add(coordinator)
+        coordinator.start(sceneType: .push(navigation))
+    }
+}
+
 // MARK: Delegates
-extension SettingsCoordinator: SettingsViewControllerDelegate {}
+extension SettingsCoordinator: SettingsViewControllerDelegate {
+    func displaySettingsTapped() {
+        pushDisplaySettings()
+    }
+}

@@ -40,4 +40,8 @@ extension UIImage {
     static var close: UIImage? {
         return UIImage(systemName: "xmark")
     }
+    
+    static var checkmark: UIImage? {
+        return UIImage(systemName: "checkmark")
+    }
 }

@@ -20,11 +20,11 @@ final class SettingsSectionView: UIView {
         self.init(frame: .zero)
         let label = UILabel()
         label.text = title
-        label.font = .boldSystemFont(ofSize: 23)
+        label.font = .boldSystemFont(ofSize: 25)
         addSubview(label)
-        label.edgesToSuperview(excluding: .bottom, insets: .horizontal(15) + .top(33))
+        label.edgesToSuperview(excluding: .bottom, insets: .horizontal(15) + .top(40))
         
-        let itemStack = UIStackView(arrangedSubviews: [UIView.separator])
+        let itemStack = UIStackView()
         itemStack.axis = .vertical
         itemStack.backgroundColor = R.color.backgroundColor()
         addSubview(itemStack)
@@ -50,11 +50,11 @@ private extension SettingsSectionView {
         convenience init(label: String, value: String?) {
             let titleLabel = UILabel()
             titleLabel.text = label
-            titleLabel.font = .boldSystemFont(ofSize: 15)
+            titleLabel.font = .boldSystemFont(ofSize: 18)
             
             let valueLabel = UILabel()
             valueLabel.text = value
-            valueLabel.font = .systemFont(ofSize: 15)
+            valueLabel.font = .systemFont(ofSize: 18)
             
             self.init(arrangedSubviews: [titleLabel, UIView(), valueLabel])
             height(59)

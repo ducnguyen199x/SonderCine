@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SettingsPresentableViewControllerDelegate {
+protocol SettingsPresentableViewControllerDelegate: AnyObject {
     func settingsTapped(_ sender: UIViewController)
 }
 
