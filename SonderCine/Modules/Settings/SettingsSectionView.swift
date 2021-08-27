@@ -69,7 +69,7 @@ private extension SettingsSectionView {
             self.handler = handler
             let titleLabel = UILabel()
             titleLabel.text = label
-            titleLabel.font = .boldSystemFont(ofSize: 15)
+            titleLabel.font = .boldSystemFont(ofSize: 18)
             
             let arrow = UIImage.forward?.withTintColor(.systemOrange)
             

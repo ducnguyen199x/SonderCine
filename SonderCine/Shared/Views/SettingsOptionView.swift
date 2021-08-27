@@ -60,6 +60,7 @@ final class SettingOptionView: UIView {
         override var isSelected: Bool {
             didSet {
                 title.font = isSelected ? .boldSystemFont(ofSize: 18) : .systemFont(ofSize: 18)
+                title.textColor = isSelected ? .systemOrange : R.color.textColor()
                 icon.isHidden = !isSelected
             }
         }
