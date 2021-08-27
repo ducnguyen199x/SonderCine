@@ -24,7 +24,7 @@ class Alert: UIAlertController {
         
     class func showOneButtonAlert(_ title: String? = nil,
                                   message: String?,
-                                  cancelButtonTitle: String? = nil,
+                                  cancelButtonTitle: String = "OK",
                                   cancelAction: (() -> Void)? = nil,
                                   in viewController: UIViewController? = nil) {
         let alertController = Alert(title: title, message: message, preferredStyle: .alert)

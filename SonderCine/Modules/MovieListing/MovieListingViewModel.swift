@@ -53,6 +53,7 @@ final class MovieListingViewModel: BaseViewModel {
             self?.makeItems(wrapper)
             self?.state = .completed
         }, onFailure: { [weak self] error in
+            self?.items = []
             self?.state = .error(error)
         }).disposed(by: rx.disposeBag)
     }

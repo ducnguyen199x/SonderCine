@@ -15,6 +15,7 @@ final class MovieListingViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var noItemsLabel: UILabel!
     
     override func setupNavigation() {
         navigationItem.title = "WizeMovie"
@@ -44,9 +45,11 @@ final class MovieListingViewController: BaseViewController {
                 self?.reloadData()
             }),
             viewModel.$state.subscribe(onNext: { [weak self] state in
+                guard let self = self else { return }
+                self.noItemsLabel.isHidden = state.isLoading || !self.viewModel.items.isEmpty
                 switch state {
                 case .error(_):
-                    self?.showDefaultAlert()
+                    self.showDefaultAlert()
                 default:
                     break
                 }
