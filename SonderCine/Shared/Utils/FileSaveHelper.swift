@@ -151,7 +151,6 @@ class FileSaveHelper {
             debugPrint(error)
             throw FileErrors.fileNotSaved
         }
-        
     }
     
     /**

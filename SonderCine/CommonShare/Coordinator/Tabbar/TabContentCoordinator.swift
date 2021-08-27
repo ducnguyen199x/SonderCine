@@ -32,4 +32,3 @@ class TabContentCoordinator: Coordinator {
     var tabType: TabType = .nowPlaying
     weak var delegate: TabContentCoordinatorDelegate?
 }
-

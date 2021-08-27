@@ -46,7 +46,6 @@ class BaseTabbarController: UITabBarController {
         bindViewModel()
     }
     
-    
     func setupView() {}
         
     func bindViewModel() { }
