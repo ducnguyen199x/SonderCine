@@ -72,7 +72,6 @@ final class MovieListingViewController: BaseViewController {
     
     private func reloadData() {
         tableView.reloadData()
-        tableView.endRefreshing()
         loadingIndicator.stopAnimating()
     }
 }

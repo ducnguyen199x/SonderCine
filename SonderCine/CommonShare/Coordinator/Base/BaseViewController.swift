@@ -94,7 +94,7 @@ class BaseViewController: UIViewController {
     }
     
     func showDefaultAlert() {
-        Alert.showOneButtonAlert(message: "Something went wrong!\nPlease try again.")
+        Alert.showOneButtonAlert(message: "Something went wrong!\nPlease try again.", in: self)
     }
     
     func didChangeOrientation() {}

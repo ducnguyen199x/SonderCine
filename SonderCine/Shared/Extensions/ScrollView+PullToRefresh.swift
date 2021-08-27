@@ -32,6 +32,8 @@ final class RefreshControl: UIRefreshControl {
     
     @objc private func refresh() {
         action()
-        endRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.endRefreshing()
+        }
     }
 }
