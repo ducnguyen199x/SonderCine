@@ -41,7 +41,7 @@ final class PaginationControl: UIStackView {
                 addArrangedSubview(makeButton(page: i))
             }
             
-        case 0...2:
+        case 1...3:
             for i in 1...5 {
                 addArrangedSubview(makeButton(page: i))
             }
