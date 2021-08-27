@@ -19,9 +19,18 @@ final class SettingsViewController: BaseViewController {
         super.setupView()
         // Refresh content view if needed
         contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        // General section
+        contentView.addArrangedSubview(SettingsSectionView(title: "General", items: [
+            .link(label: "Language") { },
+            .link(label: "Display") { }
+        ]))
+        
         // About section
         contentView.addArrangedSubview(SettingsSectionView(title: "About", items: [
-            .plain(label: "App Version", value: Bundle.main.currentAppVersion)
+            .plain(label: "App version", value: Bundle.main.currentAppVersion),
+            .link(label: "Privacy policy") { },
+            .link(label: "Term of use") { }
         ]))
     }
     
