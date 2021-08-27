@@ -29,13 +29,17 @@
 		4E8BF8A826D8F06C0038EEBB /* DisplaySettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8A426D8F06C0038EEBB /* DisplaySettingsCoordinator.swift */; };
 		4E8BF8A926D8F06C0038EEBB /* DisplaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8A526D8F06C0038EEBB /* DisplaySettingsViewController.swift */; };
 		4E8BF8AA26D8F06C0038EEBB /* DisplaySettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8A626D8F06C0038EEBB /* DisplaySettingsViewModel.swift */; };
-		4E8BF8AD26D8F14D0038EEBB /* DisplaySettingsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8AC26D8F14D0038EEBB /* DisplaySettingsOptionView.swift */; };
+		4E8BF8AD26D8F14D0038EEBB /* SettingsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8AC26D8F14D0038EEBB /* SettingsOptionView.swift */; };
 		4E8BF8AF26D8F47A0038EEBB /* UserDefaults+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8AE26D8F47A0038EEBB /* UserDefaults+Ex.swift */; };
 		4E8BF8B126D8F4AD0038EEBB /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8B026D8F4AD0038EEBB /* AppSettings.swift */; };
 		4E8BF8B426D922020038EEBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8B626D922020038EEBB /* Localizable.strings */; };
 		4E8BF8BA26D926630038EEBB /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8B926D926630038EEBB /* Localization.swift */; };
 		4E8BF8BC26D926D80038EEBB /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8BB26D926D80038EEBB /* LanguageManager.swift */; };
 		4E8BF8BE26D927CF0038EEBB /* Notification+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8BD26D927CF0038EEBB /* Notification+Ex.swift */; };
+		4E8BF8C426D934690038EEBB /* LanguageSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8C026D934690038EEBB /* LanguageSettings.storyboard */; };
+		4E8BF8C526D934690038EEBB /* LanguageSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8C126D934690038EEBB /* LanguageSettingsCoordinator.swift */; };
+		4E8BF8C626D934690038EEBB /* LanguageSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8C226D934690038EEBB /* LanguageSettingsViewController.swift */; };
+		4E8BF8C726D934690038EEBB /* LanguageSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8C326D934690038EEBB /* LanguageSettingsViewModel.swift */; };
 		4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5287B26D60B68003515B3 /* AppDelegate.swift */; };
 		4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */; };
 		4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288526D60B68003515B3 /* BaseTableViewHeaderFooterView.swift */; };
@@ -159,7 +163,7 @@
 		4E8BF8A426D8F06C0038EEBB /* DisplaySettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsCoordinator.swift; sourceTree = "<group>"; };
 		4E8BF8A526D8F06C0038EEBB /* DisplaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsViewController.swift; sourceTree = "<group>"; };
 		4E8BF8A626D8F06C0038EEBB /* DisplaySettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsViewModel.swift; sourceTree = "<group>"; };
-		4E8BF8AC26D8F14D0038EEBB /* DisplaySettingsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySettingsOptionView.swift; sourceTree = "<group>"; };
+		4E8BF8AC26D8F14D0038EEBB /* SettingsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionView.swift; sourceTree = "<group>"; };
 		4E8BF8AE26D8F47A0038EEBB /* UserDefaults+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ex.swift"; sourceTree = "<group>"; };
 		4E8BF8B026D8F4AD0038EEBB /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		4E8BF8B526D922020038EEBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -168,6 +172,10 @@
 		4E8BF8B926D926630038EEBB /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		4E8BF8BB26D926D80038EEBB /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		4E8BF8BD26D927CF0038EEBB /* Notification+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Ex.swift"; sourceTree = "<group>"; };
+		4E8BF8C026D934690038EEBB /* LanguageSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageSettings.storyboard; sourceTree = "<group>"; };
+		4E8BF8C126D934690038EEBB /* LanguageSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingsCoordinator.swift; sourceTree = "<group>"; };
+		4E8BF8C226D934690038EEBB /* LanguageSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingsViewController.swift; sourceTree = "<group>"; };
+		4E8BF8C326D934690038EEBB /* LanguageSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingsViewModel.swift; sourceTree = "<group>"; };
 		4EC5287826D60B68003515B3 /* SonderCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonderCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5287B26D60B68003515B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -304,6 +312,7 @@
 		4E8BF88326D7D7360038EEBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF8AC26D8F14D0038EEBB /* SettingsOptionView.swift */,
 				4E8BF88426D7D7580038EEBB /* PaginationControl.swift */,
 				4E8BF88826D7E6BD0038EEBB /* PaginationCell.swift */,
 			);
@@ -344,6 +353,7 @@
 		4E8BF8A126D8F04B0038EEBB /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF8BF26D934420038EEBB /* Languages */,
 				4E8BF8A226D8F0580038EEBB /* Display */,
 			);
 			path = Submodules;
@@ -352,7 +362,6 @@
 		4E8BF8A226D8F0580038EEBB /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				4E8BF8AB26D8F13B0038EEBB /* Views */,
 				4E8BF8A326D8F06C0038EEBB /* DisplaySettings.storyboard */,
 				4E8BF8A426D8F06C0038EEBB /* DisplaySettingsCoordinator.swift */,
 				4E8BF8A526D8F06C0038EEBB /* DisplaySettingsViewController.swift */,
@@ -361,12 +370,15 @@
 			path = Display;
 			sourceTree = "<group>";
 		};
-		4E8BF8AB26D8F13B0038EEBB /* Views */ = {
+		4E8BF8BF26D934420038EEBB /* Languages */ = {
 			isa = PBXGroup;
 			children = (
-				4E8BF8AC26D8F14D0038EEBB /* DisplaySettingsOptionView.swift */,
+				4E8BF8C026D934690038EEBB /* LanguageSettings.storyboard */,
+				4E8BF8C126D934690038EEBB /* LanguageSettingsCoordinator.swift */,
+				4E8BF8C226D934690038EEBB /* LanguageSettingsViewController.swift */,
+				4E8BF8C326D934690038EEBB /* LanguageSettingsViewModel.swift */,
 			);
-			path = Views;
+			path = Languages;
 			sourceTree = "<group>";
 		};
 		4EC5286D26D60B68003515B3 = {
@@ -832,6 +844,7 @@
 				4EC528FF26D60B6B003515B3 /* Assets.xcassets in Resources */,
 				4E8BF88026D7CA700038EEBB /* AdsCell.xib in Resources */,
 				4EC5294E26D74199003515B3 /* MovieListing.storyboard in Resources */,
+				4E8BF8C426D934690038EEBB /* LanguageSettings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1016,7 @@
 				4EC528A026D60B68003515B3 /* NetworkError.swift in Sources */,
 				4EC5289226D60B68003515B3 /* BaseNavigationController.swift in Sources */,
 				4EC5289626D60B68003515B3 /* BaseViewModel.swift in Sources */,
+				4E8BF8C626D934690038EEBB /* LanguageSettingsViewController.swift in Sources */,
 				4E8BF8A026D8DBBA0038EEBB /* SettingPresentable.swift in Sources */,
 				4E8BF88E26D89B630038EEBB /* CacheManager.swift in Sources */,
 				4E8BF89C26D8D6CC0038EEBB /* SettingsViewController.swift in Sources */,
@@ -1023,6 +1037,7 @@
 				4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */,
 				4EC5296326D76192003515B3 /* IntValue.swift in Sources */,
 				4EC528D426D60B68003515B3 /* Sequence+Extensions.swift in Sources */,
+				4E8BF8C726D934690038EEBB /* LanguageSettingsViewModel.swift in Sources */,
 				4EC528D226D60B68003515B3 /* ReusableView+Extensions.swift in Sources */,
 				4EC528C026D60B68003515B3 /* Date+Extensions.swift in Sources */,
 				4EC5292C26D61048003515B3 /* MainTabbarViewController.swift in Sources */,
@@ -1053,7 +1068,7 @@
 				4EC5288B26D60B68003515B3 /* AppCoordinator.swift in Sources */,
 				4E8BF89326D8D4110038EEBB /* SettingsSectionView.swift in Sources */,
 				4E8BF8BC26D926D80038EEBB /* LanguageManager.swift in Sources */,
-				4E8BF8AD26D8F14D0038EEBB /* DisplaySettingsOptionView.swift in Sources */,
+				4E8BF8AD26D8F14D0038EEBB /* SettingsOptionView.swift in Sources */,
 				4EC528F026D60B68003515B3 /* SplashScreenViewController.swift in Sources */,
 				4E8BF89B26D8D6CC0038EEBB /* SettingsCoordinator.swift in Sources */,
 				4EC528BA26D60B68003515B3 /* Codable+Extensions.swift in Sources */,
@@ -1086,6 +1101,7 @@
 				4E8BF88726D7E4E70038EEBB /* Paging.swift in Sources */,
 				4EC5295126D74199003515B3 /* MovieListingViewModel.swift in Sources */,
 				4EC528A626D60B68003515B3 /* API.swift in Sources */,
+				4E8BF8C526D934690038EEBB /* LanguageSettingsCoordinator.swift in Sources */,
 				4EC528EE26D60B68003515B3 /* SplashScreenCoordinator.swift in Sources */,
 				4EC528E626D60B68003515B3 /* UIViewController+Extensions.swift in Sources */,
 				4EC5289826D60B68003515B3 /* BaseTabbarController.swift in Sources */,

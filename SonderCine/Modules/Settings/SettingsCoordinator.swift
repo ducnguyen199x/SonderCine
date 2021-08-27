@@ -27,11 +27,22 @@ extension SettingsCoordinator {
         add(coordinator)
         coordinator.start(sceneType: .push(navigation))
     }
+    
+    func pushLanguageSettings() {
+        guard let navigation = rootViewController.navigationController else { return }
+        let coordinator = LanguageSettingsCoordinator()
+        add(coordinator)
+        coordinator.start(sceneType: .push(navigation))
+    }
 }
 
 // MARK: Delegates
 extension SettingsCoordinator: SettingsViewControllerDelegate {
     func displaySettingsTapped() {
         pushDisplaySettings()
+    }
+    
+    func languageSettingsTapped() {
+        pushLanguageSettings()
     }
 }

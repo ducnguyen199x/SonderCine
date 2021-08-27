@@ -53,6 +53,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func setupUI() {
         window?.tintColor = .systemOrange
         AppSettings.shared.loadSavedAppTheme()
-        LanguageManager.shared.setLanguage(.vietnamese)
     }
 }

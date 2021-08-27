@@ -24,6 +24,8 @@ struct LocalizedKey {
         case title = "settings.title"
         case general = "settings.general"
         case languages = "settings.languages"
+        case english = "settings.languages.english"
+        case vietnamese = "settings.languages.vietnamese"
         case display = "settings.display"
         case about = "settings.about"
         case version = "settings.version"

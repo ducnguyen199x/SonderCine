@@ -9,14 +9,14 @@ import UIKit
 import TinyConstraints
 
 /// A view show display settings options for a section
-final class DisplaySettingOptionView: UIView {
+final class SettingOptionView: UIView {
     private var optionViews = [OptionView]()
     
     /// Init
     /// - Parameters:
     ///   - title: the section's title
     ///   - options: the section's options
-    convenience init(title: String, options: [String], select: @escaping (String) -> Void) {
+    convenience init(title: String, options: [String], select: @escaping (Int) -> Void) {
         self.init(frame: .zero)
         let titleLabel = UILabel()
         titleLabel.text = title
@@ -26,10 +26,10 @@ final class DisplaySettingOptionView: UIView {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.backgroundColor = R.color.backgroundColor()
-        for option in options {
+        for (index, option) in options.enumerated() {
             let optionView = OptionView(title: option) { [unowned self] optionView in
                 self.optionViews.forEach { $0.isSelected = $0 === optionView }
-                select(option)
+                select(index)
             }
             optionViews.append(optionView)
             stack.addArrangedSubview(optionView)
@@ -47,7 +47,7 @@ final class DisplaySettingOptionView: UIView {
         optionViews[index].isSelected = true
     }
     
-    /// `OptionView`: DisplaySettingOptionView's subtype
+    /// `OptionView`: SettingOptionView's subtype
     private final class OptionView: UIControl {
         /// Option title label
         private let title = UILabel()

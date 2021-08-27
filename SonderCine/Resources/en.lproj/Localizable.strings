@@ -8,6 +8,8 @@
 "settings.title" = "Settings";
 "settings.general" = "General";
 "settings.languages" = "Languages";
+"settings.languages.english" = "English";
+"settings.languages.vietnamese" = "Vietnamese";
 "settings.display" = "Display";
 "settings.about" = "About";
 "settings.version" = "App version";

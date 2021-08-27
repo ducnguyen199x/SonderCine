@@ -43,8 +43,8 @@ final class DisplaySettingsViewModel: BaseViewModel {
         return 0
     }
     
-    func setTheme(_ rawValue: String) {
-        guard let newTheme = Theme(rawValue: rawValue) else { return }
+    func setTheme(_ index: Int) {
+        guard let newTheme = themeOptions[safe: index] else { return }
         AppSettings.shared.setTheme(newTheme)
     }
 }

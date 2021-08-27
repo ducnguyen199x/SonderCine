@@ -8,6 +8,8 @@
 "settings.title" = "Cài đặt";
 "settings.general" = "Cài đặt chung";
 "settings.languages" = "Ngôn ngữ";
+"settings.languages.english" = "Tiếng Anh";
+"settings.languages.vietnamese" = "Tiếng Việt";
 "settings.display" = "Hiển thị";
 "settings.about" = "Giới thiệu";
 "settings.version" = "Phiên bản";

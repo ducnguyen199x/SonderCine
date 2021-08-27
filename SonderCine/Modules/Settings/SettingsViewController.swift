@@ -9,6 +9,7 @@ import UIKit
 
 protocol SettingsViewControllerDelegate: ViewControllerDelegate {
     func displaySettingsTapped()
+    func languageSettingsTapped()
 }
 
 final class SettingsViewController: BaseViewController {
@@ -24,7 +25,7 @@ final class SettingsViewController: BaseViewController {
         
         // General section
         contentView.addArrangedSubview(SettingsSectionView(title: LocalizedKey.Settings.general.localized(), items: [
-            .link(label: LocalizedKey.Settings.languages.localized()) { },
+            .link(label: LocalizedKey.Settings.languages.localized()) { [weak self] in self?.delegate?.languageSettingsTapped() },
             .link(label: LocalizedKey.Settings.display.localized()) { [weak self] in self?.delegate?.displaySettingsTapped() }
         ]))
         

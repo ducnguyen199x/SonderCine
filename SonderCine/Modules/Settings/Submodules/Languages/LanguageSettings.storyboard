@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rrn-Ba-fsN">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Language Settings View Controller-->
+        <scene sceneID="gch-sP-JiX">
+            <objects>
+                <viewController storyboardIdentifier="LanguageSettingsViewController" id="rrn-Ba-fsN" customClass="LanguageSettingsViewController" customModule="SonderCine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BLm-vL-dlY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFB-Cm-XpN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-8g-PZE">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vdE-8g-PZE" secondAttribute="bottom" constant="50" id="Gcy-DI-HWu"/>
+                                    <constraint firstItem="vdE-8g-PZE" firstAttribute="centerX" secondItem="LFB-Cm-XpN" secondAttribute="centerX" id="T0S-vi-Xzc"/>
+                                    <constraint firstItem="vdE-8g-PZE" firstAttribute="leading" secondItem="LFB-Cm-XpN" secondAttribute="leading" id="Y9s-Ad-oJ5"/>
+                                    <constraint firstItem="vdE-8g-PZE" firstAttribute="top" secondItem="LFB-Cm-XpN" secondAttribute="top" id="hp6-g1-ZaO"/>
+                                    <constraint firstAttribute="trailing" secondItem="vdE-8g-PZE" secondAttribute="trailing" id="hpa-mU-bCo"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jbj-tV-cyJ"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LFB-Cm-XpN" firstAttribute="leading" secondItem="BLm-vL-dlY" secondAttribute="leading" id="BlW-na-2cw"/>
+                            <constraint firstItem="jbj-tV-cyJ" firstAttribute="trailing" secondItem="LFB-Cm-XpN" secondAttribute="trailing" id="Pi6-FF-7cP"/>
+                            <constraint firstItem="jbj-tV-cyJ" firstAttribute="bottom" secondItem="LFB-Cm-XpN" secondAttribute="bottom" id="QU6-I0-6On"/>
+                            <constraint firstItem="LFB-Cm-XpN" firstAttribute="top" secondItem="BLm-vL-dlY" secondAttribute="top" id="vgF-iH-pam"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="vdE-8g-PZE" id="WYp-ZA-sDG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMX-fp-CrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
