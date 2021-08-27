@@ -7,7 +7,8 @@
 
 import UIKit
 
-protocol MovieListingViewControllerDelegate: ViewControllerDelegate {}
+protocol MovieListingViewControllerDelegate: ViewControllerDelegate, SettingsPresentableViewControllerDelegate {
+}
 
 final class MovieListingViewController: BaseViewController {
     var viewModel: MovieListingViewModel!
@@ -79,6 +80,7 @@ final class MovieListingViewController: BaseViewController {
 // MARK: Actions
 extension MovieListingViewController {
     @objc func settingsTapped() {
+        delegate?.settingsTapped(self)
     }
 }
 

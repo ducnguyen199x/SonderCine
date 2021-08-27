@@ -18,6 +18,13 @@
 		4E8BF88B26D898120038EEBB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88A26D898120038EEBB /* Constants.swift */; };
 		4E8BF88E26D89B630038EEBB /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88D26D89B630038EEBB /* CacheManager.swift */; };
 		4E8BF89026D89BB80038EEBB /* FileSaveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88F26D89BB80038EEBB /* FileSaveHelper.swift */; };
+		4E8BF89326D8D4110038EEBB /* SettingsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89226D8D4110038EEBB /* SettingsSectionView.swift */; };
+		4E8BF89526D8D4690038EEBB /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89426D8D4690038EEBB /* UIView+Ex.swift */; };
+		4E8BF89A26D8D6CC0038EEBB /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF89626D8D6CC0038EEBB /* Settings.storyboard */; };
+		4E8BF89B26D8D6CC0038EEBB /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89726D8D6CC0038EEBB /* SettingsCoordinator.swift */; };
+		4E8BF89C26D8D6CC0038EEBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89826D8D6CC0038EEBB /* SettingsViewController.swift */; };
+		4E8BF89D26D8D6CC0038EEBB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89926D8D6CC0038EEBB /* SettingsViewModel.swift */; };
+		4E8BF8A026D8DBBA0038EEBB /* SettingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF89F26D8DBBA0038EEBB /* SettingPresentable.swift */; };
 		4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5287B26D60B68003515B3 /* AppDelegate.swift */; };
 		4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */; };
 		4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288526D60B68003515B3 /* BaseTableViewHeaderFooterView.swift */; };
@@ -130,6 +137,13 @@
 		4E8BF88A26D898120038EEBB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E8BF88D26D89B630038EEBB /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		4E8BF88F26D89BB80038EEBB /* FileSaveHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaveHelper.swift; sourceTree = "<group>"; };
+		4E8BF89226D8D4110038EEBB /* SettingsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionView.swift; sourceTree = "<group>"; };
+		4E8BF89426D8D4690038EEBB /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		4E8BF89626D8D6CC0038EEBB /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		4E8BF89726D8D6CC0038EEBB /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		4E8BF89826D8D6CC0038EEBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4E8BF89926D8D6CC0038EEBB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4E8BF89F26D8DBBA0038EEBB /* SettingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresentable.swift; sourceTree = "<group>"; };
 		4EC5287826D60B68003515B3 /* SonderCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonderCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5287B26D60B68003515B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -278,6 +292,26 @@
 				4E8BF88D26D89B630038EEBB /* CacheManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		4E8BF89126D8D4030038EEBB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF89226D8D4110038EEBB /* SettingsSectionView.swift */,
+				4E8BF89626D8D6CC0038EEBB /* Settings.storyboard */,
+				4E8BF89726D8D6CC0038EEBB /* SettingsCoordinator.swift */,
+				4E8BF89826D8D6CC0038EEBB /* SettingsViewController.swift */,
+				4E8BF89926D8D6CC0038EEBB /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4E8BF89E26D8DADB0038EEBB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF89F26D8DBBA0038EEBB /* SettingPresentable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4EC5286D26D60B68003515B3 = {
@@ -447,6 +481,7 @@
 		4EC528E926D60B68003515B3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF89126D8D4030038EEBB /* Settings */,
 				4EC5294926D74169003515B3 /* MovieListing */,
 				4EC5292526D6102C003515B3 /* MainTabbar */,
 				4EC528EA26D60B68003515B3 /* SplashScreen */,
@@ -505,6 +540,7 @@
 		4EC5294226D67A49003515B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF89E26D8DADB0038EEBB /* Protocols */,
 				4E8BF88C26D89B550038EEBB /* Managers */,
 				4E8BF88326D7D7360038EEBB /* Views */,
 				4EC5295926D753E0003515B3 /* Networks */,
@@ -554,6 +590,7 @@
 				4EC5296F26D7952E003515B3 /* Sequence+Ex.swift */,
 				4EC5297126D7A721003515B3 /* ScrollView+PullToRefresh.swift */,
 				4EC5297326D7A7C8003515B3 /* Int+Ex.swift */,
+				4E8BF89426D8D4690038EEBB /* UIView+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -728,6 +765,7 @@
 				4EC5296E26D790F5003515B3 /* MovieCell.xib in Resources */,
 				4EC5292A26D61048003515B3 /* MainTabbar.storyboard in Resources */,
 				4EC528EC26D60B68003515B3 /* SplashScreen.storyboard in Resources */,
+				4E8BF89A26D8D6CC0038EEBB /* Settings.storyboard in Resources */,
 				4EC5290226D60B6B003515B3 /* LaunchScreen.storyboard in Resources */,
 				4EC528FF26D60B6B003515B3 /* Assets.xcassets in Resources */,
 				4E8BF88026D7CA700038EEBB /* AdsCell.xib in Resources */,
@@ -903,7 +941,9 @@
 				4EC528A026D60B68003515B3 /* NetworkError.swift in Sources */,
 				4EC5289226D60B68003515B3 /* BaseNavigationController.swift in Sources */,
 				4EC5289626D60B68003515B3 /* BaseViewModel.swift in Sources */,
+				4E8BF8A026D8DBBA0038EEBB /* SettingPresentable.swift in Sources */,
 				4E8BF88E26D89B630038EEBB /* CacheManager.swift in Sources */,
+				4E8BF89C26D8D6CC0038EEBB /* SettingsViewController.swift in Sources */,
 				4EC5288D26D60B68003515B3 /* CoordinatorRelatedExtensions.swift in Sources */,
 				4EC5294826D68092003515B3 /* MovieImage.swift in Sources */,
 				4E8BF88526D7D7580038EEBB /* PaginationControl.swift in Sources */,
@@ -935,6 +975,7 @@
 				4EC528D026D60B68003515B3 /* Reactive+Extensions.swift in Sources */,
 				4EC5295626D74CC6003515B3 /* UIImage+Ex.swift in Sources */,
 				4EC5289E26D60B68003515B3 /* LocalizedError.swift in Sources */,
+				4E8BF89D26D8D6CC0038EEBB /* SettingsViewModel.swift in Sources */,
 				4EC528B126D60B68003515B3 /* ActionSheet.swift in Sources */,
 				4E8BF87E26D7BC9A0038EEBB /* R.generated.swift in Sources */,
 				4EC528CE26D60B68003515B3 /* Optional+Extensions.swift in Sources */,
@@ -944,7 +985,9 @@
 				4E8BF88226D7CA7B0038EEBB /* AdsCell.swift in Sources */,
 				4EC528C226D60B68003515B3 /* DateFormatter+Extensions.swift in Sources */,
 				4EC5288B26D60B68003515B3 /* AppCoordinator.swift in Sources */,
+				4E8BF89326D8D4110038EEBB /* SettingsSectionView.swift in Sources */,
 				4EC528F026D60B68003515B3 /* SplashScreenViewController.swift in Sources */,
+				4E8BF89B26D8D6CC0038EEBB /* SettingsCoordinator.swift in Sources */,
 				4EC528BA26D60B68003515B3 /* Codable+Extensions.swift in Sources */,
 				4EC528C426D60B68003515B3 /* Dictionary+Extensions.swift in Sources */,
 				4EC5295026D74199003515B3 /* MovieListingViewController.swift in Sources */,
@@ -955,6 +998,7 @@
 				4EC528C826D60B68003515B3 /* IndexPath+Extensions.swift in Sources */,
 				4EC528B826D60B68003515B3 /* Bundle+Extensions.swift in Sources */,
 				4EC528AA26D60B68003515B3 /* NetworkProvider.swift in Sources */,
+				4E8BF89526D8D4690038EEBB /* UIView+Ex.swift in Sources */,
 				4E8BF88926D7E6BD0038EEBB /* PaginationCell.swift in Sources */,
 				4EC5288F26D60B68003515B3 /* ViewControllerDelegate.swift in Sources */,
 				4EC5297226D7A722003515B3 /* ScrollView+PullToRefresh.swift in Sources */,

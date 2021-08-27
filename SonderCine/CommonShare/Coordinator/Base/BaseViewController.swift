@@ -96,6 +96,7 @@ class BaseViewController: UIViewController {
     }
 }
 
+// MARK: Navigations
 extension BaseViewController {
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         if let presentedViewController = presentedViewController {

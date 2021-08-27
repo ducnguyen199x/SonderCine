@@ -36,4 +36,8 @@ extension UIImage {
     static var ellipsis: UIImage? {
         return UIImage(systemName: "ellipsis")
     }
+    
+    static var close: UIImage? {
+        return UIImage(systemName: "xmark")
+    }
 }

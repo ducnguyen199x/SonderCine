@@ -29,4 +29,8 @@ final class MovieListingCoordinator: TabContentCoordinator {
 }
 
 // MARK: Delegates
-extension MovieListingCoordinator: MovieListingViewControllerDelegate {}
+extension MovieListingCoordinator: MovieListingViewControllerDelegate, SettingsPresentableCoordinator {
+    func settingsTapped(_ sender: UIViewController) {
+        presentSettings()
+    }
+}
