@@ -36,15 +36,15 @@ final class MovieListingViewModel: BaseViewModel {
         self.category = category
     }
     
-    func fetchMovieList(page: Int = 1) {
+    func fetchMovieList(page: Int = 1, shouldUseCache: Bool = true) {
         currentPage = page
         items = []
         let request: Single<MovieListWrapper> = {
             switch category {
             case .nowPlaying:
-                return networkProvider.fetchNowPlaying(page: page)
+                return networkProvider.fetchNowPlaying(page: page, shouldUseCache: shouldUseCache)
             case .topRated:
-                return networkProvider.fetchTopRated(page: page)
+                return networkProvider.fetchTopRated(page: page, shouldUseCache: shouldUseCache)
             }
         }()
         
@@ -55,6 +55,10 @@ final class MovieListingViewModel: BaseViewModel {
         }, onFailure: { [weak self] error in
             self?.state = .error(error)
         }).disposed(by: rx.disposeBag)
+    }
+    
+    func refreshCurrentPage() {
+        fetchMovieList(page: currentPage, shouldUseCache: false)
     }
     
     private func makeItems(_ wrapper: MovieListWrapper) {

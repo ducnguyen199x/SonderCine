@@ -15,6 +15,9 @@
 		4E8BF88526D7D7580038EEBB /* PaginationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88426D7D7580038EEBB /* PaginationControl.swift */; };
 		4E8BF88726D7E4E70038EEBB /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88626D7E4E70038EEBB /* Paging.swift */; };
 		4E8BF88926D7E6BD0038EEBB /* PaginationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88826D7E6BD0038EEBB /* PaginationCell.swift */; };
+		4E8BF88B26D898120038EEBB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88A26D898120038EEBB /* Constants.swift */; };
+		4E8BF88E26D89B630038EEBB /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88D26D89B630038EEBB /* CacheManager.swift */; };
+		4E8BF89026D89BB80038EEBB /* FileSaveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF88F26D89BB80038EEBB /* FileSaveHelper.swift */; };
 		4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5287B26D60B68003515B3 /* AppDelegate.swift */; };
 		4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */; };
 		4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288526D60B68003515B3 /* BaseTableViewHeaderFooterView.swift */; };
@@ -124,6 +127,9 @@
 		4E8BF88426D7D7580038EEBB /* PaginationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationControl.swift; sourceTree = "<group>"; };
 		4E8BF88626D7E4E70038EEBB /* Paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
 		4E8BF88826D7E6BD0038EEBB /* PaginationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationCell.swift; sourceTree = "<group>"; };
+		4E8BF88A26D898120038EEBB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E8BF88D26D89B630038EEBB /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		4E8BF88F26D89BB80038EEBB /* FileSaveHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaveHelper.swift; sourceTree = "<group>"; };
 		4EC5287826D60B68003515B3 /* SonderCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonderCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5287B26D60B68003515B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -264,6 +270,14 @@
 				4E8BF88826D7E6BD0038EEBB /* PaginationCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4E8BF88C26D89B550038EEBB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF88D26D89B630038EEBB /* CacheManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		4EC5286D26D60B68003515B3 = {
@@ -491,6 +505,7 @@
 		4EC5294226D67A49003515B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF88C26D89B550038EEBB /* Managers */,
 				4E8BF88326D7D7360038EEBB /* Views */,
 				4EC5295926D753E0003515B3 /* Networks */,
 				4EC5295426D74CB4003515B3 /* Extensions */,
@@ -504,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC5294426D67A67003515B3 /* AppConfiguration.swift */,
+				4E8BF88F26D89BB80038EEBB /* FileSaveHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -584,6 +600,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8BF87D26D7BC9A0038EEBB /* R.generated.swift */,
+				4E8BF88A26D898120038EEBB /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -886,6 +903,7 @@
 				4EC528A026D60B68003515B3 /* NetworkError.swift in Sources */,
 				4EC5289226D60B68003515B3 /* BaseNavigationController.swift in Sources */,
 				4EC5289626D60B68003515B3 /* BaseViewModel.swift in Sources */,
+				4E8BF88E26D89B630038EEBB /* CacheManager.swift in Sources */,
 				4EC5288D26D60B68003515B3 /* CoordinatorRelatedExtensions.swift in Sources */,
 				4EC5294826D68092003515B3 /* MovieImage.swift in Sources */,
 				4E8BF88526D7D7580038EEBB /* PaginationControl.swift in Sources */,
@@ -895,6 +913,7 @@
 				4EC5296126D76040003515B3 /* DoubleValue.swift in Sources */,
 				4EC528E826D60B68003515B3 /* UserDefaults+Extensions.swift in Sources */,
 				4EC5295C26D753F7003515B3 /* MovieNetworkProvider.swift in Sources */,
+				4E8BF89026D89BB80038EEBB /* FileSaveHelper.swift in Sources */,
 				4EC5296A26D788CA003515B3 /* MovieCell.swift in Sources */,
 				4EC528AC26D60B68003515B3 /* NetworkRelatedExtensions.swift in Sources */,
 				4EC5288926D60B68003515B3 /* Coordinator.swift in Sources */,
@@ -919,6 +938,7 @@
 				4EC528B126D60B68003515B3 /* ActionSheet.swift in Sources */,
 				4E8BF87E26D7BC9A0038EEBB /* R.generated.swift in Sources */,
 				4EC528CE26D60B68003515B3 /* Optional+Extensions.swift in Sources */,
+				4E8BF88B26D898120038EEBB /* Constants.swift in Sources */,
 				4EC5296526D761B3003515B3 /* StringValue.swift in Sources */,
 				4EC528F226D60B68003515B3 /* SplashScreenViewModel.swift in Sources */,
 				4E8BF88226D7CA7B0038EEBB /* AdsCell.swift in Sources */,

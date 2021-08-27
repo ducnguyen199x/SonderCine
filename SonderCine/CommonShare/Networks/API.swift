@@ -8,11 +8,9 @@
 import Foundation
 import Alamofire
 
-typealias CacheLocation = (filename: String, subDirectory: String)
-
 enum API {
-    case nowPlaying
-    case topRated
+    case nowPlaying(page: Int)
+    case topRated(page: Int)
     case movieDetail(id: String)
     case credits(id: String)
     case image(type: ImageType, path: String)
@@ -44,7 +42,10 @@ enum API {
 extension API {
     var defaultParams: JSON {
         switch self {
-        case .topRated, .nowPlaying, .movieDetail, .credits:
+        case .topRated(let page), .nowPlaying(let page):
+            return ["api_key": AppConfiguration.theMovieDBAPIKey.value ?? "",
+                    "page": page]
+        case .movieDetail, .credits:
             return ["api_key": AppConfiguration.theMovieDBAPIKey.value ?? ""]
         default:
             return [:]
@@ -70,12 +71,23 @@ extension API {
 extension API {
     var shouldUseCache: Bool {
         switch self {
-        default: return false
+        case .topRated, .nowPlaying, .credits, .movieDetail:
+            return true
+        default:
+            return false
         }
     }
     
     var cacheLocation: CacheLocation {
         switch self {
+        case .topRated(let page):
+            return ("\(page)", Constants.Cache.topRatedDirectory)
+        case .nowPlaying(let page):
+            return ("\(page)", Constants.Cache.nowPLayingDirectory)
+        case .movieDetail(let id):
+            return (id, Constants.Cache.movieDetailsDirectory)
+        case .credits(let id):
+            return (id, Constants.Cache.creditsDirectory)
         default:
             return ("", "/")
         }

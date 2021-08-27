@@ -61,7 +61,7 @@ extension String {
             let tagLength = tag.rawValue.count
             var resultStrings: [String] = []
             for index in stride(from: 0, to: rangeOfTags.count, by: 2) {
-                //Ranges of 2 begin tag and end tag
+                // Ranges of 2 begin tag and end tag
                 let endTagRange: NSRange? = (index < (rangeOfTags.count - 1) ? rangeOfTags[(index + 1)] : nil)
                 if endTagRange == nil { break }
                 let beginTagRange = rangeOfTags[index]
@@ -154,19 +154,19 @@ extension String {
         var modifiedFontString = self
         if let fontFamily = fontFamily, let fontSize = fontSize {
             modifiedFontString = "<span style=\"font-family: \(fontFamily)"
-                                     + "; font-size: \(fontSize)\">"
-                                     + self
-                                     + "</span>"
+                + "; font-size: \(fontSize)\">"
+                + self
+                + "</span>"
         } else if let fontSize = fontSize {
             modifiedFontString = "<span style=\"font-size: \(fontSize)\">"
-                                     + self
-                                     + "</span>"
+                + self
+                + "</span>"
         } else if let fontFamily = fontFamily {
             modifiedFontString = "<span style=\"font-family: \(fontFamily)\">"
-                                     + self
-                                     + "</span>"
+                + self
+                + "</span>"
         }
-
+        
         guard let data = modifiedFontString.data(using: .utf8) else { return nil }
         do {
             return try NSAttributedString(data: data, options:
@@ -191,7 +191,7 @@ extension String {
     }
 }
 
-//URL
+// URL
 extension String {
     func encodeUrlQueryAllowedCharacter() -> String {
         if URL(string: self) != nil {

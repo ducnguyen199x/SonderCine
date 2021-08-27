@@ -58,7 +58,7 @@ final class MovieListingViewController: BaseViewController {
     private func setupTableView() {
         tableView.setRefresh { [weak self] in
             guard let self = self else { return }
-            self.viewModel.fetchMovieList(page: self.viewModel.currentPage)
+            self.viewModel.refreshCurrentPage()
         }
         tableView.registerNib(MovieCell.self)
         tableView.registerNib(AdsCell.self)
