@@ -13,7 +13,17 @@ extension UserDefaults {
             if let result = value(forKey: #function) as? String {
                 return Theme(rawValue: result) ?? .dark
             }
-            return Theme.dark
+            return .dark
+        }
+        set { set(newValue.rawValue, forKey: #function) }
+    }
+    
+    var defaultAppLanguage: Language {
+        get {
+            if let result = value(forKey: #function) as? String {
+                return Language(rawValue: result) ?? .english
+            }
+            return .english
         }
         set { set(newValue.rawValue, forKey: #function) }
     }

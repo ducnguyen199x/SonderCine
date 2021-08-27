@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  SonderCine
+
+  Created by Nguyen Thanh Duc on 27/8/21.
+  
+*/
+"settings.title" = "Settings";
+"settings.general" = "General";
+"settings.languages" = "Languages";
+"settings.display" = "Display";
+"settings.about" = "About";
+"settings.version" = "App version";
+"settings.privacy" = "Privacy policy";
+"settings.terms" = "Term of use";
+"settings.theme" = "Theme";
+"settings.theme.default" = "System Default";
+"settings.theme.light" = "Light";
+"settings.theme.dark" = "Dark";

@@ -77,12 +77,20 @@ class BaseViewController: UIViewController {
     func localizedText() {}
     
     func observerOrientation() {
-        NotificationCenter.default.rx
-            .notification(UIDevice.orientationDidChangeNotification)
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] _ in
-                self?.didChangeOrientation()
-            }).disposed(by: rx.disposeBag)
+        rx.disposeBag.insert([
+            NotificationCenter.default.rx
+                .notification(UIDevice.orientationDidChangeNotification)
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] _ in
+                    self?.didChangeOrientation()
+                }),
+            NotificationCenter.default.rx
+                .notification(.languageChanged)
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] _ in
+                    self?.localizedText()
+                })
+        ])
     }
     
     func showDefaultAlert() {

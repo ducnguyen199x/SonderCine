@@ -19,14 +19,25 @@ enum Theme: String, CaseIterable {
         case .dark: return .dark
         }
     }
+    
+    var displayName: String {
+        switch self {
+        case .systemDefault:
+            return LocalizedKey.Settings.themeDefault.localized()
+        case .light:
+            return LocalizedKey.Settings.themeLight.localized()
+        case .dark:
+            return LocalizedKey.Settings.themeDark.localized()
+        }
+    }
 }
 
 final class DisplaySettingsViewModel: BaseViewModel {
-    let themeOptions = Theme.allCases.map { $0.rawValue }
+    let themeOptions = Theme.allCases
     
     var themSelectedIndex: Int {
         let currentTheme = AppSettings.shared.getSavedAppTheme()
-        for (index, value) in themeOptions.enumerated() where currentTheme.rawValue == value {
+        for (index, value) in themeOptions.enumerated() where currentTheme.rawValue == value.rawValue {
             return index
         }
         return 0

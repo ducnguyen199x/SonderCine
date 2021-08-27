@@ -16,4 +16,8 @@ enum Constants {
         static let movieDetailsDirectory = "sondercine.data/movie_details"
         static let cacheInterval: TimeInterval = 3600 // 1 hours
     }
+    
+    enum Localizable {
+        static let fileName = "Localizable"
+    }
 }

@@ -14,7 +14,7 @@ final class DisplaySettingsViewController: BaseViewController {
     weak var delegate: DisplaySettingsViewControllerDelegate?
     
     @IBOutlet weak var contentView: UIStackView!
-
+    
     override func setupNavigation() {
         let closeButton = UIBarButtonItem(image: .close, style: .plain, target: self, action: #selector(closeTapped(_:)))
         navigationItem.rightBarButtonItem = closeButton
@@ -22,12 +22,14 @@ final class DisplaySettingsViewController: BaseViewController {
     
     override func setupView() {
         super.setupView()
+        // Refresh content view if needed
+        contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
         // Theme section
         let theme = DisplaySettingOptionView(
-          title: "Theme",
-          options: viewModel.themeOptions) { [unowned self] option in
-          viewModel.setTheme(option)
+            title: LocalizedKey.Settings.theme.localized(),
+            options: viewModel.themeOptions.map { $0.displayName }) { [unowned self] option in
+            viewModel.setTheme(option)
         }
         theme.select(index: viewModel.themSelectedIndex)
         contentView.addArrangedSubview(UIView.separator)
@@ -36,7 +38,8 @@ final class DisplaySettingsViewController: BaseViewController {
     
     override func localizedText() {
         super.localizedText()
-        title = "Display"
+        title = LocalizedKey.Settings.display.localized()
+        setupView()
     }
     
     override func willDeinit() {

@@ -23,16 +23,16 @@ final class SettingsViewController: BaseViewController {
         contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
         // General section
-        contentView.addArrangedSubview(SettingsSectionView(title: "General", items: [
-            .link(label: "Language") { },
-            .link(label: "Display") { [weak self] in self?.delegate?.displaySettingsTapped() }
+        contentView.addArrangedSubview(SettingsSectionView(title: LocalizedKey.Settings.general.localized(), items: [
+            .link(label: LocalizedKey.Settings.languages.localized()) { },
+            .link(label: LocalizedKey.Settings.display.localized()) { [weak self] in self?.delegate?.displaySettingsTapped() }
         ]))
         
         // About section
-        contentView.addArrangedSubview(SettingsSectionView(title: "About", items: [
-            .plain(label: "App version", value: Bundle.main.currentAppVersion),
-            .link(label: "Privacy policy") { },
-            .link(label: "Term of use") { }
+        contentView.addArrangedSubview(SettingsSectionView(title: LocalizedKey.Settings.about.localized(), items: [
+            .plain(label: LocalizedKey.Settings.version.localized(), value: Bundle.main.currentAppVersion),
+            .link(label: LocalizedKey.Settings.privacy.localized()) { },
+            .link(label: LocalizedKey.Settings.terms.localized()) { }
         ]))
     }
     
@@ -43,7 +43,8 @@ final class SettingsViewController: BaseViewController {
     
     override func localizedText() {
         super.localizedText()
-        title = "Settings"
+        title = LocalizedKey.Settings.title.localized()
+        setupView()
     }
     
     override func willDeinit() {
