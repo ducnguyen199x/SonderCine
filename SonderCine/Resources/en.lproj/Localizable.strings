@@ -5,6 +5,11 @@
   Created by Nguyen Thanh Duc on 27/8/21.
   
 */
+// Tabbar
+"now_playing" = "Now Playing";
+"top_rated" = "Top Rated";
+
+// Settings
 "settings.title" = "Settings";
 "settings.general" = "General";
 "settings.languages" = "Languages";
@@ -19,3 +24,7 @@
 "settings.theme.default" = "System Default";
 "settings.theme.light" = "Light";
 "settings.theme.dark" = "Dark";
+
+// Movie Detail
+"detail.title" = "Details";
+

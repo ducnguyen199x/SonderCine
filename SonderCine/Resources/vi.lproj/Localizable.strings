@@ -5,6 +5,11 @@
   Created by Nguyen Thanh Duc on 27/8/21.
   
 */
+// Tabbar
+"now_playing" = "Đang chiếu";
+"top_rated" = "Phim Hot";
+
+// Settings
 "settings.title" = "Cài đặt";
 "settings.general" = "Cài đặt chung";
 "settings.languages" = "Ngôn ngữ";
@@ -19,3 +24,6 @@
 "settings.theme.default" = "Mặc định";
 "settings.theme.light" = "Sáng";
 "settings.theme.dark" = "Tối";
+
+// Movie Detail
+"detail.title" = "Chi Tiết";

@@ -20,6 +20,11 @@ extension RawRepresentable where Self.RawValue == String {
 }
 
 struct LocalizedKey {
+    enum TabBar: String, RawRepresentable {
+        case nowPlaying = "now_playing"
+        case topRated = "top_rated"
+    }
+    
     enum Settings: String, RawRepresentable {
         case title = "settings.title"
         case general = "settings.general"
@@ -35,5 +40,9 @@ struct LocalizedKey {
         case themeDefault = "settings.theme.default"
         case themeLight = "settings.theme.light"
         case themeDark = "settings.theme.dark"
+    }
+    
+    enum MovieDetails: String, RawRepresentable {
+        case title = "detail.title"
     }
 }

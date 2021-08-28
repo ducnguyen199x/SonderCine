@@ -23,7 +23,7 @@ extension URL: CoordinatorPayload {}
 
 protocol CoordinatorDelegate: AnyObject {}
 
-class Coordinator {
+class Coordinator: NSObject {
     deinit {
         debugPrint("Deinit \(type(of: self))")
     }

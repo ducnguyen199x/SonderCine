@@ -86,5 +86,12 @@ extension MovieListingViewModel {
     enum Category {
         case nowPlaying
         case topRated
+        
+        var displayName: String {
+            switch self {
+            case .nowPlaying: return LocalizedKey.TabBar.nowPlaying.localized()
+            case .topRated: return LocalizedKey.TabBar.topRated.localized()
+            }
+        }
     }
 }

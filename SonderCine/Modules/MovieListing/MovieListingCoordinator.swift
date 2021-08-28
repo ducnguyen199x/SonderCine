@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol MovieListingCoordinatorDelegate: CoordinatorDelegate {}
 
@@ -13,6 +15,7 @@ final class MovieListingCoordinator: TabContentCoordinator {
     init(tabType: TabType) {
         super.init()
         self.tabType = tabType
+        observeLanguageChanged()
     }
     
     override func makeNavigationController(payload: CoordinatorPayload? = nil) -> UINavigationController {
@@ -25,6 +28,19 @@ final class MovieListingCoordinator: TabContentCoordinator {
         }
         viewController.delegate = self
         return viewController.embeddedInNavigation()
+    }
+    
+    private func observeLanguageChanged() {
+        NotificationCenter.default.rx
+            .notification(.languageChanged)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                let tabBarItem = UITabBarItem(title: self.tabType.title,
+                                              image: self.tabType.icon,
+                                              selectedImage: nil)
+                self.rootViewController.navigationController?.tabBarItem = tabBarItem
+            }).disposed(by: rx.disposeBag)
     }
 }
 

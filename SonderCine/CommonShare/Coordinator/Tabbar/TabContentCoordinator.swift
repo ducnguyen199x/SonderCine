@@ -16,8 +16,8 @@ class TabContentCoordinator: Coordinator {
         
         var title: String {
             switch self {
-            case .nowPlaying: return "Now Playing"
-            case .topRated: return "Top Rated"
+            case .nowPlaying: return LocalizedKey.TabBar.nowPlaying.localized()
+            case .topRated: return LocalizedKey.TabBar.topRated.localized()
             }
         }
         

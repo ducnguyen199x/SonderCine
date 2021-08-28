@@ -20,8 +20,6 @@ final class MovieListingViewController: BaseViewController {
     @IBOutlet weak var noItemsLabel: UILabel!
     
     override func setupNavigation() {
-        navigationItem.title = "WizeMovie"
-        
         // Add Settings Button
         let settingsButton = UIBarButtonItem(image: .settings,
                                              style: .plain,
@@ -33,6 +31,11 @@ final class MovieListingViewController: BaseViewController {
     override func setupView() {
         super.setupView()
         setupTableView()
+    }
+    
+    override func localizedText() {
+        super.localizedText()
+        navigationItem.title = viewModel.category.displayName
     }
     
     override func willDeinit() {
