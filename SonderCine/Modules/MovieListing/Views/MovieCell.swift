@@ -77,8 +77,4 @@ class MovieCell: BaseTableViewCell {
         mutableAttributed.append(voteAttributedString)
         self.voteLabel.attributedText = mutableAttributed
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {}
-    
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
 }
