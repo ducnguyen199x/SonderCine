@@ -27,7 +27,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="ctH-4I-tx8" secondAttribute="bottom" id="Otx-TI-prq"/>
+                    <constraint firstAttribute="bottom" secondItem="ctH-4I-tx8" secondAttribute="bottom" priority="999" id="Otx-TI-prq"/>
                     <constraint firstItem="ctH-4I-tx8" firstAttribute="leading" secondItem="D08-CQ-Bxh" secondAttribute="leading" id="hcJ-NX-CGD"/>
                     <constraint firstItem="ctH-4I-tx8" firstAttribute="top" secondItem="D08-CQ-Bxh" secondAttribute="top" id="iHc-dL-WGO"/>
                     <constraint firstAttribute="trailing" secondItem="ctH-4I-tx8" secondAttribute="trailing" id="uKt-q5-Q6z"/>
