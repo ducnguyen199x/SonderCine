@@ -24,17 +24,17 @@ extension MovieListingViewModel {
 }
 
 final class MovieListingViewModel: BaseViewModel {
-    let networkProvider: MovieNetworkProvider
+    let networkProvider: MovieListNetworkProvider
     let category: Category
+
+    init(networkProvider: MovieListNetworkProvider = MovieListNetworkClient(), category: Category) {
+        self.networkProvider = networkProvider
+        self.category = category
+    }
     
     /// The view controller's datasource
     @Relay var items = [Item]()
     var currentPage: Int = 1
-
-    init(networkProvider: MovieNetworkProvider = MovieNetworkClient(), category: Category) {
-        self.networkProvider = networkProvider
-        self.category = category
-    }
     
     func fetchMovieList(page: Int = 1, shouldUseCache: Bool = true) {
         currentPage = page

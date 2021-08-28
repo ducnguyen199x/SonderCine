@@ -9,12 +9,12 @@ import RxSwift
 import RxCocoa
 import Alamofire
 
-protocol MovieNetworkProvider {
+protocol MovieListNetworkProvider {
     func fetchNowPlaying(page: Int, shouldUseCache: Bool) -> Single<MovieListWrapper>
     func fetchTopRated(page: Int, shouldUseCache: Bool) -> Single<MovieListWrapper>
 }
 
-extension MovieNetworkProvider {
+extension MovieListNetworkProvider {
     func fetchNowPlaying(page: Int) -> Single<MovieListWrapper> {
         fetchNowPlaying(page: page, shouldUseCache: true)
     }
@@ -24,7 +24,7 @@ extension MovieNetworkProvider {
     }
 }
 
-struct MovieNetworkClient: MovieNetworkProvider {
+struct MovieListNetworkClient: MovieListNetworkProvider {
     let networkProvider: NetworkProvider
     
     init(networkProvider: NetworkProvider = NetworkClient()) {

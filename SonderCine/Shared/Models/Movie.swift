@@ -33,7 +33,7 @@ struct Movie: Decodable {
     var title: String?
     @StringValue var overview: String
     @DoubleValue var voteAverage: Double
-    @IntValue var duration: Int
+    @IntValue var duration: Int // minutes
     @DateValue<DateFormatterGeneral> var releaseDate: Date?
     
     enum CodingKeys: String, CodingKey {
@@ -44,11 +44,27 @@ struct Movie: Decodable {
         case duration = "runtime"
         case releaseDate = "release_date"
     }
+    
+    var sysnopsis: Synopsis {
+        .init(title: title,
+              releaseDate: releaseDate,
+              duration: duration,
+              voteAverage: voteAverage,
+              genres: genres)
+    }
 }
 
 extension Movie {
     struct Genre: Decodable {
         var id: Int
         var name: String
+    }
+    
+    struct Synopsis {
+        var title: String?
+        var releaseDate: Date?
+        var duration: Int
+        var voteAverage: Double
+        var genres: [Genre]?
     }
 }

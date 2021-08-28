@@ -11,3 +11,14 @@ import Foundation
 extension Int {
   static let refreshControlTag = 1000
 }
+
+extension Int {
+    /**
+     hour + minutes duration string from minutes
+     */
+    var durationString: String {
+        let minutes = Int(self % 60)
+        let hours = Int(self / 60)
+        return "\(hours)h \(minutes)min"
+    }
+}

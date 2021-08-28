@@ -11,8 +11,8 @@ import Alamofire
 enum API {
     case nowPlaying(page: Int)
     case topRated(page: Int)
-    case movieDetail(id: String)
-    case credits(id: String)
+    case movieDetail(id: Int)
+    case credits(id: Int)
     case image(type: ImageType, path: String)
     
     var urlString: String {
@@ -85,9 +85,9 @@ extension API {
         case .nowPlaying(let page):
             return ("\(page)", Constants.Cache.nowPLayingDirectory)
         case .movieDetail(let id):
-            return (id, Constants.Cache.movieDetailsDirectory)
+            return ("\(id)", Constants.Cache.movieDetailsDirectory)
         case .credits(let id):
-            return (id, Constants.Cache.creditsDirectory)
+            return ("\(id)", Constants.Cache.creditsDirectory)
         default:
             return ("", "/")
         }

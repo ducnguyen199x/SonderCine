@@ -28,9 +28,23 @@ final class MovieListingCoordinator: TabContentCoordinator {
     }
 }
 
+// MARK: Navigations
+extension MovieListingCoordinator {
+    private func pushMovieDetail(id: Int) {
+        guard let navigation = rootViewController.navigationController else { return }
+        let coordinator = MovieDetailCoordinator()
+        add(coordinator)
+        coordinator.start(sceneType: .push(navigation), payload: id)
+    }
+}
+
 // MARK: Delegates
 extension MovieListingCoordinator: MovieListingViewControllerDelegate, SettingsPresentableCoordinator {
     func settingsTapped(_ sender: UIViewController) {
         presentSettings()
+    }
+    
+    func movieListing(_ sender: MovieListingViewController, didTap movie: Movie) {
+        pushMovieDetail(id: movie.id)
     }
 }

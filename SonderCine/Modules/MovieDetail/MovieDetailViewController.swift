@@ -1,23 +1,21 @@
 //
-//  MovieListingViewController.swift
+//  MovieDetailViewController.swift
 //  SonderCine
 //
-//  Created by Nguyen Thanh Duc on 26/8/21.
+//  Created by Nguyen Thanh Duc on 28/8/21.
 //
 
 import UIKit
 
-protocol MovieListingViewControllerDelegate: ViewControllerDelegate, SettingsPresentableViewControllerDelegate {
-    func movieListing(_ sender: MovieListingViewController, didTap movie: Movie)
-}
+protocol MovieDetailViewControllerDelegate: ViewControllerDelegate, SettingsPresentableViewControllerDelegate {}
 
-final class MovieListingViewController: BaseViewController {
-    var viewModel: MovieListingViewModel!
-    weak var delegate: MovieListingViewControllerDelegate?
+final class MovieDetailViewController: BaseViewController {
+    var viewModel: MovieDetailViewModel!
+    weak var delegate: MovieDetailViewControllerDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var noItemsLabel: UILabel!
+    @IBOutlet weak var emptyContentLabel: UILabel!
     
     override func setupNavigation() {
         navigationItem.title = "WizeMovie"
@@ -28,6 +26,7 @@ final class MovieListingViewController: BaseViewController {
                                              target: self,
                                              action: #selector(settingsTapped))
         navigationItem.setRightBarButton(settingsButton, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func setupView() {
@@ -48,7 +47,7 @@ final class MovieListingViewController: BaseViewController {
             }),
             viewModel.$state.subscribe(onNext: { [weak self] state in
                 guard let self = self else { return }
-                self.noItemsLabel.isHidden = state.isLoading || !self.viewModel.items.isEmpty
+                self.emptyContentLabel.isHidden = state.isLoading || !self.viewModel.items.isEmpty
                 switch state {
                 case .error(_):
                     self.showDefaultAlert()
@@ -57,17 +56,17 @@ final class MovieListingViewController: BaseViewController {
                 }
             })
         ])
-        viewModel.fetchMovieList()
+        viewModel.fetchDetail()
     }
     
     private func setupTableView() {
         tableView.setRefresh { [weak self] in
             guard let self = self else { return }
-            self.viewModel.refreshCurrentPage()
+            self.viewModel.fetchDetail(shouldUseCache: false)
         }
-        tableView.registerNib(MovieCell.self)
-        tableView.registerNib(AdsCell.self)
-        tableView.registerClass(PaginationCell.self)
+        tableView.registerNib(HeroCell.self)
+        tableView.registerNib(SynopsisCell.self)
+        tableView.registerNib(DescriptionCell.self)
         tableView.contentInset = .bottom(50)
     }
     
@@ -78,14 +77,14 @@ final class MovieListingViewController: BaseViewController {
 }
 
 // MARK: Actions
-extension MovieListingViewController {
+extension MovieDetailViewController {
     @objc func settingsTapped() {
         delegate?.settingsTapped(self)
     }
 }
 
 // MARK: TableView Delegates
-extension MovieListingViewController: UITableViewDelegate, UITableViewDataSource {
+extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRows()
     }
@@ -94,32 +93,20 @@ extension MovieListingViewController: UITableViewDelegate, UITableViewDataSource
         guard let item = viewModel.item(at: indexPath) else { return .init() }
         
         switch item {
-        case let .movie(movie):
-            let cell: MovieCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configure(movie, position: tableView.position(of: indexPath))
+        case let .heroMedia(path):
+            let cell: HeroCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configure(path)
             return cell
-        case .ads:
-            let cell: AdsCell = tableView.dequeueReusableCell(for: indexPath)
+        case let .synopsis(synopsis):
+            let cell: SynopsisCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configure(synopsis)
             return cell
-        case let .pagination(paging):
-            let cell: PaginationCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.setPaging(paging) { [weak self] page in
-                guard let self = self else { return }
-                self.tableView.scrollToRow(at: .init(row: 0, section: 0), at: .top, animated: true)
-                self.viewModel.fetchMovieList(page: page)
-            }
+        case let .description(desc):
+            let cell: DescriptionCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configure(desc)
             return cell
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        guard let item = viewModel.item(at: indexPath) else { return }
-        switch item {
-        case let .movie(movie):
-            delegate?.movieListing(self, didTap: movie)
         default:
-            break
+            return .init()
         }
     }
 }
