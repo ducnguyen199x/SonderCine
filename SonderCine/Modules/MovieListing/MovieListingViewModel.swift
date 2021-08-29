@@ -58,8 +58,8 @@ final class MovieListingViewModel: BaseViewModel {
         }).disposed(by: rx.disposeBag)
     }
     
-    func refreshCurrentPage() {
-        fetchMovieList(page: currentPage, shouldUseCache: false)
+    func refreshCurrentPage(shouldUseCache: Bool = false) {
+        fetchMovieList(page: currentPage, shouldUseCache: shouldUseCache)
     }
     
     private func makeItems(_ wrapper: MovieListWrapper) {

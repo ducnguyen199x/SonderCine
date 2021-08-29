@@ -74,6 +74,11 @@ final class MovieListingViewController: BaseViewController {
         loadingIndicator.stopAnimating()
     }
     
+    override func languageChanged() {
+        super.languageChanged()
+        self.viewModel.refreshCurrentPage(shouldUseCache: true)
+    }
+    
     override func settingsTapped() {
         delegate?.settingsTapped(self)
     }

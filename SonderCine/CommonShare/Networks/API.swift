@@ -44,8 +44,12 @@ extension API {
         switch self {
         case .topRated(let page), .nowPlaying(let page):
             return ["api_key": AppConfiguration.theMovieDBAPIKey.value ?? "",
-                    "page": page]
-        case .movieDetail, .credits:
+                    "page": page,
+                    "language": LanguageManager.shared.currentLanguage.rawValue]
+        case .movieDetail:
+            return ["api_key": AppConfiguration.theMovieDBAPIKey.value ?? "",
+                    "language": LanguageManager.shared.currentLanguage.rawValue]
+        case .credits:
             return ["api_key": AppConfiguration.theMovieDBAPIKey.value ?? ""]
         default:
             return [:]
@@ -81,11 +85,11 @@ extension API {
     var cacheLocation: CacheLocation {
         switch self {
         case .topRated(let page):
-            return ("\(page)", Constants.Cache.topRatedDirectory)
+            return ("\(page)-\(LanguageManager.shared.currentLanguage.rawValue)", Constants.Cache.topRatedDirectory)
         case .nowPlaying(let page):
-            return ("\(page)", Constants.Cache.nowPLayingDirectory)
+            return ("\(page)-\(LanguageManager.shared.currentLanguage.rawValue)", Constants.Cache.nowPLayingDirectory)
         case .movieDetail(let id):
-            return ("\(id)", Constants.Cache.movieDetailsDirectory)
+            return ("\(id)-\(LanguageManager.shared.currentLanguage.rawValue)", Constants.Cache.movieDetailsDirectory)
         case .credits(let id):
             return ("\(id)", Constants.Cache.creditsDirectory)
         default:

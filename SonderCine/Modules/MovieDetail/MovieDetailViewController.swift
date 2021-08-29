@@ -31,7 +31,6 @@ final class MovieDetailViewController: BaseViewController {
     override func localizedText() {
         super.localizedText()
         navigationItem.title = LocalizedKey.MovieDetails.title.localized()
-        reloadData()
     }
     
     override func willDeinit() {
@@ -78,6 +77,11 @@ final class MovieDetailViewController: BaseViewController {
     
     override func settingsTapped() {
         delegate?.settingsTapped(self)
+    }
+    
+    override func languageChanged() {
+        super.languageChanged()
+        viewModel.fetchDetail()
     }
 }
 

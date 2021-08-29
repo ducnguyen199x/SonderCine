@@ -85,7 +85,7 @@ class BaseViewController: UIViewController {
     func authenticationChanged() {}
     
     func localizedText() {}
-    
+        
     @objc func settingsTapped() {}
     
     func observeOrientation() {
@@ -102,7 +102,7 @@ class BaseViewController: UIViewController {
             .notification(.languageChanged)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
-                self?.localizedText()
+                self?.languageChanged()
             }).disposed(by: rx.disposeBag)
     }
     
