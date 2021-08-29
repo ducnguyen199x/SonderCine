@@ -41,6 +41,7 @@ final class CreditsListingViewController: BaseViewController {
     
     private func setupCollectionView() {
         collectionView.registerNib(CastOrCrewCell.self)
+        collectionView.contentInset = .horizontal(15)
     }
     
     override func bindViewModel() {

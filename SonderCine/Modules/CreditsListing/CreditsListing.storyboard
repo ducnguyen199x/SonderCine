@@ -31,7 +31,7 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rgb-Dy-dLr">
-                                <rect key="frame" x="15" y="115" width="384" height="747"/>
+                                <rect key="frame" x="0.0" y="115" width="414" height="747"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ljw-N8-37f">
                                     <size key="itemSize" width="128" height="128"/>
@@ -49,11 +49,11 @@
                         <viewLayoutGuide key="safeArea" id="jbj-tV-cyJ"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rgb-Dy-dLr" firstAttribute="leading" secondItem="jbj-tV-cyJ" secondAttribute="leading" constant="15" id="0my-ED-qsq"/>
+                            <constraint firstItem="rgb-Dy-dLr" firstAttribute="leading" secondItem="jbj-tV-cyJ" secondAttribute="leading" id="0my-ED-qsq"/>
                             <constraint firstItem="51y-a6-3d3" firstAttribute="centerX" secondItem="jbj-tV-cyJ" secondAttribute="centerX" id="Nmy-cP-v7l"/>
                             <constraint firstItem="jbj-tV-cyJ" firstAttribute="bottom" secondItem="rgb-Dy-dLr" secondAttribute="bottom" id="eaO-gt-VcM"/>
                             <constraint firstItem="51y-a6-3d3" firstAttribute="top" secondItem="jbj-tV-cyJ" secondAttribute="top" constant="20" id="elz-zo-vyD"/>
-                            <constraint firstItem="jbj-tV-cyJ" firstAttribute="trailing" secondItem="rgb-Dy-dLr" secondAttribute="trailing" constant="15" id="nbg-th-s1C"/>
+                            <constraint firstItem="jbj-tV-cyJ" firstAttribute="trailing" secondItem="rgb-Dy-dLr" secondAttribute="trailing" id="nbg-th-s1C"/>
                             <constraint firstItem="rgb-Dy-dLr" firstAttribute="top" secondItem="51y-a6-3d3" secondAttribute="bottom" constant="20" id="rD2-9F-R6C"/>
                         </constraints>
                     </view>
