@@ -69,6 +69,15 @@ class BaseViewController: UIViewController {
         navigationController?.makeTranslucentNavigationBar()
     }
     
+    func addSettingsBarItem() {
+        let settingsButton = UIBarButtonItem(image: .settings,
+                                             style: .plain,
+                                             target: self,
+                                             action: #selector(settingsTapped))
+        navigationItem.setRightBarButton(settingsButton, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     func languageChanged() {
         localizedText()
     }
@@ -76,6 +85,8 @@ class BaseViewController: UIViewController {
     func authenticationChanged() {}
     
     func localizedText() {}
+    
+    @objc func settingsTapped() {}
     
     func observeOrientation() {
         NotificationCenter.default.rx

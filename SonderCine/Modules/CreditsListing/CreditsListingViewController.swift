@@ -29,14 +29,7 @@ final class CreditsListingViewController: BaseViewController {
     }
     
     override func setupNavigation() {
-        
-        // Add Settings Button
-        let settingsButton = UIBarButtonItem(image: .settings,
-                                             style: .plain,
-                                             target: self,
-                                             action: #selector(settingsTapped))
-        navigationItem.setRightBarButton(settingsButton, animated: true)
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        addSettingsBarItem()
     }
     
     override func localizedText() {
@@ -61,6 +54,10 @@ final class CreditsListingViewController: BaseViewController {
     override func willDeinit() {
         delegate?.viewControllerWillDeinit()
     }
+    
+    override func settingsTapped() {
+        delegate?.settingsTapped(self)
+    }
 }
 
 // MARK: Actions
@@ -71,10 +68,6 @@ extension CreditsListingViewController {
         case 1: viewModel.filterType = .crew
         default: break
         }
-    }
-    
-    @objc func settingsTapped() {
-        delegate?.settingsTapped(self)
     }
 }
 

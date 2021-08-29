@@ -20,14 +20,7 @@ final class MovieDetailViewController: BaseViewController {
     @IBOutlet weak var emptyContentLabel: UILabel!
     
     override func setupNavigation() {
-        
-        // Add Settings Button
-        let settingsButton = UIBarButtonItem(image: .settings,
-                                             style: .plain,
-                                             target: self,
-                                             action: #selector(settingsTapped))
-        navigationItem.setRightBarButton(settingsButton, animated: true)
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        addSettingsBarItem()
     }
     
     override func setupView() {
@@ -82,11 +75,8 @@ final class MovieDetailViewController: BaseViewController {
         tableView.reloadData()
         loadingIndicator.stopAnimating()
     }
-}
-
-// MARK: Actions
-extension MovieDetailViewController {
-    @objc func settingsTapped() {
+    
+    override func settingsTapped() {
         delegate?.settingsTapped(self)
     }
 }
