@@ -52,6 +52,10 @@
 		4E8BF8DE26DA26190038EEBB /* SynopsisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8DD26DA26190038EEBB /* SynopsisCell.xib */; };
 		4E8BF8E026DA27610038EEBB /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8DF26DA27610038EEBB /* DescriptionCell.swift */; };
 		4E8BF8E226DA27D40038EEBB /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E126DA27D40038EEBB /* DescriptionCell.xib */; };
+		4E8BF8E426DA790E0038EEBB /* CreditsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E326DA790E0038EEBB /* CreditsCell.swift */; };
+		4E8BF8E626DA807E0038EEBB /* CastOrCrewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E526DA807E0038EEBB /* CastOrCrewCell.swift */; };
+		4E8BF8E826DA840E0038EEBB /* CreditsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E726DA840E0038EEBB /* CreditsCell.xib */; };
+		4E8BF8EA26DB41F90038EEBB /* CastOrCrewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E926DB41F90038EEBB /* CastOrCrewCell.xib */; };
 		4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5287B26D60B68003515B3 /* AppDelegate.swift */; };
 		4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */; };
 		4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288526D60B68003515B3 /* BaseTableViewHeaderFooterView.swift */; };
@@ -200,6 +204,10 @@
 		4E8BF8DD26DA26190038EEBB /* SynopsisCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SynopsisCell.xib; sourceTree = "<group>"; };
 		4E8BF8DF26DA27610038EEBB /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		4E8BF8E126DA27D40038EEBB /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
+		4E8BF8E326DA790E0038EEBB /* CreditsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsCell.swift; sourceTree = "<group>"; };
+		4E8BF8E526DA807E0038EEBB /* CastOrCrewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastOrCrewCell.swift; sourceTree = "<group>"; };
+		4E8BF8E726DA840E0038EEBB /* CreditsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditsCell.xib; sourceTree = "<group>"; };
+		4E8BF8E926DB41F90038EEBB /* CastOrCrewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastOrCrewCell.xib; sourceTree = "<group>"; };
 		4EC5287826D60B68003515B3 /* SonderCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonderCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5287B26D60B68003515B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -426,6 +434,10 @@
 				4E8BF8DD26DA26190038EEBB /* SynopsisCell.xib */,
 				4E8BF8DF26DA27610038EEBB /* DescriptionCell.swift */,
 				4E8BF8E126DA27D40038EEBB /* DescriptionCell.xib */,
+				4E8BF8E326DA790E0038EEBB /* CreditsCell.swift */,
+				4E8BF8E726DA840E0038EEBB /* CreditsCell.xib */,
+				4E8BF8E526DA807E0038EEBB /* CastOrCrewCell.swift */,
+				4E8BF8E926DB41F90038EEBB /* CastOrCrewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -900,7 +912,9 @@
 				4EC528FF26D60B6B003515B3 /* Assets.xcassets in Resources */,
 				4E8BF88026D7CA700038EEBB /* AdsCell.xib in Resources */,
 				4EC5294E26D74199003515B3 /* MovieListing.storyboard in Resources */,
+				4E8BF8E826DA840E0038EEBB /* CreditsCell.xib in Resources */,
 				4E8BF8C426D934690038EEBB /* LanguageSettings.storyboard in Resources */,
+				4E8BF8EA26DB41F90038EEBB /* CastOrCrewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,6 +1145,7 @@
 				4E8BF89326D8D4110038EEBB /* SettingsSectionView.swift in Sources */,
 				4E8BF8BC26D926D80038EEBB /* LanguageManager.swift in Sources */,
 				4E8BF8AD26D8F14D0038EEBB /* SettingsOptionView.swift in Sources */,
+				4E8BF8E426DA790E0038EEBB /* CreditsCell.swift in Sources */,
 				4EC528F026D60B68003515B3 /* SplashScreenViewController.swift in Sources */,
 				4E8BF89B26D8D6CC0038EEBB /* SettingsCoordinator.swift in Sources */,
 				4EC528BA26D60B68003515B3 /* Codable+Extensions.swift in Sources */,
@@ -1155,6 +1170,7 @@
 				4EC528E426D60B68003515B3 /* UIView+Extensions.swift in Sources */,
 				4EC5295E26D75813003515B3 /* Movie.swift in Sources */,
 				4EC5296C26D7898E003515B3 /* DateValue.swift in Sources */,
+				4E8BF8E626DA807E0038EEBB /* CastOrCrewCell.swift in Sources */,
 				4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */,
 				4EC528C626D60B68003515B3 /* Error+Extensions.swift in Sources */,
 				4EC528D826D60B68003515B3 /* UIActivityIndicator+Extensions.swift in Sources */,

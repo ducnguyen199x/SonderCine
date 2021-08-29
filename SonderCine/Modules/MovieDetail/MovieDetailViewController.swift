@@ -36,6 +36,7 @@ final class MovieDetailViewController: BaseViewController {
     override func localizedText() {
         super.localizedText()
         navigationItem.title = LocalizedKey.MovieDetails.title.localized()
+        reloadData()
     }
     
     override func willDeinit() {
@@ -71,6 +72,7 @@ final class MovieDetailViewController: BaseViewController {
         tableView.registerNib(HeroCell.self)
         tableView.registerNib(SynopsisCell.self)
         tableView.registerNib(DescriptionCell.self)
+        tableView.registerNib(CreditsCell.self)
         tableView.contentInset = .bottom(50)
     }
     
@@ -109,8 +111,10 @@ extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource 
             let cell: DescriptionCell = tableView.dequeueReusableCell(for: indexPath)
             cell.configure(desc)
             return cell
-        default:
-            return .init()
+        case let .credit(credit):
+            let cell: CreditsCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configure(credit)
+            return cell
         }
     }
 }

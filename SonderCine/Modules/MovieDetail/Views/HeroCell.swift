@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// `HeroCell` display movie backdrop image.
+/// `HeroCell` displays movie backdrop image.
 class HeroCell: BaseTableViewCell {
     /// the movie's backdrop image
     @IBOutlet weak var thumbnail: UIImageView!

@@ -27,4 +27,6 @@
 
 // Movie Detail
 "detail.title" = "Details";
-
+"detail.cast_crews" = "Cast & Crews";
+"detail.see_all" = "See all";
+"detail.director" = "Directors";

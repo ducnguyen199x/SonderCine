@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// `SynopsisCell` display movie briefs.
+/// `SynopsisCell` displays movie briefs.
 class SynopsisCell: BaseTableViewCell {
     /// the movie's name and release year
     @IBOutlet weak var titleLabel: UILabel!

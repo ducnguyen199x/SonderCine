@@ -36,7 +36,7 @@ class BaseTableViewCell: UITableViewCell {
     func setupView() {
         didSetupView = true
     }
-    
+        
     func addSeparator(height: CGFloat = 1,
                       color: UIColor? = UITableView().separatorColor,
                       leftInset: CGFloat = 10,

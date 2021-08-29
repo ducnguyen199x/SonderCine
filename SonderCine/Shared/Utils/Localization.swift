@@ -44,5 +44,8 @@ struct LocalizedKey {
     
     enum MovieDetails: String, RawRepresentable {
         case title = "detail.title"
+        case castAndCrews = "detail.cast_crews"
+        case seeAll = "detail.see_all"
+        case director = "detail.director"
     }
 }

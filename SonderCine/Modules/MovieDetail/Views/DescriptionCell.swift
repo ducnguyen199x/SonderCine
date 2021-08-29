@@ -7,14 +7,13 @@
 
 import UIKit
 
-/// `DescriptionCell` display movie overview.
+/// `DescriptionCell` displays movie overview.
 class DescriptionCell: BaseTableViewCell {
     /// the movie's overview
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func setupView() {
         super.setupView()
-        addSeparator(leftInset: 15, rightInset: 15)
     }
     
     /**

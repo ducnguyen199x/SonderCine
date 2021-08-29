@@ -54,9 +54,9 @@ final class MovieDetailViewModel: BaseViewModel {
         var items: [Item] = [.heroMedia(path: movie.backdropPath),
                              .synopsis(movie.sysnopsis),
                              .description(movie.overview)]
-//        if let credit = credit {
-//            items.append(.credit(credit))
-//        }
+        if let credit = credit {
+            items.append(.credit(credit))
+        }
         self.items = items
     }
     

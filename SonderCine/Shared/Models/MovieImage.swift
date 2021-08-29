@@ -32,3 +32,13 @@ enum PosterImage: String, ImageType {
         return rawValue
     }
 }
+
+enum ProfileImage: String, ImageType {
+    case w45
+    case w92
+    case original
+    
+    var size: String {
+        return rawValue
+    }
+}

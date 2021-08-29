@@ -27,3 +27,6 @@
 
 // Movie Detail
 "detail.title" = "Chi Tiết";
+"detail.cast_crews" = "Đội ngũ sản xuất";
+"detail.see_all" = "Tất cả";
+"detail.director" = "Đạo diễn";
