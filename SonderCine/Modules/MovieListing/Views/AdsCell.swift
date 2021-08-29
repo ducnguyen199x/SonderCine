@@ -16,4 +16,7 @@ class AdsCell: BaseTableViewCell {
         super.setupView()
         addSeparator()
     }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
+    override func setSelected(_ selected: Bool, animated: Bool) {}
 }
