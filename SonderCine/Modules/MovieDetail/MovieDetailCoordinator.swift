@@ -22,9 +22,23 @@ final class MovieDetailCoordinator: Coordinator {
     }
 }
 
+// MARK: Navigation
+extension MovieDetailCoordinator {
+    private func pushCreditsListing(_ credit: Credit) {
+        guard let navigation = rootViewController.navigationController else { return }
+        let coordinator = CreditsListingCoordinator()
+        add(coordinator)
+        coordinator.start(sceneType: .push(navigation), payload: credit)
+    }
+}
+
 // MARK: Delegates
 extension MovieDetailCoordinator: MovieDetailViewControllerDelegate, SettingsPresentableCoordinator {
     func settingsTapped(_ sender: UIViewController) {
         presentSettings()
+    }
+    
+    func movieDetail(_ sender: UIViewController, didTap credit: Credit) {
+        pushCreditsListing(credit)
     }
 }

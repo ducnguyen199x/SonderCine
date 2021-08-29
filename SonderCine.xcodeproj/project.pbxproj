@@ -56,6 +56,10 @@
 		4E8BF8E626DA807E0038EEBB /* CastOrCrewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E526DA807E0038EEBB /* CastOrCrewCell.swift */; };
 		4E8BF8E826DA840E0038EEBB /* CreditsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E726DA840E0038EEBB /* CreditsCell.xib */; };
 		4E8BF8EA26DB41F90038EEBB /* CastOrCrewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8E926DB41F90038EEBB /* CastOrCrewCell.xib */; };
+		4E8BF8F026DB56E00038EEBB /* CreditsListing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BF8EC26DB56E00038EEBB /* CreditsListing.storyboard */; };
+		4E8BF8F126DB56E00038EEBB /* CreditsListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8ED26DB56E00038EEBB /* CreditsListingCoordinator.swift */; };
+		4E8BF8F226DB56E00038EEBB /* CreditsListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8EE26DB56E00038EEBB /* CreditsListingViewController.swift */; };
+		4E8BF8F326DB56E00038EEBB /* CreditsListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BF8EF26DB56E00038EEBB /* CreditsListingViewModel.swift */; };
 		4EC5287C26D60B68003515B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5287B26D60B68003515B3 /* AppDelegate.swift */; };
 		4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */; };
 		4EC5288626D60B68003515B3 /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5288526D60B68003515B3 /* BaseTableViewHeaderFooterView.swift */; };
@@ -208,6 +212,10 @@
 		4E8BF8E526DA807E0038EEBB /* CastOrCrewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastOrCrewCell.swift; sourceTree = "<group>"; };
 		4E8BF8E726DA840E0038EEBB /* CreditsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditsCell.xib; sourceTree = "<group>"; };
 		4E8BF8E926DB41F90038EEBB /* CastOrCrewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastOrCrewCell.xib; sourceTree = "<group>"; };
+		4E8BF8EC26DB56E00038EEBB /* CreditsListing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreditsListing.storyboard; sourceTree = "<group>"; };
+		4E8BF8ED26DB56E00038EEBB /* CreditsListingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsListingCoordinator.swift; sourceTree = "<group>"; };
+		4E8BF8EE26DB56E00038EEBB /* CreditsListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsListingViewController.swift; sourceTree = "<group>"; };
+		4E8BF8EF26DB56E00038EEBB /* CreditsListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsListingViewModel.swift; sourceTree = "<group>"; };
 		4EC5287826D60B68003515B3 /* SonderCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SonderCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC5287B26D60B68003515B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC5288326D60B68003515B3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -442,6 +450,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4E8BF8EB26DB56BB0038EEBB /* CreditsListing */ = {
+			isa = PBXGroup;
+			children = (
+				4E8BF8EC26DB56E00038EEBB /* CreditsListing.storyboard */,
+				4E8BF8ED26DB56E00038EEBB /* CreditsListingCoordinator.swift */,
+				4E8BF8EE26DB56E00038EEBB /* CreditsListingViewController.swift */,
+				4E8BF8EF26DB56E00038EEBB /* CreditsListingViewModel.swift */,
+			);
+			path = CreditsListing;
+			sourceTree = "<group>";
+		};
 		4EC5286D26D60B68003515B3 = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +628,7 @@
 		4EC528E926D60B68003515B3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4E8BF8EB26DB56BB0038EEBB /* CreditsListing */,
 				4E8BF8C926D9F23C0038EEBB /* MovieDetail */,
 				4E8BF89126D8D4030038EEBB /* Settings */,
 				4EC5294926D74169003515B3 /* MovieListing */,
@@ -910,6 +930,7 @@
 				4E8BF8A726D8F06C0038EEBB /* DisplaySettings.storyboard in Resources */,
 				4E8BF8DE26DA26190038EEBB /* SynopsisCell.xib in Resources */,
 				4EC528FF26D60B6B003515B3 /* Assets.xcassets in Resources */,
+				4E8BF8F026DB56E00038EEBB /* CreditsListing.storyboard in Resources */,
 				4E8BF88026D7CA700038EEBB /* AdsCell.xib in Resources */,
 				4EC5294E26D74199003515B3 /* MovieListing.storyboard in Resources */,
 				4E8BF8E826DA840E0038EEBB /* CreditsCell.xib in Resources */,
@@ -1105,6 +1126,7 @@
 				4E8BF89026D89BB80038EEBB /* FileSaveHelper.swift in Sources */,
 				4EC5296A26D788CA003515B3 /* MovieCell.swift in Sources */,
 				4EC528AC26D60B68003515B3 /* NetworkRelatedExtensions.swift in Sources */,
+				4E8BF8F326DB56E00038EEBB /* CreditsListingViewModel.swift in Sources */,
 				4EC5288926D60B68003515B3 /* Coordinator.swift in Sources */,
 				4EC5288426D60B68003515B3 /* BaseTableViewCell.swift in Sources */,
 				4E8BF8D326D9F4B90038EEBB /* MovieDetailNetworkProvider.swift in Sources */,
@@ -1134,6 +1156,7 @@
 				4E8BF8BA26D926630038EEBB /* Localization.swift in Sources */,
 				4E8BF8CF26D9F2510038EEBB /* MovieDetailCoordinator.swift in Sources */,
 				4E8BF87E26D7BC9A0038EEBB /* R.generated.swift in Sources */,
+				4E8BF8F126DB56E00038EEBB /* CreditsListingCoordinator.swift in Sources */,
 				4E8BF8A826D8F06C0038EEBB /* DisplaySettingsCoordinator.swift in Sources */,
 				4EC528CE26D60B68003515B3 /* Optional+Extensions.swift in Sources */,
 				4E8BF88B26D898120038EEBB /* Constants.swift in Sources */,
@@ -1183,6 +1206,7 @@
 				4EC528A626D60B68003515B3 /* API.swift in Sources */,
 				4E8BF8C526D934690038EEBB /* LanguageSettingsCoordinator.swift in Sources */,
 				4EC528EE26D60B68003515B3 /* SplashScreenCoordinator.swift in Sources */,
+				4E8BF8F226DB56E00038EEBB /* CreditsListingViewController.swift in Sources */,
 				4EC528E626D60B68003515B3 /* UIViewController+Extensions.swift in Sources */,
 				4EC5289826D60B68003515B3 /* BaseTabbarController.swift in Sources */,
 				4EC528AE26D60B68003515B3 /* Relay.swift in Sources */,

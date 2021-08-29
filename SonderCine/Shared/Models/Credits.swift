@@ -14,7 +14,7 @@ protocol CastOrCrew {
     var role: String { get }
 }
 
-struct Credit: Decodable {
+struct Credit: Decodable, CoordinatorPayload {
     var id: Int
     var cast: [Cast]?
     var crew: [Crew]?

@@ -47,5 +47,7 @@ struct LocalizedKey {
         case castAndCrews = "detail.cast_crews"
         case seeAll = "detail.see_all"
         case director = "detail.director"
+        case casts = "detail.casts"
+        case crews = "detail.crews"
     }
 }

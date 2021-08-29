@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol MovieDetailViewControllerDelegate: ViewControllerDelegate, SettingsPresentableViewControllerDelegate {}
+protocol MovieDetailViewControllerDelegate: ViewControllerDelegate, SettingsPresentableViewControllerDelegate {
+    func movieDetail(_ sender: UIViewController, didTap credit: Credit)
+}
 
 final class MovieDetailViewController: BaseViewController {
     var viewModel: MovieDetailViewModel!
@@ -113,7 +115,10 @@ extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         case let .credit(credit):
             let cell: CreditsCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configure(credit)
+            cell.configure(credit) { [weak self] in
+                guard let self = self else { return }
+                self.delegate?.movieDetail(self, didTap: credit)
+            }
             return cell
         }
     }

@@ -30,3 +30,5 @@
 "detail.cast_crews" = "Cast & Crews";
 "detail.see_all" = "See all";
 "detail.director" = "Directors";
+"detail.casts" = "Casts";
+"detail.crews" = "Crews";
