@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol SettingsCoordinatorDelegate: CoordinatorDelegate {}
 
@@ -34,6 +35,16 @@ extension SettingsCoordinator {
         add(coordinator)
         coordinator.start(sceneType: .push(navigation))
     }
+    
+    func pushPrivacy() {
+        let safari = SFSafariViewController(url: URL(string: "https://google.com")!)
+        rootViewController.present(safari, animated: true)
+    }
+    
+    func pushTermsOfUse() {
+        let safari = SFSafariViewController(url: URL(string: "https://google.com")!)
+        rootViewController.present(safari, animated: true)
+    }
 }
 
 // MARK: Delegates
@@ -44,5 +55,13 @@ extension SettingsCoordinator: SettingsViewControllerDelegate {
     
     func languageSettingsTapped() {
         pushLanguageSettings()
+    }
+    
+    func privacyTapped() {
+        pushPrivacy()
+    }
+    
+    func termsOfUseTapped() {
+        pushTermsOfUse()
     }
 }

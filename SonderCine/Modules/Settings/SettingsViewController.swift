@@ -10,6 +10,8 @@ import UIKit
 protocol SettingsViewControllerDelegate: ViewControllerDelegate {
     func displaySettingsTapped()
     func languageSettingsTapped()
+    func privacyTapped()
+    func termsOfUseTapped()
 }
 
 final class SettingsViewController: BaseViewController {
@@ -32,8 +34,8 @@ final class SettingsViewController: BaseViewController {
         // About section
         contentView.addArrangedSubview(SettingsSectionView(title: LocalizedKey.Settings.about.localized(), items: [
             .plain(label: LocalizedKey.Settings.version.localized(), value: Bundle.main.currentAppVersion),
-            .link(label: LocalizedKey.Settings.privacy.localized()) { },
-            .link(label: LocalizedKey.Settings.terms.localized()) { }
+            .link(label: LocalizedKey.Settings.privacy.localized()) { [weak self] in self?.delegate?.privacyTapped() },
+            .link(label: LocalizedKey.Settings.terms.localized()) { [weak self] in self?.delegate?.termsOfUseTapped() }
         ]))
     }
     
