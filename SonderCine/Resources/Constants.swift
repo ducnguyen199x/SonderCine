@@ -14,7 +14,7 @@ enum Constants {
         static let topRatedDirectory = "sondercine.data/top_rated"
         static let creditsDirectory = "sondercine.data/credits"
         static let movieDetailsDirectory = "sondercine.data/movie_details"
-        static let cacheInterval: TimeInterval = 3600 // 1 hours
+        static let cacheInterval: TimeInterval = 24 * 3600 // 24 hours
     }
     
     enum Localizable {
