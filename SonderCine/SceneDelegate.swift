@@ -6,22 +6,22 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     let appCoordinator = AppCoordinator()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
         guard (scene as? UIWindowScene) != nil else { return }
         
+        setupUI()
+        setupGoogleServices()
+        NetworkManager.shared.startNetworkConnectionObserver()
+
         if let window = window {
             appCoordinator.start(sceneType: .root(window))
         }
-        
-        NetworkManager.shared.startNetworkConnectionObserver()
-        setupUI()
-        setupGoogleServices()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -58,6 +58,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupGoogleServices() {
-        
+        GMSServices.provideAPIKey(AppConfiguration.googleMapAPIKey.rawValue)
     }
 }

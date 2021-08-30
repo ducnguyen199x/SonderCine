@@ -139,6 +139,10 @@
 		4EC5297226D7A722003515B3 /* ScrollView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5297126D7A721003515B3 /* ScrollView+PullToRefresh.swift */; };
 		4EC5297426D7A7C8003515B3 /* Int+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5297326D7A7C8003515B3 /* Int+Ex.swift */; };
 		4ED2DF8A26DC8EC500DB333D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8926DC8EC500DB333D /* NetworkManager.swift */; };
+		4ED2DF9026DCD01700DB333D /* CineMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8C26DCD01700DB333D /* CineMap.storyboard */; };
+		4ED2DF9126DCD01700DB333D /* CineMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8D26DCD01700DB333D /* CineMapCoordinator.swift */; };
+		4ED2DF9226DCD01700DB333D /* CineMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8E26DCD01700DB333D /* CineMapViewController.swift */; };
+		4ED2DF9326DCD01700DB333D /* CineMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8F26DCD01700DB333D /* CineMapViewModel.swift */; };
 		CFE045DD96DCE4483DF11EDD /* Pods_SonderCine_SonderCineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A645F06546B8FE0FAEC3028 /* Pods_SonderCine_SonderCineUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -303,6 +307,10 @@
 		4EC5297126D7A721003515B3 /* ScrollView+PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		4EC5297326D7A7C8003515B3 /* Int+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ex.swift"; sourceTree = "<group>"; };
 		4ED2DF8926DC8EC500DB333D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4ED2DF8C26DCD01700DB333D /* CineMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CineMap.storyboard; sourceTree = "<group>"; };
+		4ED2DF8D26DCD01700DB333D /* CineMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineMapCoordinator.swift; sourceTree = "<group>"; };
+		4ED2DF8E26DCD01700DB333D /* CineMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineMapViewController.swift; sourceTree = "<group>"; };
+		4ED2DF8F26DCD01700DB333D /* CineMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineMapViewModel.swift; sourceTree = "<group>"; };
 		522C3414505165662EBD3C79 /* Pods-SonderCine-SonderCineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine-SonderCineUITests.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DEB1283D9F9EFDA9D3C550E /* Pods-SonderCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.release.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.release.xcconfig"; sourceTree = "<group>"; };
 		A2DB93354E3922171D2A722E /* Pods-SonderCine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -631,6 +639,7 @@
 		4EC528E926D60B68003515B3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4ED2DF8B26DCCFF100DB333D /* CineMap */,
 				4E8BF8EB26DB56BB0038EEBB /* CreditsListing */,
 				4E8BF8C926D9F23C0038EEBB /* MovieDetail */,
 				4E8BF89126D8D4030038EEBB /* Settings */,
@@ -800,6 +809,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4ED2DF8B26DCCFF100DB333D /* CineMap */ = {
+			isa = PBXGroup;
+			children = (
+				4ED2DF8C26DCD01700DB333D /* CineMap.storyboard */,
+				4ED2DF8D26DCD01700DB333D /* CineMapCoordinator.swift */,
+				4ED2DF8E26DCD01700DB333D /* CineMapViewController.swift */,
+				4ED2DF8F26DCD01700DB333D /* CineMapViewModel.swift */,
+			);
+			path = CineMap;
+			sourceTree = "<group>";
+		};
 		63056D3068780E574794F27B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -940,6 +960,7 @@
 				4EC5294E26D74199003515B3 /* MovieListing.storyboard in Resources */,
 				4E8BF8E826DA840E0038EEBB /* CreditsCell.xib in Resources */,
 				4E8BF8C426D934690038EEBB /* LanguageSettings.storyboard in Resources */,
+				4ED2DF9026DCD01700DB333D /* CineMap.storyboard in Resources */,
 				4E8BF8EA26DB41F90038EEBB /* CastOrCrewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1010,7 +1031,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R/R.generated.swift",
+				$SRCROOT/R/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1158,6 +1179,7 @@
 				4EC528E026D60B68003515B3 /* UITableView+Extensions.swift in Sources */,
 				4E8BF8AF26D8F47A0038EEBB /* UserDefaults+Ex.swift in Sources */,
 				4EC528CA26D60B68003515B3 /* NSMutableAttributedString+Extensions.swift in Sources */,
+				4ED2DF9226DCD01700DB333D /* CineMapViewController.swift in Sources */,
 				4E8BF8D126D9F2510038EEBB /* MovieDetailViewModel.swift in Sources */,
 				4EC5296126D76040003515B3 /* DoubleValue.swift in Sources */,
 				4EC528E826D60B68003515B3 /* UserDefaults+Extensions.swift in Sources */,
@@ -1202,6 +1224,8 @@
 				4EC5296526D761B3003515B3 /* StringValue.swift in Sources */,
 				4EC528F226D60B68003515B3 /* SplashScreenViewModel.swift in Sources */,
 				4E8BF88226D7CA7B0038EEBB /* AdsCell.swift in Sources */,
+				4ED2DF9126DCD01700DB333D /* CineMapCoordinator.swift in Sources */,
+				4ED2DF9326DCD01700DB333D /* CineMapViewModel.swift in Sources */,
 				4EC528C226D60B68003515B3 /* DateFormatter+Extensions.swift in Sources */,
 				4EC5288B26D60B68003515B3 /* AppCoordinator.swift in Sources */,
 				4E8BF89326D8D4110038EEBB /* SettingsSectionView.swift in Sources */,

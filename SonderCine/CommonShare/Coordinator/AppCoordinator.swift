@@ -51,6 +51,14 @@ extension AppCoordinator {
         invoke(coordinator, sceneType: .root(window))
     }
     
+    func openCineMapScreen() {
+        guard let window = window else { return }
+        let coordinator = CineMapCoordinator()
+        coordinator.delegate = self
+        removeAllCoordinators()
+        invoke(coordinator, sceneType: .root(window))
+    }
+    
     func showNoNetwork() {
         openSplashScreen()
     }
@@ -58,9 +66,12 @@ extension AppCoordinator {
 
 extension AppCoordinator: SplashScreenCoordinatorDelegate {
     func splashScreenCoordinatorCompleted() {
-        openMainTabbarScreen()
+        openCineMapScreen()
     }
 }
 
 extension AppCoordinator: MainTabbarCoordinatorDelegate {
+}
+
+extension AppCoordinator: CineMapCoordinatorDelegate {
 }

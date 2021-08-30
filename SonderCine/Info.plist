@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -62,14 +67,12 @@
 	</array>
 	<key>UserDefined</key>
 	<dict>
-		<key>IMAGE_ENDPOINT</key>
-		<string>$(IMAGE_ENDPOINT)</string>
 		<key>API_ENDPOINT</key>
 		<string>$(API_ENDPOINT)</string>
+		<key>IMAGE_ENDPOINT</key>
+		<string>$(IMAGE_ENDPOINT)</string>
 		<key>THE_MOVIE_DB_API_KEY</key>
 		<string>$(THE_MOVIE_DB_API_KEY)</string>
-		<key>GOOGLE_MAP_API_KEY</key>
-		<string>$(GOOGLE_MAP_API_KEY)</string>
 	</dict>
 </dict>
 </plist>
