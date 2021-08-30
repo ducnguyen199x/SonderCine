@@ -58,6 +58,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupGoogleServices() {
-        GMSServices.provideAPIKey(AppConfiguration.googleMapAPIKey.rawValue)
+        GMSServices.provideAPIKey(AppConfiguration.googleMapAPIKey.value ?? "")
     }
 }
