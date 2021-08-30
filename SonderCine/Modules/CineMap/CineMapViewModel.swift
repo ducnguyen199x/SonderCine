@@ -7,4 +7,17 @@
 
 import Foundation
 
-final class CineMapViewModel: BaseViewModel {}
+final class CineMapViewModel: BaseViewModel {
+    @Relay var coordinate: Coordinate = LocationManager.shared.currentCoordinate
+    
+    override init() {
+        super.init()
+        LocationManager.shared.updateLocation()
+    }
+    
+    override func bind() {
+        rx.disposeBag.insert([
+            LocationManager.shared.$currentCoordinate.bind(to: $coordinate)
+        ])
+    }
+}

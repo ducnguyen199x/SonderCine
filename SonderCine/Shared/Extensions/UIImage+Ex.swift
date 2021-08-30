@@ -44,4 +44,16 @@ extension UIImage {
     static var checkmark: UIImage? {
         return UIImage(systemName: "checkmark")
     }
+    
+    static var currentPosition: UIImage? {
+        return UIImage(systemName: "figure.wave.circle")
+    }
+}
+
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage {
+      return UIGraphicsImageRenderer(size: size).image { _ in
+        draw(in: CGRect(origin: .zero, size: size))
+      }
+    }
 }

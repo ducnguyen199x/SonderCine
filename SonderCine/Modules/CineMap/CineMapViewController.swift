@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 protocol CineMapViewControllerDelegate: ViewControllerDelegate {}
 
@@ -14,24 +15,41 @@ final class CineMapViewController: BaseViewController {
     var viewModel: CineMapViewModel!
     weak var delegate: CineMapViewControllerDelegate?
     
+    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var myPositionButton: UIButton!
+
     override func setupView() {
         super.setupView()
+        myPositionButton.setImage(.currentPosition?.resized(to: CGSize(width: 50, height: 50))
+                                    .withTintColor(.systemRed, renderingMode: .alwaysOriginal), for: .normal)
+        myPositionButton.layer.cornerRadius = 25
+        myPositionButton.layer.shadowOpacity = 0.8
+        myPositionButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        myPositionButton.backgroundColor = .white
+    }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        rx.disposeBag.insert([
+            viewModel.$coordinate.subscribe(onNext: { [weak self] _ in
+                self?.updateMap()
+            })
+        ])
+    }
         
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-        self.view.addSubview(mapView)
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+    private func updateMap() {
+        let camera = GMSCameraPosition.camera(withLatitude: viewModel.coordinate.lat,
+                                              longitude: viewModel.coordinate.lng, zoom: 17)
+        mapView.camera = camera
     }
     
     override func willDeinit() {
         delegate?.viewControllerWillDeinit()
+    }
+}
+
+extension CineMapViewController {
+    @IBAction func myPositionTapped(_ sender: UIButton) {
+        updateMap()
     }
 }

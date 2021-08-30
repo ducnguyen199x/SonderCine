@@ -16,7 +16,7 @@ final class CineMapCoordinator: Coordinator {
         let viewController = CineMapViewController.instantiate()
         viewController.viewModel = CineMapViewModel()
         viewController.delegate = self
-        return viewController.embeddedInNavigation()
+        return viewController.embeddedInNavigation(shouldHideNavigation: true)
     }
 }
 

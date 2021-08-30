@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>googlechromes</string>
-		<string>comgooglemaps</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -23,6 +18,17 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Please give us your location so that we can help you to find nearby cinemas</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please give us your location so that we can help you to find nearby cinemas</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please give us your location so that we can help you to find nearby cinemas</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>
@@ -46,6 +52,10 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -69,12 +79,12 @@
 	<dict>
 		<key>API_ENDPOINT</key>
 		<string>$(API_ENDPOINT)</string>
+		<key>GOOGLE_MAP_API_KEY</key>
+		<string>$(GOOGLE_MAP_API_KEY)</string>
 		<key>IMAGE_ENDPOINT</key>
 		<string>$(IMAGE_ENDPOINT)</string>
 		<key>THE_MOVIE_DB_API_KEY</key>
 		<string>$(THE_MOVIE_DB_API_KEY)</string>
-		<key>GOOGLE_MAP_API_KEY</key>
-		<string>$(GOOGLE_MAP_API_KEY)</string>
 	</dict>
 </dict>
 </plist>
