@@ -19,11 +19,18 @@ def ui_pods
     pod 'FLEX', :configurations => ['Debug']
 end
 
+def google_pods
+    pod 'GoogleMaps'
+    pod 'SVProgressHUD'
+    pod 'FLEX', :configurations => ['Debug']
+end
+
 target 'SonderCine' do
   use_frameworks!
 
   base_pods
   ui_pods
+  google_pods
   
   # Pods for SonderCine
 

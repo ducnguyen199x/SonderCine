@@ -68,6 +68,8 @@
 		<string>$(API_ENDPOINT)</string>
 		<key>THE_MOVIE_DB_API_KEY</key>
 		<string>$(THE_MOVIE_DB_API_KEY)</string>
+		<key>GOOGLE_MAP_API_KEY</key>
+		<string>$(GOOGLE_MAP_API_KEY)</string>
 	</dict>
 </dict>
 </plist>

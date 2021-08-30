@@ -824,6 +824,7 @@
 				4EC5287426D60B68003515B3 /* Resources */,
 				4EC5287526D60B68003515B3 /* Swift Lint */,
 				4D779B7F368C4002092938E2 /* [CP] Embed Pods Frameworks */,
+				AF0CC4B1D3B2246E58D52EBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -862,6 +863,7 @@
 				4EC5291026D60B6B003515B3 /* Frameworks */,
 				4EC5291126D60B6B003515B3 /* Resources */,
 				5E2AF52409CDA443A923EB0F /* [CP] Embed Pods Frameworks */,
+				885F9236076D36A7966BEC64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1008,7 +1010,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R/R.generated.swift,
+				"$SRCROOT/R/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1073,6 +1075,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		885F9236076D36A7966BEC64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF0CC4B1D3B2246E58D52EBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SonderCine/Pods-SonderCine-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SonderCine/Pods-SonderCine-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SonderCine/Pods-SonderCine-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4A3467171471F3087170812 /* [CP] Check Pods Manifest.lock */ = {

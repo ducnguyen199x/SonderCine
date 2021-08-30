@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         NetworkManager.shared.startNetworkConnectionObserver()
         setupUI()
+        setupGoogleServices()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -54,5 +55,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func setupUI() {
         window?.tintColor = .systemOrange
         AppSettings.shared.loadSavedAppTheme()
+    }
+    
+    private func setupGoogleServices() {
+        
     }
 }
