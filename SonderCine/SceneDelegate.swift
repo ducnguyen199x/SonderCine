@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             appCoordinator.start(sceneType: .root(window))
         }
         
+        NetworkManager.shared.startNetworkConnectionObserver()
         setupUI()
     }
 

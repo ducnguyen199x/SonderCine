@@ -11,6 +11,11 @@ import RxCocoa
 final class SplashScreenViewModel: BaseViewModel {
     
     func fetchData() {
+        if NetworkManager.shared.connection == .notReachable {
+            state = .error(NetworkError.noNetwork)
+            return
+        }
+        
         state = .loading(nil)
         Completable.empty().delay(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe(onCompleted: { [weak self] in

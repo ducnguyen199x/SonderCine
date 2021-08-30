@@ -14,6 +14,7 @@ enum NetworkError: LocalizedError {
     case cancelled
     case refreshTokenFailed
     case serverError(String)
+    case noNetwork
     
     var localizedDescription: String {
         switch self {

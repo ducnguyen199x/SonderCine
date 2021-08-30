@@ -48,9 +48,7 @@ final class MovieListingCoordinator: TabContentCoordinator {
 extension MovieListingCoordinator {
     private func pushMovieDetail(id: Int) {
         guard let navigation = rootViewController.navigationController else { return }
-        let coordinator = MovieDetailCoordinator()
-        add(coordinator)
-        coordinator.start(sceneType: .push(navigation), payload: id)
+        invoke(MovieDetailCoordinator(), sceneType: .push(navigation), payload: id)
     }
 }
 

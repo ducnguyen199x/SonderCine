@@ -27,8 +27,7 @@ extension MovieDetailCoordinator {
     private func pushCreditsListing(_ credit: Credit) {
         guard let navigation = rootViewController.navigationController else { return }
         let coordinator = CreditsListingCoordinator()
-        add(coordinator)
-        coordinator.start(sceneType: .push(navigation), payload: credit)
+        invoke(coordinator, sceneType: .push(navigation), payload: credit)
     }
 }
 

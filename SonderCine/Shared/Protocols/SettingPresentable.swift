@@ -17,8 +17,6 @@ protocol SettingsPresentableCoordinator where Self: Coordinator {
 
 extension SettingsPresentableCoordinator {
     func presentSettings() {
-        let coordinator = SettingsCoordinator()
-        add(coordinator)
-        coordinator.start(sceneType: .present(rootViewController))
+        invoke(SettingsCoordinator(), sceneType: .present(rootViewController))
     }
 }

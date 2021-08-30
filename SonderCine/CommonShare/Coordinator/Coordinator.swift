@@ -42,9 +42,9 @@ class Coordinator: NSObject {
         launch(target: navigationController, sceneType: sceneType)
     }
     
-    func invoke(_ coordinator: Coordinator, sceneType: SceneType) {
+    func invoke(_ coordinator: Coordinator, sceneType: SceneType, payload: CoordinatorPayload? = nil) {
         add(coordinator)
-        coordinator.start(sceneType: sceneType)
+        coordinator.start(sceneType: sceneType, payload: payload)
     }
     
     func makeNavigationController(payload: CoordinatorPayload? = nil) -> UINavigationController {

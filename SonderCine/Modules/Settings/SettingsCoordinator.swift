@@ -24,16 +24,12 @@ final class SettingsCoordinator: Coordinator {
 extension SettingsCoordinator {
     func pushDisplaySettings() {
         guard let navigation = rootViewController.navigationController else { return }
-        let coordinator = DisplaySettingsCoordinator()
-        add(coordinator)
-        coordinator.start(sceneType: .push(navigation))
+        invoke(DisplaySettingsCoordinator(), sceneType: .push(navigation))
     }
     
     func pushLanguageSettings() {
         guard let navigation = rootViewController.navigationController else { return }
-        let coordinator = LanguageSettingsCoordinator()
-        add(coordinator)
-        coordinator.start(sceneType: .push(navigation))
+        invoke(LanguageSettingsCoordinator(), sceneType: .push(navigation))
     }
     
     func pushPrivacy() {

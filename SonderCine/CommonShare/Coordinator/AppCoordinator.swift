@@ -9,6 +9,21 @@ import UIKit
 class AppCoordinator: Coordinator {
     var window: UIWindow?
     
+    override init() {
+        super.init()
+        bind()
+    }
+    
+    private func bind() {
+        rx.disposeBag.insert([
+            NetworkManager.shared.$connection.subscribe(onNext: { [weak self] status in
+                if status == .notReachable {
+                    self?.showNoNetwork()
+                }
+            })
+        ])
+    }
+    
     override func start(sceneType: SceneType, payload: CoordinatorPayload? = nil) {
         if case .root(let window) = sceneType {
             self.window = window
@@ -34,6 +49,10 @@ extension AppCoordinator {
         coordinator.delegate = self
         removeAllCoordinators()
         invoke(coordinator, sceneType: .root(window))
+    }
+    
+    func showNoNetwork() {
+        openSplashScreen()
     }
 }
 
