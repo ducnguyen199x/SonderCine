@@ -21,8 +21,7 @@ end
 
 def google_pods
     pod 'GoogleMaps'
-    pod 'SVProgressHUD'
-    pod 'FLEX', :configurations => ['Debug']
+    pod 'GooglePlaces'
 end
 
 target 'SonderCine' do

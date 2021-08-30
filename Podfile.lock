@@ -6,6 +6,7 @@ PODS:
   - GoogleMaps/Base (5.1.0)
   - GoogleMaps/Maps (5.1.0):
     - GoogleMaps/Base
+  - GooglePlaces (5.0.0)
   - IQKeyboardManager (6.5.6)
   - Kingfisher (6.3.1)
   - "NSObject+Rx (5.2.2)":
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Alamofire
   - FLEX
   - GoogleMaps
+  - GooglePlaces
   - IQKeyboardManager
   - Kingfisher
   - "NSObject+Rx"
@@ -42,6 +44,7 @@ SPEC REPOS:
     - Alamofire
     - FLEX
     - GoogleMaps
+    - GooglePlaces
     - IQKeyboardManager
     - Kingfisher
     - "NSObject+Rx"
@@ -58,6 +61,7 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   FLEX: e51461dd6f0bfb00643c262acdfea5d5d12c596b
   GoogleMaps: 086ae1dab659eaa7339bdb30fc88e2f44e7c597c
+  GooglePlaces: 5d87ca13ed98b7a937e0d8bc7026f718c7263271
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
@@ -70,6 +74,6 @@ SPEC CHECKSUMS:
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: e0c6ecd650b71cb1d3f78d80b051e496b1b2d9ab
+PODFILE CHECKSUM: ec0b06353c795927c23c49f8fdce720068b200e2
 
 COCOAPODS: 1.10.1
