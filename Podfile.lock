@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (5.4.3)
   - FLEX (4.5.0)
-  - IQKeyboardManager (6.5.6)
   - Kingfisher (6.3.1)
   - "NSObject+Rx (5.2.2)":
     - RxSwift (~> 6.2)
@@ -21,7 +20,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FLEX
-  - IQKeyboardManager
   - Kingfisher
   - "NSObject+Rx"
   - R.swift
@@ -35,7 +33,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - FLEX
-    - IQKeyboardManager
     - Kingfisher
     - "NSObject+Rx"
     - R.swift
@@ -50,7 +47,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   FLEX: e51461dd6f0bfb00643c262acdfea5d5d12c596b
-  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
@@ -62,6 +58,6 @@ SPEC CHECKSUMS:
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 320a3a45b203a8a0d6d93a6ff69ad4de0bb0aadd
+PODFILE CHECKSUM: 30fbd27a28078d8bf2624324a3a878a19dd68beb
 
 COCOAPODS: 1.10.1

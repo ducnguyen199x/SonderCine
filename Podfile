@@ -14,7 +14,6 @@ def base_pods
 end
 
 def ui_pods
-    pod 'IQKeyboardManager'
     pod 'SVProgressHUD'
     pod 'FLEX', :configurations => ['Debug']
 end
