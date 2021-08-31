@@ -24,11 +24,6 @@
 	<string>Please give us your location so that we can help you to find nearby cinemas</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please give us your location so that we can help you to find nearby cinemas</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>googlechromes</string>
-		<string>comgooglemaps</string>
-	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

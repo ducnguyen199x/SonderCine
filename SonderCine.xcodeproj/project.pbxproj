@@ -143,8 +143,6 @@
 		4ED2DF9126DCD01700DB333D /* CineMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8D26DCD01700DB333D /* CineMapCoordinator.swift */; };
 		4ED2DF9226DCD01700DB333D /* CineMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8E26DCD01700DB333D /* CineMapViewController.swift */; };
 		4ED2DF9326DCD01700DB333D /* CineMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF8F26DCD01700DB333D /* CineMapViewModel.swift */; };
-		4ED2DF9526DCD76F00DB333D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF9426DCD76F00DB333D /* LocationManager.swift */; };
-		4ED2DF9726DCD81000DB333D /* GeoCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2DF9626DCD81000DB333D /* GeoCoding.swift */; };
 		CFE045DD96DCE4483DF11EDD /* Pods_SonderCine_SonderCineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A645F06546B8FE0FAEC3028 /* Pods_SonderCine_SonderCineUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -313,8 +311,6 @@
 		4ED2DF8D26DCD01700DB333D /* CineMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineMapCoordinator.swift; sourceTree = "<group>"; };
 		4ED2DF8E26DCD01700DB333D /* CineMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineMapViewController.swift; sourceTree = "<group>"; };
 		4ED2DF8F26DCD01700DB333D /* CineMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineMapViewModel.swift; sourceTree = "<group>"; };
-		4ED2DF9426DCD76F00DB333D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		4ED2DF9626DCD81000DB333D /* GeoCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoding.swift; sourceTree = "<group>"; };
 		522C3414505165662EBD3C79 /* Pods-SonderCine-SonderCineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine-SonderCineUITests.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DEB1283D9F9EFDA9D3C550E /* Pods-SonderCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.release.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.release.xcconfig"; sourceTree = "<group>"; };
 		A2DB93354E3922171D2A722E /* Pods-SonderCine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonderCine.debug.xcconfig"; path = "Target Support Files/Pods-SonderCine/Pods-SonderCine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -380,7 +376,6 @@
 				4E8BF8B026D8F4AD0038EEBB /* AppSettings.swift */,
 				4E8BF8BB26D926D80038EEBB /* LanguageManager.swift */,
 				4ED2DF8926DC8EC500DB333D /* NetworkManager.swift */,
-				4ED2DF9426DCD76F00DB333D /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -735,7 +730,6 @@
 				4EC5295D26D75813003515B3 /* Movie.swift */,
 				4E8BF88626D7E4E70038EEBB /* Paging.swift */,
 				4E8BF8D426D9FAB10038EEBB /* Credits.swift */,
-				4ED2DF9626DCD81000DB333D /* GeoCoding.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -850,7 +844,6 @@
 				4EC5287426D60B68003515B3 /* Resources */,
 				4EC5287526D60B68003515B3 /* Swift Lint */,
 				4D779B7F368C4002092938E2 /* [CP] Embed Pods Frameworks */,
-				AF0CC4B1D3B2246E58D52EBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -889,7 +882,6 @@
 				4EC5291026D60B6B003515B3 /* Frameworks */,
 				4EC5291126D60B6B003515B3 /* Resources */,
 				5E2AF52409CDA443A923EB0F /* [CP] Embed Pods Frameworks */,
-				885F9236076D36A7966BEC64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1037,7 +1029,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R/R.generated.swift,
+				"$SRCROOT/R/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1104,40 +1096,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		885F9236076D36A7966BEC64 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SonderCine-SonderCineUITests/Pods-SonderCine-SonderCineUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF0CC4B1D3B2246E58D52EBB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SonderCine/Pods-SonderCine-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SonderCine/Pods-SonderCine-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SonderCine/Pods-SonderCine-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B4A3467171471F3087170812 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1184,7 +1142,6 @@
 				4EC528BC26D60B68003515B3 /* Comparable+Extensions.swift in Sources */,
 				4EC528E026D60B68003515B3 /* UITableView+Extensions.swift in Sources */,
 				4E8BF8AF26D8F47A0038EEBB /* UserDefaults+Ex.swift in Sources */,
-				4ED2DF9726DCD81000DB333D /* GeoCoding.swift in Sources */,
 				4EC528CA26D60B68003515B3 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				4ED2DF9226DCD01700DB333D /* CineMapViewController.swift in Sources */,
 				4E8BF8D126D9F2510038EEBB /* MovieDetailViewModel.swift in Sources */,
@@ -1242,7 +1199,6 @@
 				4EC528F026D60B68003515B3 /* SplashScreenViewController.swift in Sources */,
 				4E8BF89B26D8D6CC0038EEBB /* SettingsCoordinator.swift in Sources */,
 				4EC528BA26D60B68003515B3 /* Codable+Extensions.swift in Sources */,
-				4ED2DF9526DCD76F00DB333D /* LocationManager.swift in Sources */,
 				4EC528C426D60B68003515B3 /* Dictionary+Extensions.swift in Sources */,
 				4EC5295026D74199003515B3 /* MovieListingViewController.swift in Sources */,
 				4EC528B526D60B68003515B3 /* ImagePicker.swift in Sources */,

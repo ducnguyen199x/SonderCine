@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleMaps
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -16,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard (scene as? UIWindowScene) != nil else { return }
         
         setupUI()
-        setupGoogleServices()
         NetworkManager.shared.startNetworkConnectionObserver()
 
         if let window = window {
@@ -55,9 +53,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func setupUI() {
         window?.tintColor = .systemOrange
         AppSettings.shared.loadSavedAppTheme()
-    }
-    
-    private func setupGoogleServices() {
-        GMSServices.provideAPIKey(AppConfiguration.googleMapAPIKey.value ?? "")
     }
 }
