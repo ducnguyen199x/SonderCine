@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import MapKit
 
-protocol CineMapCoordinatorDelegate: CoordinatorDelegate {}
+protocol CineMapCoordinatorDelegate: CoordinatorDelegate {
+    func cineMapDidSelectLocation()
+}
 
 final class CineMapCoordinator: Coordinator {
     weak var delegate: CineMapCoordinatorDelegate?
@@ -21,4 +24,8 @@ final class CineMapCoordinator: Coordinator {
 }
 
 // MARK: Delegates
-extension CineMapCoordinator: CineMapViewControllerDelegate {}
+extension CineMapCoordinator: CineMapViewControllerDelegate {
+    func cineMap(_ sender: UIViewController, didSelect location: CLLocationCoordinate2D) {
+        delegate?.cineMapDidSelectLocation()
+    }
+}

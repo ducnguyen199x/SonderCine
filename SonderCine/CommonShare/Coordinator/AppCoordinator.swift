@@ -74,4 +74,7 @@ extension AppCoordinator: MainTabbarCoordinatorDelegate {
 }
 
 extension AppCoordinator: CineMapCoordinatorDelegate {
+    func cineMapDidSelectLocation() {
+        openMainTabbarScreen()
+    }
 }

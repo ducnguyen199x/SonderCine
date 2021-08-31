@@ -8,7 +8,9 @@
 import UIKit
 import MapKit
 
-protocol CineMapViewControllerDelegate: ViewControllerDelegate {}
+protocol CineMapViewControllerDelegate: ViewControllerDelegate {
+    func cineMap(_ sender: UIViewController, didSelect location: CLLocationCoordinate2D)
+}
 
 final class CineMapViewController: BaseViewController {
     var viewModel: CineMapViewModel!
@@ -138,7 +140,17 @@ final class CineMapViewController: BaseViewController {
                 Alert.showOneButtonAlert(message: LocalizedKey.Alert.locationNotFound.localized(), in: self)
                 return
             }
+            
+            // Add Pin
+            self.mapView.annotations.forEach(self.mapView.removeAnnotation)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            self.mapView.addAnnotation(annotation)
+            
+            // Draw direction
             self.mapView.addOverlay(route.polyline)
+            
+            // Zoom out to see full paths
             self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: .uniform(50), animated: true)
         }
     }
@@ -271,5 +283,10 @@ extension CineMapViewController: MKMapViewDelegate {
         self.previousLocation = center
         
         geoCoder.cancelGeocode()
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let coordinate = view.annotation?.coordinate else { return }
+        delegate?.cineMap(self, didSelect: coordinate)
     }
 }
