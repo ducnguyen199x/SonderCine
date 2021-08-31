@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 extension UserDefaults {
     var theme: Theme {
@@ -26,5 +27,10 @@ extension UserDefaults {
             return .english
         }
         set { set(newValue.rawValue, forKey: #function) }
+    }
+    
+    var didSelectCinema: Bool {
+        get { bool(forKey: #function) }
+        set { set(newValue, forKey: #function) }
     }
 }

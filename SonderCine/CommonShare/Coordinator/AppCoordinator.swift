@@ -66,7 +66,11 @@ extension AppCoordinator {
 
 extension AppCoordinator: SplashScreenCoordinatorDelegate {
     func splashScreenCoordinatorCompleted() {
-        openCineMapScreen()
+        if UserDefaults.standard.didSelectCinema {
+            openMainTabbarScreen()
+        } else {
+            openCineMapScreen()
+        }
     }
 }
 
@@ -74,7 +78,7 @@ extension AppCoordinator: MainTabbarCoordinatorDelegate {
 }
 
 extension AppCoordinator: CineMapCoordinatorDelegate {
-    func cineMapDidSelectLocation() {
+    func cineMapDidSelectLocation(_ sender: Coordinator) {
         openMainTabbarScreen()
     }
 }

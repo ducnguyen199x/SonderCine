@@ -8,6 +8,7 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate: ViewControllerDelegate {
+    func changeCinemaTapped()
     func displaySettingsTapped()
     func languageSettingsTapped()
     func privacyTapped()
@@ -27,6 +28,7 @@ final class SettingsViewController: BaseViewController {
         
         // General section
         contentView.addArrangedSubview(SettingsSectionView(title: LocalizedKey.Settings.general.localized(), items: [
+            .link(label: LocalizedKey.Settings.changeCinema.localized()) { [weak self] in self?.delegate?.changeCinemaTapped() },
             .link(label: LocalizedKey.Settings.languages.localized()) { [weak self] in self?.delegate?.languageSettingsTapped() },
             .link(label: LocalizedKey.Settings.display.localized()) { [weak self] in self?.delegate?.displaySettingsTapped() }
         ]))

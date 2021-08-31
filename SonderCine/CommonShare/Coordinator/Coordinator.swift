@@ -11,6 +11,7 @@ enum SceneType {
     case root(UIWindow)
     case push(UINavigationController)
     case present(UIViewController)
+    case customPresent(UIViewController, UIModalPresentationStyle)
     case popup(UIViewController, CGSize, Bool)
     case embedded(UIViewController, UIView)
 }
@@ -77,6 +78,9 @@ class Coordinator: NSObject {
     
     func launch(target: UIViewController, sceneType: SceneType) {
         switch sceneType {
+        case .customPresent(let viewController, let style):
+            target.modalPresentationStyle = style
+            viewController.present(target, animated: true, completion: nil)
         case .present(let viewController):
             viewController.present(target, animated: true, completion: nil)
         case .push(let navigationController):

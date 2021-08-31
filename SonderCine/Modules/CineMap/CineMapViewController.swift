@@ -46,7 +46,7 @@ final class CineMapViewController: BaseViewController {
         searchBar.placeholder = LocalizedKey.CineMap.searchPlaceholder.localized()
         coordinateSearchTitle.text = LocalizedKey.CineMap.searchLatLng.localized()
         coordinateSearchButton.setTitle(LocalizedKey.CineMap.search.localized(), for: .normal)
-        coordinateSearchButton.setTitle(LocalizedKey.CineMap.clear.localized(), for: .normal)
+        clearButton.setTitle(LocalizedKey.CineMap.clear.localized(), for: .normal)
     }
     
     private func setupMap() {
@@ -287,6 +287,7 @@ extension CineMapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let coordinate = view.annotation?.coordinate else { return }
+        UserDefaults.standard.didSelectCinema = true
         delegate?.cineMap(self, didSelect: coordinate)
     }
 }

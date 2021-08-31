@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 protocol CineMapCoordinatorDelegate: CoordinatorDelegate {
-    func cineMapDidSelectLocation()
+    func cineMapDidSelectLocation(_ sender: Coordinator)
 }
 
 final class CineMapCoordinator: Coordinator {
@@ -26,6 +26,6 @@ final class CineMapCoordinator: Coordinator {
 // MARK: Delegates
 extension CineMapCoordinator: CineMapViewControllerDelegate {
     func cineMap(_ sender: UIViewController, didSelect location: CLLocationCoordinate2D) {
-        delegate?.cineMapDidSelectLocation()
+        delegate?.cineMapDidSelectLocation(self)
     }
 }

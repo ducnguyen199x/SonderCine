@@ -41,6 +41,12 @@ extension SettingsCoordinator {
         let safari = SFSafariViewController(url: URL(string: "https://google.com")!)
         rootViewController.present(safari, animated: true)
     }
+    
+    func presentCineMap() {
+        let coordinator = CineMapCoordinator()
+        coordinator.delegate = self
+        invoke(coordinator, sceneType: .customPresent(rootViewController, .automatic))
+    }
 }
 
 // MARK: Delegates
@@ -59,5 +65,15 @@ extension SettingsCoordinator: SettingsViewControllerDelegate {
     
     func termsOfUseTapped() {
         pushTermsOfUse()
+    }
+    
+    func changeCinemaTapped() {
+        presentCineMap()
+    }
+}
+
+extension SettingsCoordinator: CineMapCoordinatorDelegate {
+    func cineMapDidSelectLocation(_ sender: Coordinator) {
+        sender.rootViewController.dismiss(animated: true, completion: nil)
     }
 }

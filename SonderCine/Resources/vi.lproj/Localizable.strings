@@ -24,6 +24,7 @@
 "settings.theme.default" = "Mặc định";
 "settings.theme.light" = "Sáng";
 "settings.theme.dark" = "Tối";
+"settings.change_cinema" = "Thay đổi rạp chiếu phim";
 
 // Movie Detail
 "detail.title" = "Chi Tiết";

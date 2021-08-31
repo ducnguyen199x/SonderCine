@@ -24,6 +24,7 @@
 "settings.theme.default" = "System Default";
 "settings.theme.light" = "Light";
 "settings.theme.dark" = "Dark";
+"settings.change_cinema" = "Change Cinema";
 
 // Movie Detail
 "detail.title" = "Details";

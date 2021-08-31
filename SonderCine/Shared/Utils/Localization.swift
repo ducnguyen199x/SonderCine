@@ -40,6 +40,7 @@ struct LocalizedKey {
         case themeDefault = "settings.theme.default"
         case themeLight = "settings.theme.light"
         case themeDark = "settings.theme.dark"
+        case changeCinema = "settings.change_cinema"
     }
     
     enum MovieDetails: String, RawRepresentable {
