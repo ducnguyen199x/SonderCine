@@ -12,9 +12,9 @@ extension UserDefaults {
     var theme: Theme {
         get {
             if let result = value(forKey: #function) as? String {
-                return Theme(rawValue: result) ?? .systemDefault
+                return Theme(rawValue: result) ?? .dark
             }
-            return .systemDefault
+            return .dark
         }
         set { set(newValue.rawValue, forKey: #function) }
     }
