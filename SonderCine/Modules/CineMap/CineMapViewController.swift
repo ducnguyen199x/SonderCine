@@ -33,8 +33,18 @@ final class CineMapViewController: BaseViewController {
     override func setupView() {
         super.setupView()
         searchBar.delegate = self
+        searchWithCoordinateView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        searchWithCoordinateView.layer.shadowRadius = 2
+        searchWithCoordinateView.layer.shadowOpacity = 0.5
         setupMap()
-        setupTableView()
+    }
+    
+    override func localizedText() {
+        super.localizedText()
+        searchBar.placeholder = LocalizedKey.CineMap.searchPlaceholder.localized()
+        coordinateSearchTitle.text = LocalizedKey.CineMap.searchLatLng.localized()
+        coordinateSearchButton.setTitle(LocalizedKey.CineMap.search.localized(), for: .normal)
+        coordinateSearchButton.setTitle(LocalizedKey.CineMap.clear.localized(), for: .normal)
     }
     
     private func setupMap() {
@@ -60,10 +70,6 @@ final class CineMapViewController: BaseViewController {
         trackingButton.trailingToSuperview(offset: 15)
         
         trackingLocation()
-    }
-    
-    private func setupTableView() {
-        searchWithCoordinateView.roundCorners([.bottomLeft, .bottomRight], radius: 10)
     }
     
     override func bindViewModel() {
@@ -100,14 +106,20 @@ final class CineMapViewController: BaseViewController {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
+    /**
+     Draw Direction to specific placemark
+     */
     private func drawDirection(to placemark: CLPlacemark) {
         guard let coordinate = placemark.location?.coordinate else { return }
         drawDirection(to: coordinate)
     }
     
+    /**
+     Draw Direction to specific coordinate
+     */
     private func drawDirection(to coordinate: CLLocationCoordinate2D) {
         guard let location = locationManager.location?.coordinate else {
-            //TODO: Inform user we don't have their current location
+            Alert.showOneButtonAlert(message: LocalizedKey.Alert.locationNoPermission.localized(), in: self)
             return
         }
         
@@ -118,12 +130,12 @@ final class CineMapViewController: BaseViewController {
         directions.calculate { [weak self] (response, error) in
             guard let self = self else { return }
             if error != nil {
-                Alert.showOneButtonAlert(message: "Cannot find this location. Please try another input!", in: self)
+                Alert.showOneButtonAlert(message: LocalizedKey.Alert.locationNotFound.localized(), in: self)
                 return
             }
             guard let response = response,
                   let route = response.routes.first else {
-                Alert.showOneButtonAlert(message: "Cannot find this location. Please try another input!", in: self)
+                Alert.showOneButtonAlert(message: LocalizedKey.Alert.locationNotFound.localized(), in: self)
                 return
             }
             self.mapView.addOverlay(route.polyline)
@@ -162,13 +174,26 @@ final class CineMapViewController: BaseViewController {
         directionsArray.forEach { $0.cancel() }
     }
     
-    private func geocode(_ address: String) {
-        geoCoder.geocodeAddressString(address) { [weak self] places, error in
+    /**
+     Find Location
+     - Parameter text: address / location name
+     */
+    private func findLocation(_ text: String) {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = text
+        request.region = mapView.region
+        
+        let search = MKLocalSearch(request: request)
+        search.start { [weak self] response, error in
             if error != nil {
-                Alert.showOneButtonAlert(message: "Cannot find this location. Please try another input!", in: self)
+                Alert.showOneButtonAlert(message: LocalizedKey.Alert.locationNotFound.localized(), in: self)
                 return
             }
-            guard let place = places?.first else { return }
+            
+            guard let place = response?.mapItems.first?.placemark else {
+                Alert.showOneButtonAlert(message: LocalizedKey.Alert.locationNotFound.localized(), in: self)
+                return
+            }
             self?.drawDirection(to: place)
         }
     }
@@ -180,7 +205,7 @@ extension CineMapViewController {
         endEditing(true)
         guard let latString = latTextField.text, let lat = Double(latString),
               let lngString = lngTextField.text, let lng = Double(lngString) else {
-            Alert.showOneButtonAlert(message: "Invalid latitude and longtitude!", in: self)
+            Alert.showOneButtonAlert(message: LocalizedKey.Alert.invalidLatLng.localized(), in: self)
             return }
         searchBar.text = nil
         drawDirection(to: CLLocationCoordinate2D(latitude: lat, longitude: lng))
@@ -200,12 +225,12 @@ extension CineMapViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         endEditing(true)
         guard let text = searchBar.text, !text.isEmpty else {
-            Alert.showOneButtonAlert(message: "Invalid address!", in: self)
+            Alert.showOneButtonAlert(message: LocalizedKey.Alert.invalidAddress.localized(), in: self)
             return
         }
         latTextField.text = nil
         lngTextField.text = nil
-        geocode(text)
+        findLocation(text)
     }
 }
 
@@ -222,6 +247,8 @@ extension CineMapViewController: CLLocationManagerDelegate {
         switch status {
         case .authorizedAlways, .authorizedWhenInUse:
             trackingLocation()
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
         default: break
         }
     }

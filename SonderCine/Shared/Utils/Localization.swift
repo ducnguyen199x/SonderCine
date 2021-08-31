@@ -50,4 +50,18 @@ struct LocalizedKey {
         case casts = "detail.casts"
         case crews = "detail.crews"
     }
+    
+    enum CineMap: String, RawRepresentable {
+        case searchPlaceholder = "map.search_placeholder"
+        case searchLatLng = "map.search_lat_lng"
+        case search = "map.search"
+        case clear = "map.clear"
+    }
+    
+    enum Alert: String, RawRepresentable {
+        case invalidAddress = "alert.invalid_address"
+        case invalidLatLng = "alert.invalid_lat_lng"
+        case locationNotFound = "alert.location_not_found"
+        case locationNoPermission = "alert.location_no_permission"
+    }
 }
