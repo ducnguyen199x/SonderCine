@@ -42,6 +42,6 @@
 
 // Alert
 "alert.invalid_address" = "Invalid address!";
-"alert.invalid_lat_lng" = "Invalid latitude and longtitude!";
+"alert.invalid_lat_lng" = "Invalid latitude and longitude!";
 "alert.location_not_found" = "Cannot find this location. Please try another input!";
 "alert.location_no_permission" = "Sorry! We cannot get your location. Please give us Location permission in Settings";
