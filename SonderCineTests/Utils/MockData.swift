@@ -36,4 +36,8 @@ class MockData {
     class func paging() -> Paging {
         Paging(current: 1, total: 2)
     }
+    
+    class func synopsis() -> Movie.Synopsis {
+        Movie.Synopsis(title: "", releaseDate: nil, duration: 1, voteAverage: 1.0, genres: [])
+    }
 }
