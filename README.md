@@ -23,6 +23,7 @@ also provides them useful details of movies.
 
 - Clone project
 - Use command line to go to project folder and run `pod install`
+- Open `SonderCine.xcworkspace`
 - Run project on simulaor
 
 ### Run on real device
