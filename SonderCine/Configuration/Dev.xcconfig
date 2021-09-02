@@ -11,4 +11,3 @@
 API_ENDPOINT = https:/$()/api.themoviedb.org/3
 THE_MOVIE_DB_API_KEY = 1d96053c639e1496db422824bf3103a8
 IMAGE_ENDPOINT = https:/$()/image.tmdb.org/t/p
-GOOGLE_MAP_API_KEY = AIzaSyDX0_vO668wDAYUxkjqUd768LfUlvXTPBs

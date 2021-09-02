@@ -74,8 +74,6 @@
 	<dict>
 		<key>API_ENDPOINT</key>
 		<string>$(API_ENDPOINT)</string>
-		<key>GOOGLE_MAP_API_KEY</key>
-		<string>$(GOOGLE_MAP_API_KEY)</string>
 		<key>IMAGE_ENDPOINT</key>
 		<string>$(IMAGE_ENDPOINT)</string>
 		<key>THE_MOVIE_DB_API_KEY</key>
