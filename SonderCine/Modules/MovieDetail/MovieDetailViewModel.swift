@@ -50,7 +50,7 @@ final class MovieDetailViewModel: BaseViewModel {
             }).disposed(by: rx.disposeBag)
     }
     
-    private func makeItems(_ movie: Movie, credit: Credit?) {
+    func makeItems(_ movie: Movie, credit: Credit?) {
         var items: [Item] = [.heroMedia(path: movie.backdropPath),
                              .synopsis(movie.sysnopsis),
                              .description(movie.overview)]
