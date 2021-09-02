@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rrn-Ba-fsN">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="gch-sP-JiX">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreenViewController" id="rrn-Ba-fsN" customClass="SplashScreenViewController" customModule="SonderCine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BLm-vL-dlY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick access to the greatest movie database" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64n-ka-95M">
+                                <rect key="frame" x="50" y="253.5" width="275" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4A0-HP-WNh">
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
+                                <color key="color" systemColor="systemGrayColor"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry! There might be problems with your internet connection." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-Ha-DQT">
+                                <rect key="frame" x="50" y="244" width="275" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-UC-Ruo">
+                                <rect key="frame" x="155" y="363.5" width="65" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Try again">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="retry:" destination="rrn-Ba-fsN" eventType="touchUpInside" id="c3h-Fj-3fY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jbj-tV-cyJ"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4A0-HP-WNh" firstAttribute="top" secondItem="64n-ka-95M" secondAttribute="bottom" constant="20" id="0Pr-f5-2mJ"/>
+                            <constraint firstItem="0yz-UC-Ruo" firstAttribute="centerX" secondItem="jbj-tV-cyJ" secondAttribute="centerX" id="0aM-bb-bvH"/>
+                            <constraint firstItem="jbj-tV-cyJ" firstAttribute="trailing" secondItem="64n-ka-95M" secondAttribute="trailing" constant="50" id="859-df-uwR"/>
+                            <constraint firstItem="64n-ka-95M" firstAttribute="leading" secondItem="jbj-tV-cyJ" secondAttribute="leading" constant="50" id="Ddj-d7-Xev"/>
+                            <constraint firstItem="64n-ka-95M" firstAttribute="centerY" secondItem="jbj-tV-cyJ" secondAttribute="centerY" constant="-50" id="QsC-oJ-5Bc"/>
+                            <constraint firstItem="0S9-Ha-DQT" firstAttribute="leading" secondItem="jbj-tV-cyJ" secondAttribute="leading" constant="50" id="XUw-q4-qDq"/>
+                            <constraint firstItem="0S9-Ha-DQT" firstAttribute="centerX" secondItem="jbj-tV-cyJ" secondAttribute="centerX" id="bh2-Va-0jB"/>
+                            <constraint firstItem="0S9-Ha-DQT" firstAttribute="centerY" secondItem="jbj-tV-cyJ" secondAttribute="centerY" constant="-50" id="bis-jc-Sjk"/>
+                            <constraint firstItem="4A0-HP-WNh" firstAttribute="centerX" secondItem="jbj-tV-cyJ" secondAttribute="centerX" id="d7x-0j-IQ7"/>
+                            <constraint firstItem="64n-ka-95M" firstAttribute="centerX" secondItem="jbj-tV-cyJ" secondAttribute="centerX" id="maB-Nn-dic"/>
+                            <constraint firstItem="0yz-UC-Ruo" firstAttribute="top" secondItem="4A0-HP-WNh" secondAttribute="bottom" constant="10" id="mfn-g1-HK9"/>
+                            <constraint firstItem="jbj-tV-cyJ" firstAttribute="trailing" secondItem="0S9-Ha-DQT" secondAttribute="trailing" constant="50" id="pTw-Jq-dBg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="introLabel" destination="64n-ka-95M" id="fA5-aB-UId"/>
+                        <outlet property="loadingIndicator" destination="4A0-HP-WNh" id="JYQ-Mg-nh3"/>
+                        <outlet property="noInternetLabel" destination="0S9-Ha-DQT" id="F4h-5R-Nan"/>
+                        <outlet property="retryButton" destination="0yz-UC-Ruo" id="nnl-KY-UOW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMX-fp-CrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

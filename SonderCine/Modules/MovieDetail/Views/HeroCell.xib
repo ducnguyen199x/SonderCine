@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="331" id="Eru-MS-wgw" customClass="HeroCell" customModule="SonderCine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eru-MS-wgw" id="D08-CQ-Bxh">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ctH-4I-tx8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ctH-4I-tx8" secondAttribute="height" multiplier="16:9" id="DeH-i3-pVY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ctH-4I-tx8" secondAttribute="bottom" priority="999" id="Otx-TI-prq"/>
+                    <constraint firstItem="ctH-4I-tx8" firstAttribute="leading" secondItem="D08-CQ-Bxh" secondAttribute="leading" id="hcJ-NX-CGD"/>
+                    <constraint firstItem="ctH-4I-tx8" firstAttribute="top" secondItem="D08-CQ-Bxh" secondAttribute="top" id="iHc-dL-WGO"/>
+                    <constraint firstAttribute="trailing" secondItem="ctH-4I-tx8" secondAttribute="trailing" id="uKt-q5-Q6z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ctH-4I-tx8" firstAttribute="centerX" secondItem="Eru-MS-wgw" secondAttribute="centerX" id="v3m-FZ-KQC"/>
+            </constraints>
+            <connections>
+                <outlet property="thumbnail" destination="ctH-4I-tx8" id="wl0-1R-1IZ"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="227.67857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  SonderCine
+
+  Created by Nguyen Thanh Duc on 27/8/21.
+  
+*/
+// Tabbar
+"now_playing" = "Now Playing";
+"top_rated" = "Top Rated";
+
+// Settings
+"settings.title" = "Settings";
+"settings.general" = "General";
+"settings.languages" = "Languages";
+"settings.languages.english" = "English";
+"settings.languages.vietnamese" = "Vietnamese";
+"settings.display" = "Display";
+"settings.about" = "About";
+"settings.version" = "App version";
+"settings.privacy" = "Privacy policy";
+"settings.terms" = "Term of use";
+"settings.theme" = "Theme";
+"settings.theme.default" = "System Default";
+"settings.theme.light" = "Light";
+"settings.theme.dark" = "Dark";
+"settings.change_cinema" = "Change Cinema";
+
+// Movie Detail
+"detail.title" = "Details";
+"detail.cast_crews" = "Cast & Crews";
+"detail.see_all" = "See all";
+"detail.director" = "Directors";
+"detail.casts" = "Casts";
+"detail.crews" = "Crews";
+
+// CineMap
+"map.search_placeholder" = "Search with address or location name";
+"map.search_lat_lng" = "Search with lat, lng";
+"map.search" = "Search";
+"map.clear" = "Clear";
+
+// Alert
+"alert.invalid_address" = "Invalid address!";
+"alert.invalid_lat_lng" = "Invalid latitude and longitude!";
+"alert.location_not_found" = "Cannot find this location. Please try another input!";
+"alert.location_no_permission" = "Sorry! We cannot get your location. Please give us Location permission in Settings";

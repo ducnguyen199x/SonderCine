@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  SonderCine
+
+  Created by Nguyen Thanh Duc on 27/8/21.
+  
+*/
+// Tabbar
+"now_playing" = "Đang chiếu";
+"top_rated" = "Phim Hot";
+
+// Settings
+"settings.title" = "Cài đặt";
+"settings.general" = "Cài đặt chung";
+"settings.languages" = "Ngôn ngữ";
+"settings.languages.english" = "Tiếng Anh";
+"settings.languages.vietnamese" = "Tiếng Việt";
+"settings.display" = "Hiển thị";
+"settings.about" = "Giới thiệu";
+"settings.version" = "Phiên bản";
+"settings.privacy" = "Chính sách bảo mật";
+"settings.terms" = "Điều khoản sử dụng";
+"settings.theme" = "Giao diện";
+"settings.theme.default" = "Mặc định";
+"settings.theme.light" = "Sáng";
+"settings.theme.dark" = "Tối";
+"settings.change_cinema" = "Thay đổi rạp chiếu phim";
+
+// Movie Detail
+"detail.title" = "Chi Tiết";
+"detail.cast_crews" = "Đội ngũ sản xuất";
+"detail.see_all" = "Tất cả";
+"detail.director" = "Đạo diễn";
+"detail.casts" = "Diễn viên";
+"detail.crews" = "Sản xuất";
+
+// CineMap
+"map.search_placeholder" = "Tìm với địa chỉ, tên địa điểm";
+"map.search_lat_lng" = "Tìm với lat, lng";
+"map.search" = "Tìm";
+"map.clear" = "Xoá";
+
+// Alert
+"alert.invalid_address" = "Địa chỉ không hợp lệ!";
+"alert.invalid_lat_lng" = "latitude và longitude không hợp lệ!";
+"alert.location_not_found" = "Không tìm thấy địa điểm. Hãy thử địa điểm khác!";
+"alert.location_no_permission" = "Xin lỗi! Chúng tôi không thể lấy được vị trí của bạn. Hãy cấp quyền cho chúng tôi ở Cài đặt";

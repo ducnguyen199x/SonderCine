@@ -1,0 +1,63 @@
+PODS:
+  - Alamofire (5.4.3)
+  - FLEX (4.5.0)
+  - Kingfisher (6.3.1)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftLint (0.43.1)
+  - TinyConstraints (4.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - FLEX
+  - Kingfisher
+  - "NSObject+Rx"
+  - R.swift
+  - RxCocoa
+  - RxSwift
+  - SVProgressHUD
+  - SwiftLint
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FLEX
+    - Kingfisher
+    - "NSObject+Rx"
+    - R.swift
+    - R.swift.Library
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SVProgressHUD
+    - SwiftLint
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  FLEX: e51461dd6f0bfb00643c262acdfea5d5d12c596b
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+
+PODFILE CHECKSUM: 30fbd27a28078d8bf2624324a3a878a19dd68beb
+
+COCOAPODS: 1.10.1
