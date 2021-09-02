@@ -28,4 +28,12 @@ class MockData {
         guard let data = Bundle.loadJsonData(from: "mock_credits") else { return nil }
         return try? JSONDecoder().decode(Credit.self, from: data)
     }
+    
+    class func movie() -> Movie {
+        Movie(id: 1, overview: "", voteAverage: 1.0, duration: 1)
+    }
+    
+    class func paging() -> Paging {
+        Paging(current: 1, total: 2)
+    }
 }
