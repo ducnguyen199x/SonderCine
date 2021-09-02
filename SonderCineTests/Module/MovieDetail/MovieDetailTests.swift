@@ -1,14 +1,16 @@
 //
-//  SonderCineTests.swift
+//  MovieDetailTest.swift
 //  SonderCineTests
 //
-//  Created by Nguyen Thanh Duc on 25/8/21.
+//  Created by Nguyen Thanh Duc on 1/9/21.
 //
 
+import Foundation
 import XCTest
+
 @testable import SonderCine
 
-class SonderCineTests: XCTestCase {
+class MovieDetailTests: XCTestCase {
 
     override func setUpWithError() throws {
     }

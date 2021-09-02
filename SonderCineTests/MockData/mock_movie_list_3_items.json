@@ -1,0 +1,73 @@
+{
+    "dates": {
+        "maximum": "2021-08-30",
+        "minimum": "2021-07-13"
+    },
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg",
+            "genre_ids": [
+                28,
+                12,
+                14,
+                35
+            ],
+            "id": 436969,
+            "original_language": "en",
+            "original_title": "The Suicide Squad",
+            "overview": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+            "popularity": 3152.029,
+            "poster_path": "/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg",
+            "release_date": "2021-07-28",
+            "title": "The Suicide Squad",
+            "video": false,
+            "vote_average": 8,
+            "vote_count": 3240
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/7WJjFviFBffEJvkAms4uWwbcVUk.jpg",
+            "genre_ids": [
+                12,
+                14,
+                35,
+                28
+            ],
+            "id": 451048,
+            "original_language": "en",
+            "original_title": "Jungle Cruise",
+            "overview": "Dr. Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal – a discovery that will change the future of medicine.",
+            "popularity": 2863.974,
+            "poster_path": "/9dKCd55IuTT5QRs989m9Qlb7d2B.jpg",
+            "release_date": "2021-07-28",
+            "title": "Jungle Cruise",
+            "video": false,
+            "vote_average": 7.9,
+            "vote_count": 2246
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/w2jm8I0K83aZzHcI4Acl8DtuXCt.jpg",
+            "genre_ids": [
+                16,
+                10751,
+                12,
+                35
+            ],
+            "id": 675445,
+            "original_language": "en",
+            "original_title": "PAW Patrol: The Movie",
+            "overview": "Ryder and the pups are called to Adventure City to stop Mayor Humdinger from turning the bustling metropolis into a state of chaos.",
+            "popularity": 2371.734,
+            "poster_path": "/ic0intvXZSfBlYPIvWXpU1ivUCO.jpg",
+            "release_date": "2021-08-09",
+            "title": "PAW Patrol: The Movie",
+            "video": false,
+            "vote_average": 8.1,
+            "vote_count": 299
+        }
+    ],
+    "total_pages": 1
+}

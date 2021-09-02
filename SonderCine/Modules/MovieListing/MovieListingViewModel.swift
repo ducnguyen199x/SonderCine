@@ -62,11 +62,13 @@ final class MovieListingViewModel: BaseViewModel {
         fetchMovieList(page: currentPage, shouldUseCache: shouldUseCache)
     }
     
-    private func makeItems(_ wrapper: MovieListWrapper) {
+    func makeItems(_ wrapper: MovieListWrapper) {
         var items: [Item] = wrapper.results.map { .movie($0) }
         let adsNumber = items.count / 3
-        for i in 1...adsNumber {
-            items.insert(.ads, at: i * 3 + i - 1)
+        if adsNumber > 0 {
+            for i in 1...adsNumber {
+                items.insert(.ads, at: i * 3 + i - 1)
+            }
         }
         items.append(.pagination(wrapper.paging))
         self.items = items
